@@ -8,13 +8,17 @@
 
 ## 2단계: 프로젝트 설정
 
-### Root Directory 설정 (중요!)
-**Vercel 대시보드에서만 설정 가능합니다:**
-- Settings → General → Root Directory
-- `townE` 입력
-- 저장
+### Root Directory 설정 (필수!)
+**반드시 Vercel 대시보드에서 설정해야 합니다:**
 
-**주의**: `vercel.json`에는 `rootDirectory` 속성을 넣지 마세요. Vercel 대시보드에서만 설정합니다.
+1. 프로젝트 생성 후 또는 Settings → General로 이동
+2. **Root Directory** 섹션 찾기
+3. `townE` 입력
+4. **Save** 클릭
+
+**중요**: 
+- Root Directory를 `townE`로 설정하면, Vercel은 `townE` 폴더 내부에서 빌드를 시작합니다
+- 따라서 `vercel.json`의 빌드 명령어에는 `cd townE`가 필요 없습니다
 
 ### Framework Preset
 - 자동 감지: Next.js

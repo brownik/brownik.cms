@@ -49,16 +49,17 @@ NEXT_PUBLIC_API_BASE_URL=https://your-project.vercel.app/api
 
 ```json
 {
-  "buildCommand": "cd townE && npm install && npm run build",
-  "outputDirectory": "townE/.next",
-  "devCommand": "cd townE && npm run dev",
-  "installCommand": "cd townE && npm install",
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": ".next",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
   "framework": "nextjs"
 }
 ```
 
 **중요**: 
-- `vercel.json`에는 `rootDirectory` 속성을 넣지 마세요 (Vercel에서 지원하지 않음)
+- Root Directory를 `townE`로 설정하면, Vercel은 `townE` 폴더 내부에서 빌드를 시작합니다
+- 따라서 빌드 명령어에 `cd townE`가 필요 없습니다
 - Root Directory는 **Vercel 대시보드**에서만 설정합니다:
   - Settings → General → Root Directory → `townE` 입력
 
