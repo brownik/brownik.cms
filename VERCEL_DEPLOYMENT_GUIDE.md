@@ -11,7 +11,7 @@
 ### 1.2 프로젝트 설정
 
 #### Root Directory 설정
-- **Root Directory**: `towne-frontend` 선택
+- **Root Directory**: `townE-frontend` 선택
 - 이 설정은 Vercel이 프론트엔드 폴더를 인식하도록 합니다.
 
 #### Build and Output Settings
@@ -152,7 +152,7 @@ Value: cname.vercel-dns.com
 **해결 방법**:
 1. 로컬에서 빌드 테스트:
    ```bash
-   cd towne-frontend
+   cd townE-frontend
    npm install
    npm run build
    ```
@@ -244,7 +244,7 @@ import Image from 'next/image';
 ## 12. 체크리스트
 
 배포 전 확인:
-- [ ] Root Directory가 `towne-frontend`로 설정됨
+- [ ] Root Directory가 `townE-frontend`로 설정됨
 - [ ] 환경 변수가 올바르게 설정됨
 - [ ] 로컬에서 빌드가 성공함
 - [ ] 백엔드 API가 접근 가능함

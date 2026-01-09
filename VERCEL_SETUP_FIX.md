@@ -1,7 +1,7 @@
 # Vercel 설정 문제 해결 가이드
 
 ## 문제 상황
-Vercel 대시보드에서 `townE-backend`와 `new_analysis_docs`만 보이고 `towne-frontend`가 보이지 않는 경우
+Vercel 대시보드에서 `townE-backend`와 `new_analysis_docs`만 보이고 `townE-frontend`가 보이지 않는 경우
 
 ## 해결 방법
 
@@ -17,7 +17,7 @@ Vercel 대시보드에서 `townE-backend`와 `new_analysis_docs`만 보이고 `t
 3. **General 탭에서 Root Directory 설정**
    - **Root Directory** 섹션 찾기
    - **Edit** 버튼 클릭
-   - `towne-frontend` 입력
+   - `townE-frontend` 입력
    - **Save** 클릭
 
 4. **재배포**
@@ -39,7 +39,7 @@ Vercel 대시보드에서 `townE-backend`와 `new_analysis_docs`만 보이고 `t
 
 3. **프로젝트 설정**
    - **Framework Preset**: Next.js (자동 감지)
-   - **Root Directory**: `towne-frontend` 선택
+   - **Root Directory**: `townE-frontend` 선택
    - **Environment Variables** 추가:
      - `NEXT_PUBLIC_API_BASE_URL`
      - `NEXT_PUBLIC_APP_NAME`
@@ -65,12 +65,12 @@ ls -la vercel.json
 ### 2. 파일 내용 확인
 ```json
 {
-  "buildCommand": "cd towne-frontend && npm install && npm run build",
-  "outputDirectory": "towne-frontend/.next",
-  "devCommand": "cd towne-frontend && npm run dev",
-  "installCommand": "cd towne-frontend && npm install",
+  "buildCommand": "cd townE-frontend && npm install && npm run build",
+  "outputDirectory": "townE-frontend/.next",
+  "devCommand": "cd townE-frontend && npm run dev",
+  "installCommand": "cd townE-frontend && npm install",
   "framework": "nextjs",
-  "rootDirectory": "towne-frontend"
+  "rootDirectory": "townE-frontend"
 }
 ```
 
@@ -80,12 +80,12 @@ git log --oneline -5
 # vercel.json이 커밋되어 있는지 확인
 ```
 
-## 대안: towne-frontend를 루트로 이동 (고급)
+## 대안: townE-frontend를 루트로 이동 (고급)
 
 만약 계속 문제가 발생하면, 프로젝트 구조를 변경할 수 있습니다:
 
-1. `towne-frontend`의 내용을 루트로 이동
-2. 또는 Vercel에서 `towne-frontend` 폴더만 별도 프로젝트로 연동
+1. `townE-frontend`의 내용을 루트로 이동
+2. 또는 Vercel에서 `townE-frontend` 폴더만 별도 프로젝트로 연동
 
 하지만 이 방법은 프로젝트 구조 변경이 필요하므로 권장하지 않습니다.
 
@@ -94,8 +94,8 @@ git log --oneline -5
 **가장 빠른 해결 방법:**
 
 1. Vercel 대시보드 → Settings → General
-2. Root Directory: `towne-frontend` 입력
+2. Root Directory: `townE-frontend` 입력
 3. Save
 4. Deployments → Redeploy
 
-이렇게 하면 Vercel이 `towne-frontend` 폴더를 프로젝트 루트로 인식합니다.
+이렇게 하면 Vercel이 `townE-frontend` 폴더를 프로젝트 루트로 인식합니다.

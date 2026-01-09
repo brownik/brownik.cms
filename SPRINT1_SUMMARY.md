@@ -72,7 +72,7 @@ townE-backend/
 
 ### Frontend
 ```
-towne-frontend/
+townE-frontend/
 ├── package.json
 ├── .env.local
 ├── app/
@@ -107,7 +107,7 @@ mvn spring-boot:run
 
 ### 프론트엔드 실행
 ```bash
-cd towne-frontend
+cd townE-frontend
 npm install
 npm run dev
 ```

@@ -7,7 +7,7 @@
 ## 디렉토리 구조
 
 ```
-towne-frontend/
+townE-frontend/
 ├── app/                          # Next.js App Router (라우팅만 담당)
 │   ├── (admin)/                  # 관리자 라우트 그룹
 │   │   └── admin/

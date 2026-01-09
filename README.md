@@ -1,29 +1,23 @@
 # townE 리뉴얼 프로젝트
 
-JSP/Spring MVC 기반 시스템을 Next.js(App Router) + Spring Boot 3.x REST API로 전환하는 프로젝트입니다.
+JSP/Spring MVC 기반 시스템을 Next.js(App Router)로 전환하는 프로젝트입니다.
 
 ## 프로젝트 구조
 
 ```
 maeul-e/
-├── townE-backend/      # Spring Boot 백엔드
-├── towne-frontend/     # Next.js 프론트엔드
+├── townE-frontend/     # Next.js 프론트엔드 + API Routes (백엔드 통합)
 └── new_analysis_docs/   # 분석 문서 및 가이드
 ```
 
 ## 기술 스택
 
-### Backend
-- Spring Boot 3.x
-- Java 17
-- Spring Data JPA
-- Spring Security (JWT)
-- MariaDB
-- Querydsl
-
-### Frontend
+### Full-Stack (Next.js)
 - Next.js 14+ (App Router)
 - TypeScript
+- Prisma (ORM)
+- MariaDB
+- JWT 인증
 - Tailwind CSS
 - TanStack Query
 - Zustand
@@ -31,18 +25,15 @@ maeul-e/
 
 ## 시작하기
 
-### 백엔드 실행
+### 개발 서버 실행
 ```bash
-cd townE-backend
-mvn spring-boot:run
-```
-
-### 프론트엔드 실행
-```bash
-cd towne-frontend
+cd townE-frontend
 npm install
 npm run dev
 ```
+
+애플리케이션은 `http://localhost:3000`에서 실행됩니다.
+API는 `http://localhost:3000/api`에서 제공됩니다.
 
 ## 주요 기능
 

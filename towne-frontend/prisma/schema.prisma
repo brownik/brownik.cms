@@ -1,0 +1,153 @@
+// Prisma 스키마 파일
+// 기존 MariaDB 스키마를 기반으로 작성
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  // MariaDB는 MySQL과 호환되므로 mysql provider 사용
+}
+
+model Member {
+  key             Int       @id @default(autoincrement()) @map("KEY")
+  memberType      String    @default("P") @db.VarChar(1) @map("MEMBERTYPE")
+  userId          String?   @db.VarChar(50) @map("USERID")
+  userPw          String?   @db.VarChar(100) @map("USERPW")
+  name            String?   @db.VarChar(200) @map("NAME")
+  nickName        String?   @db.VarChar(20) @map("NICKNAME")
+  fcmToken        String?   @db.VarChar(256) @map("FCMTOKEN")
+  volunteerId     String?   @db.VarChar(50) @map("VOLUNTEERID")
+  businessNumber  String?   @db.VarChar(12) @map("BUSINESSNUMBER")
+  companyName     String?   @db.VarChar(50) @map("COMPANYNAME")
+  tel             String?   @db.VarChar(256) @map("TEL")
+  phone           String?   @db.VarChar(256) @map("PHONE")
+  fax             String?   @db.VarChar(256) @map("FAX")
+  email           String?   @db.VarChar(256) @map("EMAIL")
+  age             Int?      @map("AGE")
+  gender          String?   @db.VarChar(1) @map("GENDER")
+  zipCode         String?   @db.VarChar(5) @map("ZIPCODE")
+  address1        String?   @db.VarChar(100) @map("ADDRESS1")
+  address2        String?   @db.VarChar(100) @map("ADDRESS2")
+  birthday        String?   @db.VarChar(256) @map("BIRTHDAY")
+  birthdayType    String?   @db.VarChar(1) @map("BIRTHDAYTYPE")
+  emailAgree      String    @default("N") @db.VarChar(1) @map("EMAILAGREE")
+  smsAgree        String    @default("N") @db.VarChar(1) @map("SMSAGREE")
+  agreementDate   DateTime? @map("AGREEMENTDATE")
+  memberLevel     String    @default("0") @db.VarChar(50) @map("MEMBERLEVEL")
+  status          String    @default("U") @db.VarChar(1) @map("STATUS")
+  dropReason      String?   @db.VarChar(500) @map("DROPREASON")
+  certType        String?   @db.VarChar(1) @map("CERTTYPE")
+  certKey1         String?   @db.VarChar(200) @map("CERTKEY1")
+  certKey2         String?   @db.VarChar(200) @map("CERTKEY2")
+  lastLoginDate   DateTime? @map("LASTLOGINDATE")
+  lastLoginIp     String?   @db.VarChar(15) @map("LASTLOGINIP")
+  loginFailCount  Int       @default(0) @map("LOGINFAILCOUNT")
+  insertDate      DateTime  @default(now()) @map("INSERTDATE")
+  insertIp        String?   @db.VarChar(15) @map("INSERTIP")
+  insertMemberKey Int?      @map("INSERTMEMBERKEY")
+  updateDate      DateTime? @map("UPDATEDATE")
+  updateIp        String?   @db.VarChar(15) @map("UPDATEIP")
+  updateMemberKey Int?      @map("UPDATEMEMBERKEY")
+
+  boardItems      BoardItem[]
+  comments        Comment[]
+
+  @@map("NU_MEMBER")
+}
+
+model Board {
+  key                Int       @id @default(autoincrement()) @map("KEY")
+  siteKey            Int       @map("SITEKEY")
+  title              String    @db.VarChar(50) @map("TITLE")
+  boardType          String    @db.VarChar(50) @map("BOARDTYPE")
+  skinKey            Int       @map("SKINKEY")
+  listAccessRole     String    @db.VarChar(50) @map("LISTACCESSROLE")
+  readAccessRole     String    @db.VarChar(50) @map("READACCESSROLE")
+  cudAccessRole      String    @db.VarChar(50) @map("CUDACCESSROLE")
+  commentAccessRole  String    @db.VarChar(50) @map("COMMENTACCESSROLE")
+  replyAccessRole    String    @db.VarChar(50) @map("REPLYACCESSROLE")
+  commentUseYn       String    @default("Y") @db.VarChar(1) @map("COMMENTUSEYN")
+  replyUseYn         String    @default("Y") @db.VarChar(1) @map("REPLYUSEYN")
+  secretUseYn        String    @default("N") @db.VarChar(1) @map("SECRETUSEYN")
+  okeyUseYn          String    @default("N") @db.VarChar(1) @map("OKEYUSEYN")
+  reservationYn      String    @default("N") @db.VarChar(1) @map("RESERVATIONYN")
+  uploadUseYn        String    @default("N") @db.VarChar(1) @map("UPLOADUSEYN")
+  uploadCount        Int       @default(1) @map("UPLOADCOUNT")
+  uploadSize         Int       @default(10000000) @map("UPLOADSIZE")
+  uploadFileExtension String?   @db.VarChar(100) @map("UPLOADFILEEXTENSION")
+  header             String?   @db.Text @map("HEADER")
+  footer             String?   @db.Text @map("FOOTER")
+  write              String?   @db.Text @map("WRITE")
+  modify             String?   @db.Text @map("MODIFY")
+  status             String    @default("U") @db.VarChar(1) @map("STATUS")
+  insertDate         DateTime  @default(now()) @map("INSERTDATE")
+  insertIp           String?   @db.VarChar(15) @map("INSERTIP")
+  insertMemberKey    Int?      @map("INSERTMEMBERKEY")
+  updateDate         DateTime? @map("UPDATEDATE")
+  updateIp           String?   @db.VarChar(15) @map("UPDATEIP")
+  updateMemberKey    Int?      @map("UPDATEMEMBERKEY")
+
+  boardItems         BoardItem[]
+
+  @@map("NU_BOARD")
+}
+
+model BoardItem {
+  key            Int       @id @default(autoincrement()) @map("KEY")
+  boardKey       Int       @map("BOARDKEY")
+  categoryKey    Int?      @map("CATEGORYKEY")
+  title          String    @db.VarChar(50) @map("TITLE")
+  content        String    @db.MediumText @map("CONTENT")
+  writer         String    @db.VarChar(50) @map("WRITER")
+  notice         String    @default("N") @db.VarChar(1) @map("NOTICE")
+  openDate       DateTime? @map("OPENDATE")
+  closeDate      DateTime? @map("CLOSEDATE")
+  passwd         String?   @db.VarChar(30) @map("PASSWD")
+  secret         String    @default("N") @db.VarChar(1) @map("SECRET")
+  parentKey      Int?      @map("PARENTKEY")
+  parentTopKey   Int?      @map("PARENTTOPKEY")
+  parentAllKey   String?   @db.VarChar(250) @map("PARENTALLKEY")
+  hit            Int       @default(0) @map("HIT")
+  commentCount   Int       @default(0) @map("COMMENTCOUNT")
+  depth           Int       @default(0) @map("DEPTH")
+  status         String    @default("U") @db.VarChar(1) @map("STATUS")
+  insertDate     DateTime  @default(now()) @map("INSERTDATE")
+  insertIp       String?   @db.VarChar(15) @map("INSERTIP")
+  insertMemberKey Int?     @map("INSERTMEMBERKEY")
+  updateDate     DateTime? @map("UPDATEDATE")
+  updateIp       String?   @db.VarChar(15) @map("UPDATEIP")
+  updateMemberKey Int?     @map("UPDATEMEMBERKEY")
+
+  board          Board     @relation(fields: [boardKey], references: [key])
+  member         Member?   @relation(fields: [insertMemberKey], references: [key])
+  comments       Comment[]
+
+  @@map("NU_BOARD_ITEM")
+}
+
+model Comment {
+  key            Int       @id @default(autoincrement()) @map("KEY")
+  boardItemKey   Int       @map("BOARDITEMKEY")
+  parentKey      Int?      @map("PARENTKEY")
+  parentTopKey   Int?      @map("PARENTTOPKEY")
+  parentAllKey   String?   @db.VarChar(250) @map("PARENTALLKEY")
+  comment        String    @db.VarChar(500) @map("COMMENT")
+  writer         String    @db.VarChar(50) @map("WRITER")
+  passwd         String?   @db.VarChar(100) @map("PASSWD")
+  depth          Int       @default(0) @map("DEPTH")
+  status         String    @default("U") @db.VarChar(1) @map("STATUS")
+  insertDate     DateTime  @default(now()) @map("INSERTDATE")
+  insertIp       String?   @db.VarChar(15) @map("INSERTIP")
+  insertMemberKey Int?     @map("INSERTMEMBERKEY")
+  updateDate     DateTime? @map("UPDATEDATE")
+  updateIp       String?   @db.VarChar(15) @map("UPDATEIP")
+  updateMemberKey Int?     @map("UPDATEMEMBERKEY")
+
+  boardItem      BoardItem @relation(fields: [boardItemKey], references: [key])
+  member         Member?   @relation(fields: [insertMemberKey], references: [key])
+
+  @@map("NU_BOARD_COMMENT")
+}

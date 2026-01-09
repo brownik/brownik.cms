@@ -8,7 +8,7 @@ Next.js App Router는 파일 시스템 기반 라우팅을 사용하지만, feat
 
 ### 현재 구조 (Layer-Based)
 ```
-towne-frontend/
+townE-frontend/
 ├── app/                    # 라우트 (URL 기반)
 ├── components/             # 컴포넌트 (타입별)
 │   ├── admin/
@@ -21,7 +21,7 @@ towne-frontend/
 
 ### Feature-Based 구조 (제안)
 ```
-towne-frontend/
+townE-frontend/
 ├── app/                    # 라우트 (URL 기반) - 유지
 │   ├── (auth)/            # 인증 관련 라우트
 │   ├── (admin)/           # 관리자 라우트

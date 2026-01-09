@@ -5,8 +5,8 @@
 1. [Vercel](https://vercel.com) 접속 후 GitHub 로그인
 2. "Add New Project" 클릭
 3. GitHub 저장소 선택: `brownik/brownik.cms`
-4. **중요**: Root Directory를 `towne-frontend`로 설정
-   - Settings → Root Directory → `towne-frontend` 입력
+4. **중요**: Root Directory를 `townE-frontend`로 설정
+   - Settings → Root Directory → `townE-frontend` 입력
 
 ## 2. 환경 변수 설정 (선택사항)
 
