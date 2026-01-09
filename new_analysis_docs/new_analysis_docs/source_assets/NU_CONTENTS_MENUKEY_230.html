@@ -1,0 +1,98 @@
+<!--
+DB PK: MENUKEY=230
+용도: NU_CONTENTS 테이블의 HTML 컨텐츠
+생성일: 2019-10-18 07:06:49
+수정일: 2025-12-29 10:19:54
+-->
+
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+
+<!-- 현재 로그인한 회원정보 -->
+<c:set var="curretHomeMember" value="${el:getCurrentHomeMember()}" />
+  
+<!-- 네이버 상태확인값 생성 -->
+${el:generateStateCode()}
+<!-- 도메인 API KEY 세팅 -->
+<c:set var="getCurrentDomainApi" value="${el:getCurrentDomainApi()}" />
+<c:forEach items="${getCurrentDomainApi}" var="domainApiItem" >
+	<c:choose>
+		<c:when test="${domainApiItem.apiType eq 'google'}">
+			<c:set value="${domainApiItem.apiKey}" var="googleApiKey" />
+		</c:when>
+		<c:when test="${domainApiItem.apiType eq 'kakao'}">
+			<c:set value="${domainApiItem.apiKey}" var="kakaoApiKey" />
+			<c:set value="${domainApiItem.apiSecretKey}" var="kakaoSecretKey" />
+		</c:when>
+		<c:when test="${domainApiItem.apiType eq 'naver'}">
+			<c:set value="${domainApiItem.apiKey}" var="naverApiKey" />
+			<c:set value="${domainApiItem.apiSecretKey}" var="naverSecretKey" />
+		</c:when>
+		<c:when test="${domainApiItem.apiType eq 'naverLogin'}">
+			<c:set value="${domainApiItem.apiKey}" var="naverLoginApiKey" />
+			<c:set value="${domainApiItem.apiSecretKey}" var="naverLoginSecretKey" />
+		</c:when>
+	</c:choose>
+</c:forEach>
+
+<script>
+Kakao.init('${kakaoSecretKey}');
+
+// 로그인한 상태에서 접근하지 못하게 막기
+$(document).ready(function(){
+  	if("${curretHomeMember.key}" != ""){
+  		location.href = "../..:subdirectory:"
+    }
+});
+</script>
+
+<!-- 컨텐츠 시작 -->
+<div class="container">
+	<div class="login_wrap">
+      <div class="title">
+          <h2 onclick="location.href='/townE/home/content.do?menu=237'">로그인</h2>
+          <p>원하시는 로그인 유형을 선택 해주세요.</p>
+      </div>
+      <div class="login-type">
+          <ul>
+              <li><a href="javascript:void(0);" id="phoneLogin" >전화번호</a></li>
+              <li><a href="javascript:void(0);" id="kakaoLogin">카카오</a></li>
+            
+              <c:set var="URL" value="${pageContext.request.requestURL}" />
+              <c:set var="idx" value="${fn:indexOf(URL,'townE')}"/>
+              <c:set var="URL" value="${fn:substring(URL,0,idx)}"/>
+            
+              <c:url value="https://nid.naver.com/oauth2.0/authorize" var="naverUrl">
+					<c:param name="response_type" value="code" />
+					<c:param name="client_id" value="${naverLoginApiKey}" />
+					<c:param name="redirect_uri" value="${URL}/townE/home/programs/comap/login/naver" />
+					<c:param name="state" value="${sessionScope.naverState}" />
+			  </c:url>
+              <li><a href="javascript:void(0);" id="naverLogin" data-url="${naverUrl}">네이버</a></li>
+			  <!--
+              <li><a href="javascript:void(0);" id="facebookLogin" >페이스북</a></li>
+              <li><a href="javascript:void(0);" id="googleLogin" >구글</a></li>
+              <li><a href="javascript:void(0);" id="twitterLogin" >트위터</a></li>
+			  -->
+          </ul>
+      </div>
+	  <div class="login-type-mobile">
+			<ul>
+				<li>
+					<a href="javascript:void(0);" id="phoneLogin2"><img src=":subdirectory:/resources/images/townE/common/04_login_phone.png"></a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" id="kakaoLogin2"><img src=":subdirectory:/resources/images/townE/common/04_login_kakao.png"></a>
+				</li>
+				<li>
+					<a href="javascript:void(0);" id="naverLogin2" data-url="${naverUrl}"><img src=":subdirectory:/resources/images/townE/common/04_login_naver.png"></a>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+  	<div class="login-using-rink">
+		<a href="#" style="display:none;">회원가입방법</a>
+		<a href="/townE/home/content.do?menu=235">이용약관 및 개인정보처리방침</a>
+	</div>
+</div>

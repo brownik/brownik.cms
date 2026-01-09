@@ -1,0 +1,43 @@
+/*
+DB PK: MENUKEY=210
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2019-02-20 11:42:35
+수정일: 2019-04-10 10:30:43
+*/
+
+#container {width:100%; position: relative; clear: both; height:auto; background:#fff !important;}
+
+/* 검색 부분 */
+.mobile-data-visualization_search {padding:20px 15px; border-bottom:1px solid #686e83;}
+.mobile-data-visualization_search .mobile-data-visualization_search-bar {height:26px; background:#e9ebf2; border-radius:30px; padding:10px 15px 0 15px;}
+.mobile-data-visualization_search .mobile-data-visualization_search-bar .mobile-data-visualization_search-input {position:relative; float:left; font-size:13px; font-weight:300; color:#505567; width:90%; background:none; border:none; outline:none;}
+.mobile-data-visualization_search .mobile-data-visualization_search-bar .mobile-data-visualization_search-input::placeholder {color:#a7adc1;}
+.mobile-data-visualization_search .mobile-data-visualization_search-bar .mobile-data-visualization_search-input::-ms-input-placeholder {color:#a7adc1;}
+.mobile-data-visualization_search .mobile-data-visualization_search-bar .mobile-data-visualization_search-input::-webkit-input-placeholder {color:#a7adc1;} 
+.mobile-data-visualization_search .mobile-data-visualization_search-bar .mobile-data-visualization_search-input::-moz-placeholder {color:#a7adc1;}
+.mobile-data-visualization_search .mobile-data-visualization_search-bar .mobile-data-visualization_search-output {position:relative; float:right; background:none; border:none; outline:none; background:url(/imap/image/file/1069) 100% 100% no-repeat; width:16px; height:16px;}
+
+/* 카테고리 부분 */
+.mobile-data-visualization_category {padding:10px 15px; border-bottom:1px solid #686e83;}
+.mobile-data-visualization_category .mobile-data-visualization_category-wrap {overflow-x:scroll; white-space:nowrap;}
+.mobile-data-visualization_category ul {width:620px;}
+.mobile-data-visualization_category ul li {position:relative; float:left; background:#00a8b5; border-radius:5px; padding:5px 12px; font-size:12px; font-weight:400; color:#fff; text-align:center; margin-right:10px;}
+::-webkit-scrollbar {display:none;}
+
+/* 목록 부분 */
+.mobile-data-visualization_list {border-bottom:1px solid #686e83;}
+.mobile-data-visualization_list ul li {height:72px; padding:13px 15px; border-bottom:1px solid #bcc0d1;}
+.mobile-data-visualization_list ul li .mobile-data-visualization_list-img {position:relative; float:left; border:1px solid #bcc0d1; border-radius:3px; width:94px; height:70px; background:url(/imap/image/file/1070) 100% 100% no-repeat; background-size:cover;}
+.mobile-data-visualization_list ul li .mobile-data-visualization_list-img span {display:block; position:absolute; width:94px; height:70px; top:0; left:0;}
+.mobile-data-visualization_list ul li .mobile-data-visualization_list-text {position:relative; float:left; top:15px; margin-left:7%; text-align:left; width:58%;}
+.mobile-data-visualization_list ul li .mobile-data-visualization_list-text p.mobile-data-visualization_list-text_date {font-size:10px; font-weight:300; color:#767c8f;}
+.mobile-data-visualization_list ul li .mobile-data-visualization_list-text p.mobile-data-visualization_list-text_title {font-size:14px; font-weight:600; color:#5a5f6f; width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+	/* paging */
+	.mb_paging { width:100%; text-align: center; padding:20px 0; }
+	.mb_paging span a { margin:2px; display: inline-block; width:30px; height:30px; border:1px solid #d9d4d4; font-size:14px;  background-color: #fff; font-weight:600; line-height: 29px; border-radius: 5px; color:#666; text-align:center;}
+	.mb_paging span a.on {border:1px solid #5882e0; color:#5882e0;}
+	.mb_paging .mb_present { background-color:#8b8e99; color:#fff; }
+	.mb_paging .mb_numPN { display: inline-block; }
+	.mb_paging .mb_numPN a { font-size:10px; }
+	.mb_paging p { text-align: center; }
+/* 목록 부분 */

@@ -1,0 +1,107 @@
+/*
+DB PK: MENUKEY=57
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2016-12-26 13:18:54
+수정일: 2019-01-24 14:38:27
+*/
+
+/* 테마 */
+.tab{clear:both;position:relative;height:48px;margin-bottom:20px;border:1px solid #dadada;border-bottom-color:#777;}
+.tab span{display:block;float:left;position:relative;border-right:1px solid #dadada;}
+.tab span a{display:block;position:relative;height:48px;padding:0 20px;color:#272635;font-size:15px;font-weight:300;line-height:48px;cursor:pointer;}
+.tab span button{display:block;position:relative;height:48px;padding:0 20px;border:0;outline:none;cursor:pointer;font-family:'Noto Sans KR';color:#272635;font-size:15px;font-weight:300;line-height:48px;background-color:#fff;}
+.tab span.on{height:49px;border-right-color:#feb10a;}
+.tab span.on button{display:block;position:relative;height:49px;color:#fff;font-weight:600;background-color:#feb10a;}
+.tab span.on a{display:block;position:relative;height:49px;color:#fff;font-weight:600;background-color:#feb10a;}
+.tab span.on span{display:block;position:absolute;bottom:-6px;left:50%;z-index:33;width:11px;height:6px;margin-left:-5px;border:none;background:url(:subdirectory:/resources/images/sub/change/br_tab_arr.gif) 0 0 no-repeat;}
+
+.tab p.thema{display:block;position:absolute;top:0;right:0;}
+.tab p.thema span{display:block;float:left;border-right:none;}
+.tab p.thema span.thema_child button{background-color:#ec2252;}
+.tab p.thema span.thema_old button{background-color:#2e65da;}
+.tab p.thema span.thema_transfer button{background-color:#ee7b00;}
+.tab p.thema span button{display:block;position:relative;color:#fff;}
+.tab p.thema span.on button span{display:block;position:absolute;left:50%;bottom:-6px;z-index:33;width:11px;height:6px;margin-left:-5px;border:none;background:url(:subdirectory:/resources/images/sub/change/br_tab_arr.gif) 0 0 no-repeat}
+.tab p.thema span.thema_child.on button{background-color:#ec2252;}
+.tab p.thema span.thema_child.on button span{background:url(:subdirectory:/resources/images/sub/change/br_tab_arr1.gif) 0 0 no-repeat;}
+.tab p.thema span.thema_old.on button{background-color:#2e65da;}
+.tab p.thema span.thema_old.on button span{background:url(:subdirectory:/re/images/sub/change/br_tab_arr2.gif) 0 0 no-repeat;}
+.tab p.thema span.thema_transfer.on button{background-color:#ee7b00;}
+.tab p.thema span.thema_transfer.on button span{background:url(:subdirectory::subdirectory:/resources/images/sub/change/br_tab_arr3.gif) 0 0 no-repeat;}
+
+
+/* 셀렉트 시작 */
+.select_wrap { width:100%; }
+.select_wrap .select_box { display: inline-block; float:left; background-color:#fff; border-left:1px solid #efefef; border-bottom:1px solid #e1e1e1; }
+.select_wrap .select_box:first-child { width:33.3%; border-left:0; }
+.select_wrap .select_box select { -webkit-appearance:none; background:url('/seongbuk/image/file/1398') right center no-repeat; background-size:14px; width:93%; height:45px; border:0; font-size: 14px; font-weight:500; padding:0 25px 0 6px; color:#333;}
+/* 셀렉트 종료 */
+
+/* sub > 생활지도 */
+.lifeMap_wrap{clear:both;position:relative;height:719px;margin-bottom:40px;border:1px solid #dbdbdb;}
+.lifeMap_wrap .left{position:absolute;top:0;left:0;/* z-index:999; */width:374px;border-right:1px solid #cfcdcd;}
+.leftBlock1{clear:both;position:relative;width:374px;height:305px;}
+.leftBlock1 h3{padding:25px 0 0 25px;color:#252525;font-size:18px;font-weight:600;}
+
+.leftBlock1 .miniMap{overflow:hidden;clear:both;position:absolute;top:66px;left:20px;width:200px;height:200px;}
+.leftBlock1 .miniMap .img_normal{display:block;opacity:.8;position:absolute;top:0;left:0;z-index:2;}
+.leftBlock1 .miniMap .img_over{display:block;position:absolute;top:0;left:0;z-index:3;user-select:none;pointer-events:none;}
+.leftBlock1 .miniMap area{outline:0;}
+.leftBlock1 .miniMap .img_over > span{display:none;position:absolute;top:0;left:0;}
+
+.leftBlock1 .radioGroup{overflow:hidden;position:absolute;top:0;right:0;width:138px;height:310px;}
+.leftBlock1 .radioGroup p{height:30px;padding-left:10px;color:#fff;font-size:13px;font-weight:600;line-height:30px;background-color:#7da1ed;}
+.leftBlock1 .radioGroup p input,
+.leftBlock1 .radioGroup p label{cursor:pointer;}
+.leftBlock1 .radioGroup ul{clear:both;width:142px;height:275px;background-color:#e3ecff;}
+.leftBlock1 .radioGroup ul li{float:left;width:70px;height:24px;border-right:1px solid #bdcbe9;border-bottom:1px solid #bdcbe9;}
+.leftBlock1 .radioGroup ul li a{display:block;width:65px;height:24px;padding-left:5px;color:#212b42;font-size:13px;font-weight:300;line-height:24px;cursor:pointer;}
+.leftBlock1 .radioGroup ul li.on a{color:#fff;font-weight:600;background-color:#eab412;}
+.leftBlock1 .radioGroup ul li.on2 a{color:#fff;font-weight:600;background-color:#eab412;}
+
+.leftBlock2{clear:both;height:124px;}
+.leftBlock2 h3{height:30px;text-align:center;color:#fff;font-size:13px;font-weight:600;line-height:30px;background-color:#7da1ed;}
+.leftBlock2 ul{display:block;overflow-x:hidden;overflow-y:auto;clear:both;width:354px;height:74px;padding:10px;}
+.leftBlock2 ul li{float:left;width:25%;height:24px;font-size:13px;line-height:24px;}
+.leftBlock2 ul li input,
+.leftBlock2 ul li label{cursor:pointer;}
+
+.Block{height:133px !important;}
+.leftBlock3{clear:both;}
+.leftBlock3 h3{height:30px;text-align:center;color:#fff;font-size:13px;font-weight:600;line-height:30px;background-color:#7da1ed;}
+.leftBlock3 ul{display:block;overflow-x:hidden;overflow-y:auto;clear:both;width:354px;height:108px;padding:10px;}
+.leftBlock3 ul li{float:left;width:100%;/*height:24px;*/font-size:13px;line-height:24px;}
+.leftBlock3 ul li input,
+.leftBlock3 ul li label{cursor:pointer;}
+
+.leftBlock4{clear:both;height:180px;}
+.leftBlock4 h3{height:30px;text-align:center;color:#fff;font-size:13px;font-weight:600;line-height:30px;background-color:#7da1ed;}
+.leftBlock4 ul{display:block;overflow-x:hidden;overflow-y:auto;clear:both;width:354px;height:130px;padding:10px;}
+.leftBlock4 ul li{float:left;width:100%;height:24px;font-size:13px;line-height:24px;}
+.icon_box{display:inline-block;width:18px;height:24px}
+.icon_box img{width:100%;}
+.rightBlock{overflow:hidden;clear:both;height:719px;padding-left:375px;}
+
+.lifeList{clear:both;position:relative;}
+.lifeList h3{clear:both;position:relative;height:60px;margin-bottom:20px;padding-left:40px;border-bottom:1px solid #cfcdcd;text-align:left;color:#272635;font-size:20px;font-weight:600;line-height:60px;background:url(:subdirectory:/resources/images/sub/basic/br_h.gif) 0 50% no-repeat;}
+.lifeList .gridBox{clear:both;width:100%;height:100%;}
+.lifeList .gridBox ul{display:block;clear:both;height:32px;border-top:1px solid #ddd;border-left:1px solid #ddd;border-bottom:1px solid #ddd;border-radius: 2px;}
+.lifeList .gridBox li{display:inline-block;float:left;}
+.lifeList .gridBox li a{display:inline-block;padding:15px 0;border-right:1px solid #dadada;border-bottom:0;text-align:center;color:#272635;font-size:15px;line-height:20px; padding:6px 12px; background-color:#fff; box-shadow: rgba(0, 0, 0, 0.05) 0px -2px 0px 0px inset; font-size: 13px;}
+.lifeList .gridBox li.active a{background-color:#121212; color:#fff;}
+.lifeList .gridBox li.disabled a{color:#999; background-color:#fff; border-color:#ddd; cursor:not-allowed;}
+.lifeList .gridBox .dataTables_length label{margin-bottom:10px;}
+.lifeList .gridBox .dataTables_length label select{height:30px;}
+.lifeList #goDatasetBtn{float:right;font-size:14px;cursor:pointer;}
+.lifeList #goDatasetBtn:hover{color:#f9a459;}
+
+/* 인포윈도우 스타일 */
+.infoWin{width: 280px;height: 150px;padding: 12px;background-color: #fff;border-radius:10px;overflow-y: scroll;}
+.infoWin table{position: relative;border-collapse: separate;width: 100%;}
+.infoWin table tr td,table tr th{font-size: 12px;line-height: 120%;color: #333;text-align: left;padding:5px 2px;font-family:돋움}
+.infoWin table tr th{width:84px;border-bottom: 2px solid #EDEDED;font-weight: bold;letter-spacing: -1px}/* 2016-12-06 hh */
+.infoWin table tr td{border-bottom: 1px dashed #e5e5e5; letter-spacing:0}
+
+
+/* 20190124 추가 */
+.leftBlock2 ul li {width:33% !important;}

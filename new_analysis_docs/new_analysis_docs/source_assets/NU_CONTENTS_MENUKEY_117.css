@@ -1,0 +1,28 @@
+/*
+DB PK: MENUKEY=117
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-05-04 15:22:53
+수정일: 2018-08-14 12:26:36
+*/
+
+.infobox_text{position:relative; border-bottom: solid 1px #313131;}
+.infobox_text .viewTitle{padding:20px 15px; border:1px solid #bababa; border-top:2px solid #2f2f2f;}
+.infobox_text .subject{display:inline-block; display:block; padding-right:250px; word-break:break-all; color:#121212; font-size:20px; font-weight:600; line-height:23px;}
+.infobox_text .detail{display:inline-block; position:absolute; top:0; right:0; padding:15px; font-size:13px; line-height:23px;}
+.infobox_text .detail span{padding-left: 15px; letter-spacing:0; color:#999; line-height:23px;}
+.infobox_text .detail .value{display: inline-block; padding-left: 3px; color: #333; line-height: 23px;}
+.maint_content{position: relative; padding: 20px 15px; line-height: 150%;}
+.maint_write{font-family:'Noto Sans KR',sans-serif; font-size: 100%; font-weight:300; letter-spacing:0.1px; line-height:25px; color:#1c1c1c; text-align:left;}
+.text_img{margin:20px 0 20px 0;}
+img{max-width:100%;}
+.info_btpage{padding: 0 0 80px 0;}
+.pagecontrol {display:inline-block; float:left; width:156px; overflow:hidden; padding: 15px 0;}
+.pagecontrol a {display:inline-block; text-align:center; margin: 0 auto; padding: 0 10px; height: 28px; font-size: 13px; vertical-align: middle; color: #404040; line-height: 28px;}
+.page_left {display:inline-block; width:76px;}
+.page_right {display:inline-block; width:76px;}
+.info_botton {display:inline-block; float:right; width:65px; overflow:hidden; padding: 15px 0;}
+.info_botton_prev {border: solid 1px #cccccc; padding: 3px 10px;}
+.info_botton_next {border: solid 1px #cccccc; padding: 3px 10px;}
+.info_botton .right{float:right;}
+.info_botton a{display: inline-block; text-align:center; margin: 0 auto; padding: 0 10px; height: 28px; font-size: 13px; vertical-align: middle; color: #fff; line-height: 28px;}
+.info_botton_list {width:44.75px; background: #656565;}

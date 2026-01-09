@@ -1,0 +1,50 @@
+/*
+DB PK: MENUKEY=235
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2019-12-18 14:05:36
+수정일: 2025-12-29 10:19:50
+*/
+
+.main-search-button{display:none;}
+
+.cd_wrap{position: relative; width:1180px; margin: 0 auto; padding: 40px; margin-top: 80px; margin-bottom: 80px; border: 1px solid #d2dae7; background-color: #fff;  box-shadow:0 5px 0 rgba(0,0,0,.05);}
+.cd_box{position: relative; clear: both;}
+
+.cd_box > input[type=radio]{display: none}
+
+.cd_box > input[type=radio]:nth-of-type(1), .cd_box > input[type=radio]:nth-of-type(1) ~ div:nth-of-type(1),
+.cd_box > input[type=radio]:nth-of-type(2), .cd_box > input[type=radio]:nth-of-type(2) ~ div:nth-of-type(2){display:none}
+.cd_box > input[type=radio]:nth-of-type(1):checked ~ div:nth-of-type(1),
+.cd_box > input[type=radio]:nth-of-type(2):checked ~ div:nth-of-type(2){display:block}
+
+.cd_box > input[type=radio] ~ label{display: inline-block; width: calc(100% / 2 - 5px); height: 60px; line-height: 60px; text-align: center; font-size: 20px; color: #323a40; border: 1px solid #c3c7ce; cursor: pointer}
+.cd_box > input[type=radio]:nth-of-type(1):checked ~ label:nth-of-type(1),
+.cd_box > input[type=radio]:nth-of-type(2):checked ~ label:nth-of-type(2){border-color: #323a40; background-color: #323a40; color: #fff; font-weight: 600}
+
+.cd_box > div{border: 1px solid #dadee5; background-color: #fafafb; color: #323a40; padding: 30px; margin-top: 20px; line-height: 1.3em}
+.cd_box > div h2{font-size: 30px; text-align: center; padding: 30px 0}
+.cd_box > div h3{font-weight: 600}
+.cd_box > div p{padding-bottom: 20px}
+.cd_box > div ul{padding-bottom: 20px}
+.cd_box > div > ul > li{padding: 5px 0 5px 15px; position: relative}
+.cd_box > div > ul > li::before{content: ''; display: block; width: 5px; height: 5px; position: absolute; top: 11px; left: 5px; background-color: #323a40}
+.cd_box > div > ul > li > ul{padding-top: 10px;}
+.cd_box > div > ul > li > ul > li{padding: 5px 0 5px 15px; position: relative}
+
+
+/* 미디어 쿼리 */
+@media screen and (max-width:1300px) {
+	.cd_wrap{position: relative; width:calc(100% - 60px); margin: 0 auto; padding: 20px; margin-top:60px; margin-bottom:60px;}
+	.cd_box > div{padding: 15px;}
+	.cd_box > div h2{font-size: 25px; text-align: center; padding: 15px 0; line-height: 1.3em}
+}
+
+@media screen and (max-width:1000px) {
+	body {height:100%; overflow:hidden;}
+	.cd_wrap {margin-top:0; margin-bottom:0; border:none; height:calc(100% - 100px); overflow-y:scroll; overflow-x:hidden;}
+	.cd_box {padding-bottom:50px;}
+}
+
+@media screen and (max-width:450px) {
+	.cd_wrap {height:calc(100% - 80px);}
+}

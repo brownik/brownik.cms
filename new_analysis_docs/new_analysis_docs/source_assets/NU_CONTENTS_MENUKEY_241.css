@@ -1,0 +1,97 @@
+/*
+DB PK: MENUKEY=241
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2025-05-20 15:34:42
+수정일: 2026-01-05 10:23:48
+*/
+
+.content_wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 모달 */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    width: 1024px;
+    height: auto;
+    background: #000;
+    border-radius: 10px;
+    aspect-ratio: 16 / 9;
+}
+
+#video-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.video {
+    cursor: pointer;
+    position: relative;
+}
+
+.thumb {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.thumb img {
+    width: 100%;
+    display: block;
+}
+
+.duration {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.title {
+    font-size: 14px;
+    margin: 6px 0 2px;
+}
+
+.date {
+    font-size: 12px;
+    color: #777;
+}
+
+.video-preview {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 480px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    #video-list {
+        grid-template-columns: repeat(2, 1fr);
+    }   
+}

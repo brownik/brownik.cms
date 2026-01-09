@@ -1,0 +1,37 @@
+/*
+DB PK: MENUKEY=112
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-04-10 19:39:03
+수정일: 2018-08-14 16:25:58
+*/
+
+/* 카테고리 */
+.tab_statis{clear:both;position:relative;padding:15px 5px 30px 5px;text-align:center;}
+.tab_statis > span{display: inline-block;width: 12.5%;height: 90px;vertical-align: top;float: left;}
+.tab_statis > span a{display:table;width: 100%;height: 100%;text-align:center;color:#252525;font-size:15px;font-weight:300;line-height:18px;background:url(:subdirectory:/resources/images/sub/data/bg_tab2.gif) center 0 no-repeat;}
+.tab_statis > span a > span{display:table-cell;vertical-align:middle;}
+.tab_statis > span.on a, .tab_statis > span a:hover{color:#121212;font-size:15px;font-weight:600;background:url(:subdirectory:/resources/images/sub/data/bg_tab2.gif) center -90px no-repeat;padding-bottom: 10px;}
+
+
+/* 검색 */
+.search_statis{clear:both;position:relative;margin-bottom:20px;}
+.search_statis fieldset{position:relative;width:100%;height:50px;}
+.search_statis fieldset select{width:20%;padding-left:2%;border:0;color:#121212;background-color:#dde0e8;height:40px;}
+.search_statis fieldset input[type=text]{width:62%;padding-left:3%;border:0;color:#5c6f6d;font-size:15px;background-color:#eef0f5;height:40px;}
+.search_statis .submit{overflow:hidden;position:absolute;top:0;right:0;width:15%;border:0;cursor:pointer;color:#fff;background-color:#3a3f55;height:42px;}
+
+/* 목록 */
+.statis_list{clear:both;width:100%;border-top:2px solid #2f2f2f;table-layout:fixed;border-collapse:collapse;font-size:13px;background-color:#fff;}
+.statis_list tr th, .statis_list tr td{padding:10px;font-family:'Noto Sans KR',sans-serif;}
+.statis_list tr th{border:1px solid #bababa;color:#222;}
+.statis_list tr td{overflow:hidden;border-bottom:1px solid #e5e5e5;text-align:center;white-space:nowrap;text-overflow:ellipsis;word-break:break-all;color:#666;}
+.statis_list tr td a{color:#121212;font-weight:600;}
+.statis_list tr td a:hover{text-decoration:underline;color:#222;}
+.statis_list tr td a span{display:inline-block;height:25px;margin-left:10px;padding:0 8px;border-radius:3px;color:#fff;line-height:25px;}
+.statis_list tr td a.file{display:inline-block;height:25px;margin-left:1px;padding:0 15px;border-radius:3px;color:#fff;line-height:25px;background-color:#747882;}
+.statis_list tr td a.file:first-child{margin-left:0;}
+.statis_list tr td a.file_xlsx{background-color:#e1ac51;}
+.statis_list tr td a.file_csv{background-color:#d35d72;}
+.statis_list tr td a.file_json{background-color:#6a7eba;}
+.statis_list tr td a.file_xml{background-color:#8766b4;}
+

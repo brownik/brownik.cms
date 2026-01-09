@@ -1,0 +1,318 @@
+/*
+DB PK: MENUKEY=223
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2019-10-17 15:50:22
+수정일: 2026-01-05 10:23:55
+*/
+
+/* none */
+.none{display: none !important;}
+/* none */
+
+.mb_paging img{vertical-align: middle}
+
+table p {font-weight: 300; color: #323a40; height: 33px; display: flex; align-items: center; justify-content: center;}
+
+/* paging */
+.mb_paging {position:relative; width:100%; text-align:center; padding:35px 0 20px 0; display:flex; align-items:center; justify-content:center; top:20px;}
+.list-form-all-list .mb_paging {position:absolute; bottom:108px; width:94%;}
+.mb_paging p {position:relative; float:left;}
+.mb_paging p a {display:inline-block; width:50px; height:31px; border:1px solid #c6ccde;  background-color:#fff; font-size:17px; font-weight:400; line-height:29px; color:#1f263c; text-align:center; margin-left:-1px;}
+.mb_paging p a.on {background-color:#e94746; color:#fff;}
+.mb_paging p a:hover {background-color:#e94746; color:#fff;}
+.mb_paging .paging-first a,
+.mb_paging .paging-last a {width:65px;}
+.mb_paging .paging-Present a {width:29px;}
+.mb_paging .paging-prev a,
+.mb_paging .paging-next a {width:50px;}
+.mb_paging .mb_present {background-color:#8b8e99; color:#fff; }
+.mb_paging .mb_numPN {display:inline-block; }
+.mb_paging .mb_numPN a {font-size:10px; }
+
+.lifeList {margin-top:25px;}
+.lifeList .gridInsert {position:absolute; width:100px; height:30px; display:flex; align-items:center; right:410px; top:15px !important;}
+.lifeList .gridInsert button{display: flex;justify-content: center;align-items: center;width: auto;height: 32px;padding: 0 24px;border: none;
+    border-radius: 0px;background-color: #1f263c;color: #fff;font-size: 15px;font-weight: 400;cursor: pointer;transition: 0.3s;}
+.lifeList .gridSearch {position:absolute; width:400px; height:30px; display:flex; align-items:center; right:0; top:15px !important;}
+.lifeList .gridBox {position:relative;}
+.lifeList h3 {margin-bottom:5px !important;}
+.lifeList input.gridSelectText {width: calc(100% - 30px); padding: 0 15px; height: 100%; margin: 0 auto; border-radius: 50px; border: 1px solid #bfcdd8; position: absolute; top: 0; right: 0; z-index: 2;}
+.lifeList button.gridSelectBtn {display: block; background: url(:subdirectory:/resources/images/townE/common/ic-searchopen2.png) 50% 50% no-repeat; width: 17px; height: 17px; position: absolute; right: 15px; z-index: 3; cursor: pointer; border: none; overflow:hidden; text-indent:18px;}
+
+.lifeList .gridBox #gridBox {position:relative; width:100%;}
+.lifeList .gridBox #gridBox > div {position:relative; width:100%;}
+.lifeList .gridBox #gridBox > div table {position:relative; width:100%; top:25px;}
+table tr th {text-align:center !important; background-color:#e3e3f1;}
+table tr td {text-align:center; background: #f7f9ff;}
+table tr td input {width:calc(100% - 5px); ;height: 35px;}
+table tr td > a {font-size: 14px; font-weight: 600;}
+table tr td > a:first-child {color: #325db3; margin-right:5px;}
+table tr td > a:last-child {color: #cf475d;}
+
+/* 수정/등록 창 영역 */
+.townmap-input {position:absolute; z-index:999999; width:100%; height:862px; background-color:rgba(0, 0, 0, 0.5); margin-top:92px; align-items:center; }
+.townmap-input .townmap-input-box {position:relative; width:450px; height:600px; background-color:#fff; box-shadow:0px 0px 5px 5px rgba(0,0,0,0.2); margin:0 auto;}
+.townmap-input .townmap-input-box .townmap-input-header {position:relative; width:calc(100% - 36px); height:7%; padding:0 18px; border-bottom:1px solid #dde1ea;}
+.townmap-input .townmap-input-box .townmap-input-header::before {display:flex; align-items:center; font-size:18px; font-weight:500; color:#000034; position:absolute; width:calc(100% - 18px); height:100%; text-align:left; left:18px; top:0;}
+.townmap-input .townmap-input-box .townmap-input-header.edit::before {content:'등록';}
+.townmap-input .townmap-input-box .townmap-input-header.revise::before {content:'수정';}
+.townmap-input .townmap-input-box form.townmap-input-content {position:relative; width:100%; height:86%;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset {position:relative; width:calc(100% - 36px); height:calc(100% - 50px); padding:25px 18px; overflow-y:scroll; overflow-x:hidden;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item {position:relative; width:100%; margin-bottom:30px;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item p {width:100%; margin-bottom:7px; font-size:16px; font-weight:500; color:#a5a5c7;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item label.townmap-input-file {position:relative; display:block; width:100%; height:34px; background:#fff; border:1px solid #8f97ae;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item label.townmap-input-file .townmap-input-file-output {position:relative; width:calc(100% - 24px); height:calc(100% - 18px); padding:9px 12px;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item label.townmap-input-file .townmap-input-file-output .file-output-text {font-size:16px; font-weight:300; color:#000034;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item label.townmap-input-file .townmap-input-file-output .file-output-text::after {position:absolute; content:''; display:block; top:9px; right:12px; background:url(:subdirectory:/resources/images/townE/common/input-file-icon1.png) 100% 100% no-repeat; background-size:contain; width:22px; height:15px;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item label.townmap-input-file .townmap-file {position:absolute; width:100%; height:100%; top:0; left:0; opacity:0;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item select {font-size:16px; font-weight:300; color:#000034; border:1px solid #8f97ae; background-color:#fff; width:100%; height:34px; padding:0 12px; background:url(:subdirectory:/resources/images/townE/common/select_arrow1.png) 97% 50% no-repeat; background-size:8px 8px;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item .townmap-place-name {font-size:16px; font-weight:300; color:#000034; border:1px solid #8f97ae; background-color:#fff; width:calc(100% - 24px); height:34px; padding:0 12px;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item .townmap-place-name::placeholder {color:#8f97ae;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item .townmap-place-name::-moz-placeholder {color:#8f97ae;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item .townmap-place-name::-webkit-input-placeholder {color:#8f97ae;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item label.townmap-input-address {position:relative; display:block; width:100%; height:34px; background:#fff; border:1px solid #8f97ae;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item label.townmap-input-address .townmap-input-address-output {position:relative; width:calc(100% - 24px); height:calc(100% - 18px); padding:9px 12px;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item label.townmap-input-address .townmap-input-address-output .address-output-text {font-size:16px; font-weight:300; color:#000034;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item label.townmap-input-address .townmap-input-address-output .address-output-text::after {position:absolute; content:''; display:block; top:9px; right:12px; background:url(:subdirectory:/resources/images/townE/common/input-address-icon1.png) 100% 100% no-repeat; background-size:contain; width:22px; height:15px;}
+.townmap-input .townmap-input-box form.townmap-input-content fieldset .townmap-input-content-item label.townmap-input-address .townmap-address {position:absolute; width:100%; height:100%; top:0; left:0; opacity:0;}
+.townmap-input .townmap-input-box .townmap-input-button-wrap {position:relative; width:100%; height:7%;}
+.townmap-input .townmap-input-box .townmap-input-button-wrap button {position:relative; float:left; display:flex; align-items:center; justify-content:center; width:calc(100%/2); height:100%; border:none; font-size:14px; font-weight:600;}
+.townmap-input .townmap-input-box .townmap-input-button-wrap button.townmap-input-button-complete {background-color:#ec6616; color:#fff;}
+.townmap-input .townmap-input-box .townmap-input-button-wrap button.townmap-input-button-cancel {background-color:#e3e3f1; color:#5b5b6b;}
+
+/* 팝업창 관리 버튼 영역 */
+.info-button-ctrl {position:absolute; z-index:999; width:100%; height:calc(100% - 80px); margin-top:80px; background:rgba(0, 0, 0, 0.5);}
+.vote-ctrl {position:absolute; z-index:999; left:0; background:rgba(0, 0, 0, 0.5);}
+.ctrl-menu-box-wrap {position:relative; width:100%; height:100%;}
+ul.ctrl-menu-box {position:fixed; z-index:1001; width:90%; margin:0 auto; bottom:3%; left:5%;}
+.info-button-ctrl ul.ctrl-menu-box li.ctrl-main-menu {width:100%; height:auto; background:#fff; border-radius:10px;}
+.vote-ctrl ul.ctrl-menu-box li.ctrl-main-menu {width:100%; height:120px; background:#fff; border-radius:10px;}
+ul.ctrl-menu-box li.ctrl-main-menu p.info-revise {width:100%; height:40px; font-size:15px; font-weight:300; color:#0060aa; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #e8e8e8;}
+ul.ctrl-menu-box li.ctrl-main-menu p.info-delete {width:100%; height:40px; font-size:15px; font-weight:300; color:#f02e2e; display:flex; align-items:center; justify-content:center;}
+ul.ctrl-menu-box li.ctrl-main-menu p.ctrl-vote {width:100%; height:40px; font-size:15px; font-weight:300; display:flex; align-items:center; justify-content:center; border-bottom:1px solid #e8e8e8;}
+ul.ctrl-menu-box li.ctrl-main-menu p.ctrl-vote:last-child {border-bottom:none;}
+ul.ctrl-menu-box li.ctrl-main-menu p.ctrl-vote.start {color:#0060aa;}
+ul.ctrl-menu-box li.ctrl-main-menu p.ctrl-vote.stop {color:#f02e2e;}
+ul.ctrl-menu-box li.ctrl-main-menu p.ctrl-vote.end {color:#f02e2e;}
+ul.ctrl-menu-box li.ctrl-cancel-menu {margin-top:10px; width:100%; height:40px; background:#fff; border-radius:10px; font-size:15px; font-weight:500; color:#0060aa; display:flex; align-items:center; justify-content:center;}
+
+/* 테마 */
+.tab{clear:both;position:relative;height:72px;margin-bottom:20px;box-shadow:0px 3px 5px 4px rgba(20, 23, 33, 0.2); display:flex; align-items:center;}
+.tab .tab-title {font-size:20px; font-weight:500; color:#1f263c; display:flex; position:relative; float:left; width:auto; padding:0 40px; height:100%; align-items:center;} 
+.tab span{display:inline-block; height:36px; padding:12px 0;}
+.tab span a{display:flex;position:relative;width:auto; height:36px; font-size:17px; font-weight:500; color:#1f263c;line-height:1em;cursor:pointer;justify-content:center; align-items:center; background:#fff; border-radius:6px; padding:0 25px;}
+.tab span a.on {background-color:#ec6616; color:#fff;}
+.tab span a:hover {background-color:#ec6616; color:#fff;}
+.tab span button{display:block;position:relative;height:48px;padding:0 20px;border:0;outline:none;cursor:pointer;font-family:'Noto Sans KR';color:#272635;font-size:15px;font-weight:300;line-height:48px;background-color:#fff;}
+.tab span.on button{display:block;position:relative;height:49px;color:#fff;font-weight:600;background-color:#feb10a;}
+.tab span.on span{display:block;position:absolute;bottom:-6px;left:50%;z-index:33;width:11px;height:6px;margin-left:-5px;border:none;background:url(:subdirectory:/resources/images/sub/change/br_tab_arr.gif) 0 0 no-repeat;}
+
+.tab p.thema{display:block;position:absolute;top:0;right:0;}
+.tab p.thema span{display:block;float:left;border-right:none;}
+.tab p.thema span.thema_child button{background-color:#ec2252;}
+.tab p.thema span.thema_old button{background-color:#2e65da;}
+.tab p.thema span.thema_transfer button{background-color:#ee7b00;}
+.tab p.thema span button{display:block;position:relative;color:#fff;}
+.tab p.thema span.on button span{display:block;position:absolute;left:50%;bottom:-6px;z-index:33;width:11px;height:6px;margin-left:-5px;border:none;background:url(:subdirectory:/resources/images/sub/change/br_tab_arr.gif) 0 0 no-repeat}
+.tab p.thema span.thema_child.on button{background-color:#ec2252;}
+.tab p.thema span.thema_child.on button span{background:url(:subdirectory:/resources/images/sub/change/br_tab_arr1.gif) 0 0 no-repeat;}
+.tab p.thema span.thema_old.on button{background-color:#2e65da;}
+.tab p.thema span.thema_old.on button span{background:url(:subdirectory:/resources/images/sub/change/br_tab_arr2.gif) 0 0 no-repeat;}
+.tab p.thema span.thema_transfer.on button{background-color:#ee7b00;}
+.tab p.thema span.thema_transfer.on button span{background:url(:subdirectory:/resources/images/sub/change/br_tab_arr3.gif) 0 0 no-repeat;}
+
+/* 20200103 서희원 추가 css */
+.tab .tab-gudong {display:none; position:relative; width:100%;}
+.tab .tab-gudong li {position:relative; float:left; width:calc(50% - 30px); display:block; padding:0 15px;}
+.tab .tab-gudong li:first-child {width:calc(50% - 31px); border-right:1px solid #ffa670;}
+.tab .tab-gudong li select {width:100%; border:0; color:#fff; background: url(/townE/resources/images/townE/common/select_arrow3.png) no-repeat 100% 50%; background-size:16px 8px; font-size:16px;}
+
+/*왼쪽메뉴바 열고닫기*/
+.leftall-wrap .left-ctrl_button .left-ctrl_btn{cursor:pointer;}
+.leftall-wrap .left-ctrl_button{transition:0.5s;}
+/* sub > 생활지도 */
+.lifeMap_wrap{clear:both;position:relative;height:860px;border:1px solid #dbdbdb; overflow:hidden;}
+.lifeMap_wrap .left{position:absolute;top:0;left:0;z-index:1020;width:374px;border-right:1px solid #cfcdcd; background-color: white; height:860px; transition: 0.5s;}
+.leftBlock1{clear:both;position:relative;height:279px;}
+.leftBlock1 h3{font-size:18px; font-weight:500; color:#000034; background-color:#e3e3f1; width:calc(100% - 32px); height:40px; display:flex; align-items:center; padding:0 16px;}
+.leftBlock1 label.townmap-all-choice-button-wrap {top:10px;}
+.townmap-all-choice-button {display:none;}
+label.townmap-all-choice-button-wrap {display:block; width:90px; height:auto; position:absolute; right:16px;}
+label.townmap-all-choice-button-wrap .townmap-all-choice-img {display:flex; font-size:16px; font-weight:500; color:#000034;}
+label.townmap-all-choice-button-wrap .townmap-all-choice-img::after {display:block; content:''; width:18px; height:18px; background:url(:subdirectory:/resources/images/townE/common/townmap-checkbox-notab.png) 100% 100% no-repeat; background-size:contain; margin-left:10px;}
+input[type="checkbox"]:checked + label .townmap-all-choice-img::after {background:url(:subdirectory:/resources/images/townE/common/townmap-checkbox-tab.png) 100% 100% no-repeat; background-size:contain;}
+
+.leftBlock1 .miniMap{overflow:hidden;clear:both;position: relative;width:100%;height:240px;}
+.leftBlock1 .miniMap .img_normal{display: flex;opacity:.8;position:absolute;top:0;left:0;z-index:2;width: 100%;height: 100%;align-items: center;justify-content: center;}
+.leftBlock1 .miniMap .img_over{display: flex; position:absolute;top:0;left:0;z-index:3;user-select:none;pointer-events:none;width: 100%;height: 100%;align-items: center;justify-content: center;}
+.leftBlock1 .miniMap area{outline:0;}
+.leftBlock1 .miniMap .img_over > img {display:none;position:relative !important;}
+
+.radioGroup {height:auto; clear:both;}
+.radioGroup label.townmap-all-choice-button-wrap {top:290px;}
+.radioGroup h3 {font-size:18px; font-weight:500; color:#000034; background-color:#e3e3f1; width:calc(100% - 32px); height:40px; display:flex; align-items:center; padding:0 16px;}
+.radioGroup ul{clear:both; height:245px; background-color:#fff; overflow-y:scroll;}
+.radioGroup ul li{position:relative; float:left; width:calc(100%/4 - 30.8px); height:34px; padding:0 15px; border-right:1px solid #dde1ea; border-bottom:1px solid #dde1ea;}
+.radioGroup ul li:nth-child(4n) {border-right:none;}
+.radioGroup ul li a{display:flex; align-items:center; width:100%;height:100%;font-size:16px; font-weight:500; color:#000034;line-height:24px;cursor:pointer;}
+.radioGroup ul li.on {background-color:#ec6616;}
+.radioGroup ul li.on a {color:#fff;font-weight:600;}
+.radioGroup ul li:hover {background-color:#ec6616;}
+.radioGroup ul li:hover a {color:#fff;}
+
+.leftBlock3{position:relative; float:left; clear:both; width:50%; height:296px;}
+.leftBlock3 h3 {font-size:18px; font-weight:500; color:#000034; background-color:#e3e3f1; width:calc(100% - 32px); height:40px; display:flex; align-items:center; padding:0 16px;}
+.leftBlock3 ul {display:block;overflow-x:hidden;overflow-y:scroll;clear:both;width:100%;height:calc(100% - 40px); border-right:1px solid #dde1ea;}
+.leftBlock3 ul li {float:left;width:calc(100% - 30px); height:34px; font-size:18px; font-weight:500; color:#000034; cursor:pointer; display:flex; align-items:center; padding:0 15px; border-bottom:1px solid #dde1ea;}
+.leftBlock3 ul li:last-child {border-bottom:none;}
+.leftBlock3 ul li.on {color:#fff; background:#ec6616;}
+.leftBlock3 ul li:hover {color:#fff; background:#ec6616;}
+.leftBlock3 ul li input,
+.leftBlock3 ul li label{cursor:pointer; width:100%;}
+
+.leftBlock4{position:relative; float:left; width:50%; height:296px;}
+.leftBlock4 h3 {font-size:18px; font-weight:500; color:#000034; background-color:#e3e3f1; width:calc(100% - 32px); height:40px; display:flex; align-items:center; padding:0 16px;}
+.leftBlock4 ul{display:block;overflow-x:hidden;overflow-y:scroll;clear:both;width:100%;height:calc(100% - 40px);}
+.leftBlock4 ul li{float:left; width:calc(100% - 30px); padding:10px 15px; height:auto; line-height:1.4em; border-bottom:1px solid #dde1ea; display:flex; align-items:center;}
+.leftBlock4 ul li:last-child {border-bottom:none;}
+.leftBlock4 ul li label {display:flex; align-items:center;}
+.leftBlock4 ul li input {display:inline-block;}
+.leftBlock4 ul li p {display:inline-block; font-size:16px; font-weight:500; color:#000034;}
+.icon_box{display:inline-block;width:18px;height:24px}
+.icon_box img{width:100%;}
+.rightBlock {overflow:hidden;clear:both;height:860px;width:100%;}
+.rightBlock #map {background:url(:subdirectory:/resources/images/townE/common/map-ex.jpg) 100% 100% no-repeat; background-size:cover; width:100% !important;}
+
+/* 수정된 기능0-지도 select 기능 시작 */
+.app-left-ctrl {position:fixed; top:0; left:0; z-index:5; width:100%; height:48px; margin-top:159px; background-color:#f1f1f1; box-shadow:0px 5px 5px 2px rgba(0,0,0,0.1);}
+.app-left-ctrl ul {position:relative; width:90%; height:100%; padding:0 5%;}
+.app-left-ctrl ul li {position:relative; float:left; width:calc(100%/3 - 2px); height:100%; border-right:1px solid #cfcfcf;}
+.app-left-ctrl ul li:last-child {border-right:none;}
+.app-left-ctrl ul li select {width:100%; height:100%; border:none; background:url(:subdirectory:/resources/images/townE/common/select_arrow2.png) no-repeat 90% 50%; background-size:16px 8px; padding:0 10px; min-width:100%; max-width:160px; padding-right:45px;}
+/* 수정된 기능0-지도 select 기능 종료 */
+
+/* 수정된 기능3-지도 말풍선 시작 */
+.map-speech-bubble {position:absolute; z-index:3; height: 50px;}
+.map-speech-bubble p {font-size:18px; font-weight:500; color:#000034; padding:15px 22px; background-color:#fff; border-radius:50px; box-shadow:0px 0px 5px 2px rgba(0,0,0,0.3);}
+.map-speech-bubble span {display:block; z-index:4; background:url(:subdirectory:/resources/images/townE/common/speech-bubble.png) 100% 100% no-repeat; background-size:contain; width:29px; height:32px; position:relative; top:-3px; margin:0 auto;}
+/* 수정된 기능3-지도 말풍선 종료 */
+
+/* 수정된 기능4-지도 인포창 시작 */
+.rightBlock .map-info-window {position:absolute; z-index:999; width:421px; height:420px; background:#fff; border-radius:10px; top:30px; right:30px; box-shadow:0px 0px 10px 5px rgba(0,0,0,0.2);}
+.rightBlock .map-info-window .info-window-header {position:relative; width:calc(100% - 36px); height:16px; padding:12px 18px; border-bottom:1px solid #dde1ea;}
+.rightBlock .map-info-window .info-window-header p.info-place-name {position:relative; float:left; font-size:18px; font-weight:500; color:#000034; width:80%; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.rightBlock .map-info-window .info-window-header .info-button-wrap {position:absolute; top:12px; right:18px; height:18px;}
+.rightBlock .map-info-window .info-window-header .info-button-wrap button {border:none; background:none; line-height:1em; font-size:14px; font-weight:600; cursor:pointer; height:100%;}
+.rightBlock .map-info-window .info-window-header .info-button-wrap button.info-modify {color:#325db3;}
+.rightBlock .map-info-window .info-window-header .info-button-wrap button.info-delete {color:#cf475d;}
+.rightBlock .map-info-window .info-window-content {position:relative; width:calc(100% - 40px); height:300px; padding:20px; overflow-y:scroll; overflow-x:hidden;}
+.rightBlock .map-info-window .info-window-content .info-window-content-img {width:calc(100% - 2px); height:300px; border:1px solid #dde1ea; margin-bottom:20px; background:url(:subdirectory:/resources/images/townE/common/townmap-img-default.jpg) center center no-repeat; background-size:cover;}
+.rightBlock .map-info-window .info-window-content .info-window-content-img img {width:100%; height:100%;}
+.rightBlock .map-info-window .info-window-content .info-window-content-text {width:1700%; height:auto; border-left:3px solid #ec6616; margin-bottom:20px;}
+.rightBlock .map-info-window .info-window-content .info-window-content-text p {margin-left:7px; font-size:14px; font-weight:400; color:#000034; margin-bottom:7px; line-height:1em;}
+.rightBlock .map-info-window .info-window-content .info-window-content-text span {margin-left:7px; font-size:16px; font-weight:500; color:#000034; line-height:1.2em; display:block;}
+.rightBlock .map-info-window .info-window-footer {position:absolute; bottom:0; border-radius:0 0 10px 10px; background-color:#e3e3f1; text-align:center; width:100%; height:40px; display:flex; align-items:center; justify-content:center;}
+.rightBlock .map-info-window .info-window-footer button {font-size:14px; font-weight:600; color:#5b5b6b; border:none; background:none; cursor:pointer; width:100%; height:100%;}
+/* 수정된 기능4-지도 인포창 종료 */
+
+.lifeList{clear:both;position:relative;}
+.lifeList h3{clear:both;position:relative;height:60px;margin-bottom:20px;padding-left:40px;border-bottom:1px solid #cfcdcd;text-align:left;color:#272635;font-size:20px;font-weight:600;line-height:60px;background:url(:subdirectory:/resources/images/sub/basic/br_h.gif) 0 50% no-repeat;}
+.lifeList .gridBox{clear:both;width:100%;height:100%;margin-bottom:20px;margin-top:-20px;}
+.lifeList .gridBox ul{display:block;clear:both;height:32px;border-top:1px solid #ddd;border-left:1px solid #ddd;border-bottom:1px solid #ddd;border-radius: 2px;}
+.lifeList .gridBox li{display:inline-block;float:left;}
+.lifeList .gridBox li a{display:inline-block;padding:15px 0;border-right:1px solid #dadada;border-bottom:0;text-align:center;color:#272635;font-size:15px;line-height:20px; padding:6px 12px; background-color:#fff; box-shadow: rgba(0, 0, 0, 0.05) 0px -2px 0px 0px inset; font-size: 13px;}
+.lifeList .gridBox li.active a{background-color:#121212; color:#fff;}
+.lifeList .gridBox li.disabled a{color:#999; background-color:#fff; border-color:#ddd; cursor:not-allowed;}
+.lifeList .gridBox .dataTables_length label{margin-bottom:10px;}
+.lifeList .gridBox .dataTables_length label select{height:30px;}
+.lifeList #goDatasetBtn{float:right;font-size:14px;cursor:pointer;}
+.lifeList #goDatasetBtn:hover{color:#f9a459;}
+
+/* 인포윈도우 스타일 */
+.infoWin{width: 280px;height: 150px;padding: 12px;background-color: #fff;border-radius:10px;overflow-y: scroll;}
+.infoWin table{position: relative;border-collapse: separate;width: 100%;}
+.infoWin table tr td,table tr th{font-size: 12px;line-height: 120%;color: #333;text-align: left;padding:5px 2px;font-family:돋움}
+.infoWin table tr th{width:84px;border-bottom: 2px solid #EDEDED;font-weight: bold;letter-spacing: -1px}/* 2016-12-06 hh */
+.infoWin table tr td{border-bottom: 1px dashed #e5e5e5; letter-spacing:0}
+
+.lifeList .gridBox {overflow:hidden;}
+.sorting_disabled{font-size: 14px;font-family: 'Noto Sans KR',sans-serif; color:#776F67;}
+#gridBox {font-size:14px; font-weight:lighter;}
+
+/* 열기 , 닫기 버튼 */
+.leftall-wrap{position: absolute; top:0; left:0; z-index:99999;}
+.leftall-wrap .left-ctrl_button {position:relative; float:right; z-index:2; top:320px; left:362px; display:none;}
+.leftall-wrap .left-ctrl_button .left-ctrl_btn {background:url(:subdirectory:/resources/images/fusion/button-bg.png) 100% 100% no-repeat; width:35px; height:140px;  border:0;}
+.leftall-wrap .left-ctrl_button #open img {transform:rotate(180deg);}
+
+/* btn 210907*/
+.control-btn {position: absolute; top: 250px; right: 5px; z-index: 99; width: 40px; height: 40px; border-radius: 5px; color:#fff;  border: 1px solid rgba(0,0,0,.2); box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); text-indent: -9999px; cursor: pointer;}
+.print-btn {background: url(/townE/resources/images/townmap/print.png) 50% 50% no-repeat; background-size: 40px 40px; background-color: #fff;}
+
+/***************************************** 마을지도 css 종료 ******************************************/
+
+/* 미디어 쿼리 */
+@media screen and (max-width:1200px) {
+	.rightBlock .map-info-window {width:350px;}
+	.lifeMap_wrap .left {width:350px;}
+}
+
+@media screen and (max-width:1000px) {
+	.townmap-input {height:calc(100% - 101px); margin-top:100px; background-color:rgba(0,0,0,0.0);}
+	.townmap-input-box {width:100% !important; height:calc(100% - 1px) !important; box-shadow:none !important; border-top:1px solid #dde1ea;}
+	.tab {box-shadow:none; background:#ec6616; padding:0 3%; margin-bottom:0; margin-top:0px; position:fixed; z-index:5; width:94%; height:48px; overflow-x:scroll; overflow-y:hidden; white-space:nowrap;}
+	/* 20200103 서희원 추가 css */
+	.tab .tab-gudong {display:block;}
+
+	.tab span {display:none;}
+	.tab .tab-title {display:none;}
+	.tab span a {background-color:#ec6616;}
+	.tab span a.on {background-color:#fff; color:#1f263c;}
+	.tab span a:hover {color:#1f263c;}
+	.app-left-ctrl {display:block !important; margin-top:148px;}
+	.lifeMap_wrap {height:calc(60% - 197px); top:96px;}
+	.lifeMap_wrap .left {display:none;}
+	.map-info-window {width:75% !important; height:60% !important; left:50%; transform:translateX(-50%);}
+	.rightBlock .map-info-window::after {display:block; content:''; position:relative; background:url(:subdirectory:/resources/images/townE/common/speech-bubble2.png) no-repeat; width:38px; height:41px; margin:0 auto; margin-top:30px;}
+	.info-window-content {height:calc(100% - 121px) !important;}
+	.map-speech-bubble {display:none;}
+
+	/*2022.10.04*/
+    .lifeList{display: none;}
+    .lifeList h3{display:none;}
+    .lifeList .gridSearch{position: relative !important; right: inherit !important; top: inherit !important; width: 100% !important; margin: 15px 0 !important;}
+    .lifeList .gridBox{height: auto; margin: 0;}
+    .title p,
+    table p,
+    table tr td,
+    table tr td > a{font-size: 12px !important;}
+    .mb_paging{padding: 0; padding-top: 10px; top: inherit;}
+    .lifeList .gridBox #gridBox > div table{top: inherit;}
+    .lifeList .gridInsert{display: block; align-items: inherit; right: inherit; }
+    .lifeList .gridInsert button{positoin:absolute; top:0; left:0; display:block; justify-content: inherit; align-items: inherit;}
+    .lifeList input.gridSelectText{width: calc(100% - 120px);}
+	.lifeList .gridBox #gridBox > div{height: 200px; overflow-y: scroll; overflow-x: hidden;}
+	.lifeMap_wrap{height:calc(100% - 197px);}
+
+}
+
+@media screen and (max-width:450px) {
+	.townmap-input {height:calc(100% - 81px); margin-top:80px; background-color:rgba(0,0,0,0.0);}
+
+	.app-left-ctrl {margin-top:128px;}
+	.lifeMap_wrap {height:calc(100% - 177px); top:96px;}
+
+	.rightBlock .map-info-window .info-window-header .info-button-wrap .info-modify,
+	.rightBlock .map-info-window .info-window-header .info-button-wrap
+.info-delete {display:none;}
+	.rightBlock .map-info-window .info-window-header .info-button-wrap .info-management {display:block !important; content:'관리'; font-size:14px; font-weight:600; color:#cf475d;}
+	.rightBlock .map-info-window .info-window-content .info-window-content-img {height:200px !important;}
+
+	.lifeList input.gridSelectText{width: calc(100% - 30px);}
+}
+
+/* paging */
+.mb_paging a{color:#000}
+/* 백세영 추가 */
+.infomationApply{position: absolute;height: 1300px; width: 100%; z-index: 999999; background-color: rgba(0,0,0,.5);}
+.infomationApplyBox{position: relative;margin:0 auto;height:300px;width:300px; background-color:#ffff;}

@@ -1,0 +1,37 @@
+/*
+DB PK: MENUKEY=20
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2016-09-26 14:05:24
+수정일: 2019-10-17 09:11:04
+*/
+
+ul.changeWrap{display:block;clear:both;width:100%;height:auto;text-align:left;}
+ul.changeWrap li{display:inline-block;zoom:1;width:265px;height:310px;padding:15px;vertical-align:top;*display:inline;}
+ul.changeWrap li.cnt4{padding:15px 15px}
+ul.changeWrap li.cnt3{padding:15px 45px}
+ul.changeWrap li div{overflow:hidden;position:relative;width:275px;height:310px;margin:0 auto;border:1px solid #bfc1d4;border-radius:10px;text-align:center;font-weight:600;background:url(:subdirectory:/resources/images/sub/bg_arr.gif) 50% 250px no-repeat;background-color:#fff;}
+ul.changeWrap li div h4{height:35px;margin-bottom:160px;padding-top:35px;text-align:center;color:#121212;font-size:15px;font-weight:700;}
+ul.changeWrap li div p{float:left;width:50%;font-size:16px;}
+ul.changeWrap li div p span{clear:both;height:23px;padding:0 8px;border-radius:3px;font-size:12px;line-height:23px;}
+ul.changeWrap li div p.before{color:#595656;}
+ul.changeWrap li div p.before strong{font-weight:300;}
+ul.changeWrap li div p.after{color:#121212;}
+ul.changeWrap li div p.before span{border:1px solid #b4bbcd;color:#333;font-weight:300;}
+ul.changeWrap li div p.after span{border:1px solid #de700f;color:#de700f;}
+ul.changeWrap li div p strong{display:block;width:100%;padding-top:10px;}
+ul.changeWrap li div p strong em{font-size:13px;}
+ul.changeWrap .ic{position:absolute;top:75px;left:50%;margin-left:-110px;}
+.s_font{font-size:14px;line-height:18px;}
+
+.sub_1_1_ul{padding-top:8px;}
+.sub_1_1_ul li{display:inline-block;overflow:hidden;float:left;position:relative;box-sizing:border-box;width:49%;margin-bottom:30px;margin-left:2%;}
+.sub_1_1_ul li:nth-child(2n-1){margin-left:0;}
+.sub_1_1_ul .box_left{display:inline-block;position:absolute;top:0;left:0;width:30%;height:250px;}
+.sub_1_1_ul .icon_box{display:inline-block;position:absolute;top:76px;left:65px;}
+.sub_1_1_ul h4{overflow:hidden;padding:0 20px;text-align:left;white-space:nowrap;text-overflow:ellipsis;-ms-text-overflow:ellipsis;word-break:break-all;-ms-word-break:break-all;color:#333;font-size:20px;font-weight:600;line-height:50px;}
+.sub_1_1_ul .left_data{display:table;position:absolute;top:195px;width:90%;height:70px;padding:5%;text-align:center;}
+.sub_1_1_ul .year{display:inline-block;position:absolute;top:-25px;left:50%;width:60px;margin-left:-31px;padding:5px 0;border:1px solid #1177c2;border-radius:4px;color:#1177c2;font-size:13px;}
+.sub_1_1_ul .box_left .value{display:block;display:table-cell;vertical-align:middle;word-break:break-all;-ms-word-break:break-all;font-size:18px;font-weight:600;line-height:140%;}
+.sub_1_1_ul small{display:block;padding-top:4px;font-size:12px;line-height:16px;}
+.sub_1_1_ul .box_right{display:block;overflow:hidden;box-sizing:border-box;height:250px;padding-left:30%;border:1px solid #ddd;border-radius:6px;text-align:right;}
+.bullet1 {padding-left: 28px !important;background: url(:subdirectory:/resources/images/main/graph/bullet1.gif) no-repeat 0 center;}

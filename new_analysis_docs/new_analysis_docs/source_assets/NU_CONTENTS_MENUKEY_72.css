@@ -1,0 +1,73 @@
+/*
+DB PK: MENUKEY=72
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2017-06-12 20:50:29
+수정일: 2018-02-22 11:03:52
+*/
+
+
+/* sub > 사진으로 보는 김해 */
+.timeWrap{clear:both;width:100%;height:auto;}
+.timeWrap ul{text-align:center;}
+.timeWrap ul li .timeBtn{margin:0 0 12px 12px;}
+.timeWrap .ulDepth1 > li:first-child .timeBtn{margin-left:0;}
+.timeWrap .ulDepth1 > li.cnt4{width:300px;}
+.timeWrap .ulDepth1 > li.cnt3{width:400px;}
+.timeWrap .ulDepth1 > li.cnt4:nth-child(5n) .timeBtn{margin-left:0;}
+.timeWrap .ulDepth1 > li.cnt3:nth-child(4n) .timeBtn{margin-left:0;}
+.timeBtn a{display:block;overflow:hidden;position:relative;height:130px;background-color:#333;}
+.timeBtn a .info{display:block;position:relative;z-index:33;z-index:10;width:100%;height:130px;text-align:center;color:#fff;background:url(/resources/images/sub/change/pic_time_bg.jpg);background-color:#333;}
+.timeWrap .ulDepth1 li:first-child + li .timeBtn .info{background-position:-291px 0;}
+.timeWrap .ulDepth1 li:first-child + li + li .timeBtn .info{background-position:-582px 0;}
+.timeWrap .ulDepth1 li:first-child + li + li + li .timeBtn .info{background-position:-873px 0;}
+.timeWrap ul li:first-child .timeBtn{margin-left:0;}
+.timeBtn .info:before{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;content:'';user-select:none;}
+.timeBtn a:hover .info:before, .liDepth1.on .info:before, .liDepth1.on a:hover .info:before{background:url(/resources/images/sub/change/bg_over_ry.png);}
+.liDepth1{float:left;}
+.liDepth1.on{height:auto;}
+.timeBtn a .info .cell{display:block;width:100%;height:130px;}
+.timeBtn a .info .cell em{display:table;width:100%;height:130px;}
+/*.timeBtn a .info .cell .year{display:inline-block;padding:8px 15px;border:1px solid #fff;border-radius:20px;font-size:15px;font-weight:300;}*/
+.timeBtn a .info .cell .subtit{display:table-cell;z-index:2;width:100%;vertical-align:middle;word-break:break-all;font-size:25px;font-weight:700;line-height:30px;}
+
+.timeContent{position:relative;}
+
+.timeSlider{position:absolute;top:0;left:84px;z-index:100;width:1020px;padding-top:40px;}
+
+.timeGallery{display:none;clear:both;width:1140px;margin:10px 0 80px 0;padding:115px 30px 25px 30px;background-color:#23365b;}
+/*.timeGallery .pic_block ul li{display:none;clear:both;position:relative;width:100%;}
+.timeGallery .pic_block ul li.on{display:block;}
+.timeGallery .pic_block ul li .titleBox{position:absolute;top:10px;left:700px;text-align:left;}
+.timeGallery .pic_block ul li .titleBox p{width:100%;padding-bottom:15px;color:#fff;}
+.timeGallery .pic_block ul li .titleBox p.year{padding-bottom:8px;font-size:18px;font-weight:300;}
+.timeGallery .pic_block ul li .titleBox p.subtit{font-size:25px;font-weight:600;}
+.timeGallery .pic_block ul li .titleBox p.subCont{color:#bdc5d5;font-size:15px;font-weight:300;}
+*/
+.ulDepth1 li:first-child .timeGallery{display:block;}
+
+
+
+.timeGallery .slide_major ul li .txtBox{display:inline-block;position:absolute;top:0;right:50px;width:300px;height:420px;padding-top:30px;text-align:left;}
+.timeGallery .slide_major ul li .txtBox p{width:100%;word-break:break-all;color:#fff;}
+.timeGallery .slide_major ul li .txtBox p.year{padding-bottom:8px;font-size:18px;font-weight:300;}
+.timeGallery .slide_major ul li .txtBox p.subtit{padding-bottom:30px;font-size:25px;font-weight:600;line-height:120%;}
+.timeGallery .slide_major ul li .txtBox p.dsc{overflow-y:auto;max-height:180px;word-break:break-all;-ms-word-break:break-all;color:#bfc6d4;font-size:14px;font-weight:300;line-height:20px;}
+.timeGallery .slide_major ul li .txtBox p.download{margin-top: 30px;}
+.timeGallery .slide_major ul li .txtBox p.subCont{color:#bdc5d5;font-size:15px;font-weight:300;}
+
+.timeGallery .slide_major ul li .downBox{display:inline-block;position:absolute;top:0;right:50px;width:300px;height:90px;padding-top:30px;text-align:left;}
+.timeGallery .nodata{position:relative;top:95px;left:350px;}
+.timeGallery .slide_major.mayor .picBox{display: table;width: 700px;height: 450px;}
+.timeGallery .slide_major.mayor .tbl_cell{display: table-cell;vertical-align: middle;}
+.timeGallery .slide_major.mayor .tbl_cell img{display: inline-block;vertical-align: middle !important;width: auto;height: auto;}
+
+.pic_control{position:absolute;bottom:30px;left:700px;width:400px;height:185px;}
+.pic_control ul{width:100%;}
+.pic_control ul li{display:inline-block;float:left;margin:1px;padding:4px;}
+.pic_control ul li:hover, .pic_control ul li.on, .pic_control ul li.on:hover{background-color:#f28d03;}
+.pic_control ul li a{display:block;overflow:hidden;position:relative;width:120px;height:80px;border:1px solid #23365b;}
+.pic_control ul li a img{position:relative;width:100%;}
+.btnClose{display:block;position:absolute;top:20px;right:20px;width:30px;height:30px;}
+.br_arr{display:block;position:relative;top:-21px;width:38px;height:21px;background:url(/resources/images/sub/change/br_time_arr.gif) 0 0 no-repeat;}
+
+.timeSlider .ui-slider-label {width:52px;}

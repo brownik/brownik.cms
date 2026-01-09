@@ -1,0 +1,21 @@
+/*
+DB PK: MENUKEY=75
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2017-06-19 14:19:35
+수정일: 2019-04-10 10:30:43
+*/
+
+.lifeWrap{clear:both;position:relative;height:880px;padding:40px;background-color:#fff;}
+.lifeBlock{clear:both;position:relative;}
+.lifeBlock h3{float:left;width:100%;padding-bottom:15px;color:#252525;font-size:25px;font-weight:600;}
+.lifeBlock h3:before{content:url('/imap/image/file/682');position:absolute;top:-2px;left:-30px;}
+.lifeBlock ul{margin-bottom:60px;position:relative;z-index:99;}
+
+.lifeBlock ul.village_icon{margin-bottom:60px !important;text-align:center;width:95%;margin:0 auto;}
+ul.village_icon li{display:inline-block;width:10%;padding:0 39px;}
+ul.village_icon li span{font-size:16px;color:#333333;font-weight:600;}
+span.village_line{background:url(/imap/image/file/681) 0 0 no-repeat;content:"";display:block;width:1093px;height:14px;position:absolute;top:91px;left:141px;z-index:1;}
+
+.lifeBlock ul.list{padding-bottom:60px;border-bottom:1px solid #e4e4e4;}
+.lifeBlock ul.list li{display:block;clear:both;height:30px;padding-left:15px;color:#252525;font-size:15px;font-weight:300;line-height:30px;background:url(:subdirectory:/resources/images/sub/life/br_dot.gif) 0 50% no-repeat;}
+.village_2{border-bottom:none !important;}

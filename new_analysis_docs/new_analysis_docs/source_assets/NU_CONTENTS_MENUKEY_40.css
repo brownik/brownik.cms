@@ -1,0 +1,10 @@
+/*
+DB PK: MENUKEY=40
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2016-09-26 14:06:36
+수정일: 2019-04-10 10:30:42
+*/
+
+
+/* sub > FILE DATA */
+.filedata_box{position:relative;padding:0 50px;}

@@ -1,0 +1,130 @@
+<!--
+DB PK: MENUKEY=240
+용도: NU_CONTENTS 테이블의 HTML 컨텐츠
+생성일: 2024-09-04 15:43:32
+수정일: 2024-09-04 16:04:03
+-->
+
+	<div class="container">
+        <div id="searchBar" class="searchBar">
+			<div class="searchBar-search">
+				<input type="text" class="searchTitle" value="" placeholder="검색어를 입력해주세요" onkeydown="pressEnter();">
+				<span class="search-button changePage"></span>
+			</div>
+          <!-- 등록하기 버튼
+			<div class="button-wrap web">
+					<button class="build-community comapDayInsert">
+						등록하기
+						<img src="/townE/resources/images/townE/common/write-icon.png">
+					</button>
+			</div>
+			-->
+		</div>
+        <!--전체글 목록 시작-->
+        <div class="list-contents">
+               <div class="info-second">
+                <div class="info-second-content">
+                      <video></video>
+                </div>
+                <button onclick="closeVideo()"></button>
+            	</div>
+                <div class="list-form-all-list">
+					
+                    <div class="list-form-menu">
+						<!--
+                        <ul>
+                            <li>
+                                <input id="group-list-view-recent" class="group-list-view changePage" type="checkbox" name="orderType" value="reg_date" checked="">
+                                <label for="group-list-view-recent" class="group-list-view-worth">최신순</label>
+                            </li>
+                            <li>
+                                <input id="group-list-view-town" class="group-list-view changePage" type="checkbox" name="orderType" value="cnt">
+                                <label for="group-list-view-town" class="group-list-view-worth">마을명순</label>
+                            </li>
+                        </ul>
+						-->
+                    </div>
+					
+                    <ul class="townrecord-main-list">
+                        <li>
+                            <a href="###" onclick="showVideo('video_2023_01.mp4')">
+                                <div class="record-main-box">
+                                    <div class="record-main-image">
+                                        <span class="mp4_time_box">
+                                            04:16
+                                        </span>
+                                        <img src="${_url}/resources/video/video_2023_01.jpg" alt="">
+                                    </div>
+                                    <div class="record-main-text">
+                                        <h5>금호1동 2023 마을총회 스케치 영상</h5>
+                                        <p>
+                                            2023.12.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###" onclick="showVideo('video_2023_02.mp4')">
+                                <div class="record-main-box">    
+                                    <div class="record-main-image">
+                                        <div class="record-main-image-box">
+                                            <span class="mp4_time_box">
+                                                03:03
+                                            </span>
+                                            <img src="${_url}/resources/video/video_2023_02.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="record-main-text">
+                                        <h5>용봉동 2023 마을총회 스케치 영상</h5>
+                                        <p >
+                                            2023.12.
+                                        </p>
+                                    </div>
+                            </div>    
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###" onclick="showVideo('video_2023_03.mp4')">
+                                <div class="record-main-box">
+                                    <div class="record-main-image">
+                                        <div class="record-main-image-box">
+                                            <span class="mp4_time_box">
+                                                 03:52
+                                            </span>
+                                           <img src="${_url}/resources/video/video_2023_03.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="record-main-text">
+                                        <h5>첨단2동 2023 마을총회 스케치 영상</h5>
+                                        <p>
+                                            2023.12.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="###" onclick="showVideo('video_2023_04.mp4')">
+                                <div class="record-main-box">
+                                    <div class="record-main-image">
+                                        <div class="record-main-image-box">
+                                            <span class="mp4_time_box">
+                                                 04:41
+                                            </span>
+                                            <img src="${_url}/resources/video/video_2023_04.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="record-main-text">
+                                        <h5>학운동 2023 마을총회 스케치 영상</h5>
+                                        <p>
+                                            2023.12.
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </div>

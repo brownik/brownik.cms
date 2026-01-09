@@ -1,0 +1,118 @@
+/*
+DB PK: MENUKEY=159
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-11-02 18:29:13
+수정일: 2019-01-23 15:22:32
+*/
+
+
+
+
+/*ebook-main*/
+.ebook_search{width:90%; margin:0 auto; overflow:hidden;}
+.ebookSelect{width:88%; float:left; padding-right:2%;}
+#select>.ebookselect1{width:36%; height:32px; font-size:12px; border:1px solid #c2c2c2; border-radius:7px;float:left;}
+#select>.ebookselect2{width:44%; height:32px; font-size:12px; border:1px solid #c2c2c2; border-radius:7px;}
+#select>.ebook_txt{width:60%; height:29px; margin-left:5px; border:1px solid #c2c2c2; border-radius:7px;}
+.ebookSelect em{width:9%; text-align:center; font-style:normal; font-size:11px; line-height:35px; display:inline-block;}
+
+.ebookSearch{width:10%; float:left; padding-top:15px;}
+.ebookSearch>a{display:block; height:67px; background-color:#6d6d6d; border-radius:5px; border:1px solid #666; font-size:13px; color:#fff; text-align:center; line-height:67px;}
+
+/*배경*/
+.bg_wrap{position:absolute; width:100%; min-height:880px; background:url(:subdirectory:/resources/images/ebook/mobile/main/bookbg_repeat.jpg) repeat-x; overflow:hidden;}
+.bg_wrap .bg_left{width:15px; height:880px; background:url(:subdirectory:/resources/images/ebook/mobile/bookbg_left.jpg)no-repeat; float:left;}
+.bg_wrap .bg_right{width:15px; height:880px; background:url(:subdirectory:/resources/images/ebook/mobile/bookbg_right.jpg)no-repeat; float:right;}
+
+/*리스트*/
+.bookWrap{position:relative; width:90%; min-height:610px; margin:0 auto; padding-top:15px;}
+.mbook_list{top:50px;  width:100%; z-index:999;}
+.mbook_list p.mbookList_tit{padding-left: 12px; font-size:14px; color:#767676; font-weight:bold; line-height:34px; background-color:#f5f5f5; border-top:2px solid #6d6d6d; border-bottom:1px solid #c7c7c7;}
+.mbook_list p.mbookList_tit small{color:#e31d1d;}
+.mbook_list .mbook_wrap{width:100%; height:556px;}
+.mbook_list .mbook_wrap ul {overflow: hidden; background:url(:subdirectory:/resources/images/ebook/mobile/main/book_bg.jpg) repeat-x;}
+.mbook_list ul li{width:50%; float:left; text-align:center; margin-top:10px;}
+.mbook_list ul li .cover_layout{max-width:140px; max-height:140px; position:relative; margin:0 auto;}
+.mbook_list ul li em{position:absolute;}
+.mbook_list ul li div.cover{position:relative;}
+.mbook_list ul li div.cover>div{padding-top:11px;}
+.mbook_list ul li div.cover>div a{height:101px; vertical-align:bottom; display:table-cell; width:140px;}
+.mbook_list ul li div.cover>div a img{max-width:132px; max-height:132px; vertical-align:bottom;}
+.mbook_list ul li div.cover>div a img.cover_img{max-width:101px; max-height:101px; border: 1px solid #e9e9e9;}
+
+.cover_info2{margin:8px 0;}
+.cover_info2 .ebook_tit{position:relative; text-align:center; color:#808080; line-height:20px; font-weight:bold; cursor:pointer; width:110px; display:inline-block; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.cover_info2 .view_btn{width:130px; height:26px; margin:0 auto;}
+.cover_info2 a.ebook_view{display:block; overflow:hidden; float:left; width:130px; height:26px; background:url(:subdirectory:/resources/images/ebook/mobile/main/btn_view2.jpg) no-repeat; background-size:130px 26px;}
+.cover_info2 a.ebook_pdf{display:block; overflow:hidden; float:left; width:72px; height:26px; background:url(:subdirectory:/resources/images/ebook/mobile/main/btn_view.jpg) no-repeat; background-size:130px 26px; background-position:-58px 0;}
+ 
+.btnView_ebook{border:0; outline:0; display:block; overflow:hidden; float:left; width:130px; height:26px; background:url(:subdirectory:/resources/images/ebook/mobile/main/btn_view2.jpg) no-repeat; background-size:130px 26px;}
+.btnView_pdf{border:0; outline:0; display:block; overflow:hidden; float:left; width:72px; height:26px; background:url(:subdirectory:/resources/images/ebook/mobile/main/btn_view.jpg) no-repeat; background-size:130px 26px; background-position:-58px 0;}
+
+
+.ico{display:inline-block; overflow:hidden; background:url(:subdirectory:/resources/images/ebook/mobile/main/icon.png) no-repeat; line-height:999px; vertical-align:top;}
+.ico_new{position:absolute; z-index:20; width:34px; height:34px; left:10%; background-position:-34px 0; background-size:cover;}
+.ico_hot{position:absolute; z-index:20; width:34px; height:34px; left:50%; margin-left:-45%; background-size:cover;}
+
+/*view*/
+.viewWrap{width:90%; margin:0 auto;}
+.view_m_title{position:relative; width:100%; padding:5px 0; background:url(:subdirectory:/resources/images/ebook/mobile/sub/book_bg_img.png)90% no-repeat; background-size:95px 76px; background-color:#f6f6f6; border-top:2px solid #8c9ba1; border-bottom:1px solid #8c9ba1; overflow:hidden;}
+.view_m_title p{padding-left:5px;}
+.view_m_title ul{margin:5px;}
+.view_m_title ul li{font-weight:bold;}
+.view_m_title ul li.view_date{float:right; font-size:11px; line-height:20px; font-weight:normal;}
+
+.viewcover{text-align:center;}
+.viewcover>img{border:1px solid #ddd;}
+
+.btn_ebook{position:relative; width:270px; height:35px; margin:0 auto;}
+.viewcover .btn_ebookview{float:left; cursor:pointer; width:133px; height:35px; background-color:#50b4cd; display:block; line-height:35px; color:#fff; border:1px solid #45aec8;}
+.viewcover .btn_ebookview img{padding-right:5px;}
+.viewcover .btn_ebookpdf{float:left; cursor:pointer; width:133px; height:35px; background-color:#9a9a9a; display:block; line-height:35px; color:#fff; border:1px solid #989898;}
+.viewcover .btn_ebookpdf img{padding-right:10px;}
+
+.viewcover .btn_ebookview2{float:left; cursor:pointer; width:266px; height:35px; background-color:#50b4cd; display:block; line-height:35px; color:#fff; border:1px solid #45aec8;}
+.viewcover .btn_ebookview2 img{padding-right:5px;}
+.viewcover .btn_ebookpdf2{float:left; cursor:pointer; width:266px; height:35px; background-color:#9a9a9a; display:block; line-height:35px; color:#fff; border:1px solid #989898;}
+.viewcover .btn_ebookpdf2 img{padding-right:10px;}
+
+.detailview_btn{width:100%; cursor:pointer; color:#555; line-height:36px; background:-webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e4e6eb)); background-color:#fff; font-size:13px; font-weight:bold; text-align:center; border:1px solid #D6D6D6; border-radius:3px;}
+.detailview_btn img{margin-left:10px; width:17px; height:12px}
+
+.ebookInfo_table{margin:0 auto; border-bottom:1px solid #e2e2e2;}
+.ebookInfo_table tr{border-bottom:1px solid #e2e2e2;}
+.ebookInfo_table tr:first-child{border-top:1px solid #e2e2e2;}
+.ebookInfo_table tr th{font-weight:bold; color:#494949; line-height:22px; padding:5px 0 5px 5px; letter-spacing:-1px; background-color:#f8f8f8;}
+.ebookInfo_table tr td{line-height:22px; padding-left:5px;}
+.ebookInfo_table tr td img{margin:0 5px;}
+
+/*리스트버튼*/
+.btn_list{margin:30px 0; text-align:center;}
+.btn_list .btn_list_a{font-size:14px; font-weight:500; padding:10px 40px; background-color:#ffb249; color:#fff; border-radius:5px;}
+.btn_disabled { cursor: default; opacity: .65; box-shadow: none;}
+
+
+
+@media only screen and (max-width: 750px) and (min-width: 100px){
+	.ebook_search{width:90%;}
+	.ebookSelect{width:78%;}
+	#select>.ebookselect1{width:36%;}
+	#select>.ebookselect2{width:44%;}
+	#select>.ebook_txt{width:60%;}
+	.ebookSelect em{width:9%;}
+	
+	.ebookSearch{width:20%; float:left; padding-top:15px;}
+	.ebookSearch>a{display:block; height:67px; background-color:#6d6d6d; border-radius:5px; border:1px solid #666; font-size:13px; color:#fff; text-align:center; line-height:67px;}
+}
+
+
+
+
+/* paging */
+.mb_paging { width:100%; text-align: center; padding:20px 0; }
+.mb_paging span a { margin:2px; display: inline-block; width:30px; height:30px; border:1px solid #d9d4d4; font-size:14px;  background-color: #fff; font-weight:600; line-height: 29px; border-radius: 5px; color:#666; text-align:center;}
+.mb_paging .mb_present { background-color:#8b8e99; color:#fff; }
+.mb_paging .mb_numPN { display: inline-block; }
+.mb_paging .mb_numPN a { font-size:10px; }
+.mb_paging p { text-align: center; }
+/* paging 종료 */

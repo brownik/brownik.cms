@@ -1,0 +1,137 @@
+<!--
+DB PK: MENUKEY=118
+용도: NU_CONTENTS 테이블의 HTML 컨텐츠
+생성일: 2018-05-16 10:30:52
+수정일: 2018-08-14 12:26:36
+-->
+
+	<div id="chart"></div>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="https://d3js.org/queue.v1.min.js"></script>
+    <script src="https://rawgit.com/susielu/d3-legend/master/d3-legend.min.js"></script>
+    <script src="https://rawgit.com/tsayen/dom-to-image/master/dist/dom-to-image.min.js"></script>
+    <script>
+      
+      
+    var width = 960,
+        height = 500;
+
+     <!-- 맵 초기 위치 설정 -->
+	var transform = d3.zoomIdentity.translate(0, 0).scale(1);
+
+     <!-- 줌 변수 생성 -->
+    var zoom = d3.zoom().scaleExtent([1,10]).on("zoom", handleZoom);
+	
+    <!-- 양자화 면적별 인구수 추산 -->
+    var quantize = d3.scaleQuantize()
+        .domain([0, 23])
+        .range(d3.range(9).map(function(i) {console.log("quantize i : "  + i); return "p" + i; }));
+    
+    <!-- 범례 -->
+    var legend = d3.legendColor()
+      	.labelDelimiter("-")
+      	.shapeWidth(30)
+      	.labelFormat(d3.format(".2f"))
+      	.useClass(true)
+      	.title("인구")
+      	.titleWidth(100)
+      	.scale(quantize);
+      
+    var svg = d3.select("#chart")
+        .append("svg")
+        .attr("width",width)
+        .attr("height",height)
+        .attr("style","overflow:hidden;")
+      	.call(zoom)
+		.call(zoom.transform,transform)
+      	.call(legend);
+	
+    $(".legendTitle tspan").attr("dy","3em")
+    	.attr("x","20px");
+    $(".legendCells").attr("transform","translate(15 30)");
+    
+    var zoomable = svg
+	  .append("g")
+      .attr("class", "zoomable")
+      .attr("transform", transform);  
+      
+    var projection = d3.geoMercator()
+        .center([126.7193633, 34.9888104])
+        .scale(80000)
+        .translate([width/2, height/2]);
+
+    var path = d3.geoPath()
+        .projection(projection);
+    console.log("path : " + path );
+    
+	
+    var popByName = d3.map();
+    
+      
+   <!-- queue() 순차실행 -->
+    queue()				
+        .defer(d3.json, ":subdirectory:/resources/json/naju_map.json")
+        .defer(d3.csv, ":subdirectory:/resources/json/najuDongData.csv", function(d) {
+      		console.log("data ?? : " + JSON.stringify(d));
+            popByName.set(d.name, +d.population);
+      		console.log(popByName.set(d.name, +d.population));
+      		console.log(d.name);
+      		console.log(d.population);
+      		console.log(d.code);
+      		console.log(popByName.get(d.name));
+        })
+        .await(ready);
+
+    function ready(error, data) {
+      var features = topojson.feature(data, data.objects["naju_map"]).features;
+
+      features.forEach(function(d) {
+        d.properties.population = popByName.get(d.properties.name);
+      	console.log("인구 : " + d.properties.population);
+        d.properties.density = (d.properties.population / path.area(d));
+      	console.log("path.area : " + path.area(d));
+      	console.log("density : " + d.properties.density);
+        d.properties.quantized = quantize(d.properties.density);
+      	console.log("quantized : " + d.properties.quantized);
+      });	
+
+      String.prototype.endsWith = function(str){
+      if(this.length < str.length){return false;}
+      return this.lastIndexOf(str) + str.length == this.length;
+      }
+                                         
+      <!-- 지역별 인구 표시 -->
+      
+      zoomable.selectAll("path")
+          .data(features)
+        .enter().append("path")
+          .attr("class", function(d) { return "municipality " + d.properties.quantized; })
+          .attr("d", path)
+          .attr("id", function(d) { return d.properties.name; })
+        .append("title")
+        .text(function(d) {return "인구 : " + numberWithCommas(d.properties.population)  + " 명"});
+      	
+      <!-- 지역명 표시 -->
+      zoomable.selectAll("text")
+          .data(features.filter(function(d) {console.log("로그" + d.properties.name); return d.properties.name}))
+        .enter().append("text")
+          .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+          .attr("dy", ".30em")
+      	  .attr("dx", "-1.5em")
+          .attr("class", "region-label")
+          .text(function(d) { return d.properties.name; });
+    }
+	
+    <!-- 스크립트 천 단위 콤마 함수 -->
+    function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+
+	function handleZoom(){
+      if (zoomable) {
+        zoomable.attr("transform", d3.event.transform);
+      }
+    };
+    </script>

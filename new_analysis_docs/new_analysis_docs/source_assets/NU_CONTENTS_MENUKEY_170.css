@@ -1,0 +1,13 @@
+/*
+DB PK: MENUKEY=170
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-11-05 16:40:31
+수정일: 2018-11-06 12:18:55
+*/
+
+.sub01_1_box h3{background:url(':subdirectory:/resources/images/mobile/sub/sub01_tit.gif') 0 6px no-repeat; padding-left:15px; line-height:20px;}
+.sub01_1_box ul li{background:url(':subdirectory:/resources/images/mobile/sub/txt_img02.gif') 3px 8px no-repeat; font-size:13px; overflow:hidden; padding-left:12px; font-weight:bold; line-height:24px;}
+.sub01_1_box ul li.sub01_1_txt{background:url(':subdirectory:/resources/images/mobile/sub/sub01_txt2.gif')0 9px no-repeat; padding-left:10px; color:#666; font-weight:normal;}
+
+.text-title{color:#2478a4;}
+.border-bt{border-bottom:1px solid #ddd; margin:40px 0;}

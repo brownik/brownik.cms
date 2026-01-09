@@ -1,0 +1,47 @@
+<!--
+DB PK: MENUKEY=47
+용도: NU_CONTENTS 테이블의 HTML 컨텐츠
+생성일: 2016-10-04 22:09:14
+수정일: 2017-10-31 09:37:29
+-->
+
+<c:set var="currentMainMenu" value="${el:getCurrentMainMenu()}" />
+
+<div id="container">
+  
+  
+	<pagetitle:hometitle />
+  
+	<div class="content sub_block">
+		<div class="siteMap">
+			<ul>
+			<c:forEach items="${currentMainMenu}" var="item" varStatus="loop">
+				<c:choose>
+					<c:when test="${item.depth==1}">
+						<c:if test="${!loop.first}">
+								</ul>
+							</div>
+						</li>
+						</c:if>
+						<li>
+							<div>
+								<h2><a href="/home/content.do?menu=${item.key}">${item.title}</a></h2>
+								<ul>
+					</c:when>
+					<c:when test="${item.depth==2}">
+									<li><a href="/home/content.do?menu=${item.key}">${item.title}</a></li>
+					</c:when>
+				</c:choose>			
+				<c:if test="${loop.last}">
+								</ul>
+							</div>
+						</li>
+				</c:if>
+			</c:forEach>
+			</ul>
+
+		</div>
+    </div>	
+
+</div>
+

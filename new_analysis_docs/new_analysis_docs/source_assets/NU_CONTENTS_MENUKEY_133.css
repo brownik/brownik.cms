@@ -1,0 +1,20 @@
+/*
+DB PK: MENUKEY=133
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-08-16 13:10:11
+수정일: 2019-04-10 10:30:43
+*/
+
+.gwangsan_download{position:absolute;width:360px;position:absolute;top:152px;left:60px;}
+img.gwangsan_down1{margin-bottom:8px;}
+.cnttx01{text-align:center;padding:30px 0;}
+.font_tit10{color:#666;font-size:36px;font-weight:600;padding:10px;}
+.font_color01{color:#c60;}
+.font_tit11{color:#999;font-size:16px;font-weight:600;padding:10px;}
+.font_tit12{color:#c3c3c3;font-size:15px;font-weight:600;padding:0 0 30px 0;}
+.font_tit09{color:#39c;font-size:24px;font-weight:600;padding:10px;}
+.font_tit111{color:#999;font-size:16px;font-weight:600;padding:5px;}
+.video_area{margin:0 auto;width:70%;}
+.videoBox{clear:both;width:100%;padding:40px}
+.video_play{float:left;width:450px;padding:40px;margin-top:-50px;}
+.video_list{float:left;width:350px;}

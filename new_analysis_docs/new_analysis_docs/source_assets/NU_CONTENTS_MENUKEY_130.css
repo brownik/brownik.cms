@@ -1,0 +1,26 @@
+/*
+DB PK: MENUKEY=130
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-08-01 16:53:18
+수정일: 2018-08-14 12:26:36
+*/
+
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+/* CSS Document */
+
+*{margin:0; padding:0; letter-spacing:-1px;}
+a {text-decoration:none; color:inherit;}
+li {list-style:none;}
+.text_hide{text-indent:-9999px;font-size:0;line-height:0;overflow:hidden;}
+.main_title{font-size:22px;color:#000;font-weight:600;text-align:center;padding:70px 0 50px;}
+
+.fullpage_slide{background-color:#eaeaea;height:900px;}
+.fullpage_title{width:532px;padding:134px 0;margin:0 auto;}
+
+.main_boxshadow{height:100%;box-shadow:0 6px rgba(0,0,0,.3);}
+
+
+/*  메인슬라이드 컨텐츠1   */
+
+.fullpage_content1{height:500px;width:1352px;margin:0 auto;background-color:#000;}
+.naju_graph {width:450px; height:490px; background-color:white; border-top:10px solid #377eb4;}

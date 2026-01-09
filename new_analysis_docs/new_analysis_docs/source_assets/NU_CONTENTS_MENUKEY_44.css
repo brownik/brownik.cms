@@ -1,0 +1,16 @@
+/*
+DB PK: MENUKEY=44
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2016-09-26 14:07:01
+수정일: 2019-04-10 10:30:43
+*/
+
+.platform_guide{width:1350px; margin:0 auto; padding-top:30px;}
+.platform_guide ul::after{content:''; display:block; clear:both;}
+.platform_guide ul li {width:408px; height:150px; border:1px solid #ddd; border-radius:5px; margin-right:20px; float:left;text-align:center; padding:10px; vertical-align:middle; margin-top:20px; margin-bottom:20px;}
+.platform_guide ul li  h2{font-size:15px; color:#f17e30; line-height:30px; padding-bottom:10px;}
+.platform_guide ul li  h2:after{content:''; display:block; background:#f17e30; width:20px; height:2px; margin:0 auto;}
+.platform_guide ul li p{font-size:14px; color:#333; line-height:20px; font-weight:300; word-break:break-all; letter-spacing:-1px;}
+.ptop10{padding-top:10px;}
+.ptop20{padding-top:20px;}
+.ptop30{padding-top:30px;}

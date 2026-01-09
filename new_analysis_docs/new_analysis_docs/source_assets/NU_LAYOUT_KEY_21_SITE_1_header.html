@@ -1,0 +1,336 @@
+<!--
+DB PK: KEY=21, SITEKEY=1
+용도: NU_LAYOUT 테이블의 HEADER HTML
+제목: WEB-서브
+생성일: 2019-10-17 15:58:08
+수정일: 2026-01-05 10:21:11
+-->
+
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+<!-- 상단 메뉴 시작 -->
+<c:set var="currentMainMenu" value="${el:getCurrentMainMenu()}" />
+<!-- 현재 로그인한 회원정보 -->
+<c:set var="curretHomeMember" value="${el:getCurrentHomeMember()}" />
+	<!-- 네이버 상태확인값 생성 -->
+${el:generateStateCode()}
+<!-- 도메인 API KEY 세팅 -->
+<c:set var="getCurrentDomainApi" value="${el:getCurrentDomainApi()}" />
+<c:forEach items="${getCurrentDomainApi}" var="domainApiItem" >
+	<c:choose>
+		<c:when test="${domainApiItem.apiType eq 'google'}">
+			<c:set value="${domainApiItem.apiKey}" var="googleApiKey" />
+		</c:when>
+		<c:when test="${domainApiItem.apiType eq 'kakao'}">
+			<c:set value="${domainApiItem.apiKey}" var="kakaoApiKey" />
+			<c:set value="${domainApiItem.apiSecretKey}" var="kakaoSecretKey" />
+		</c:when>
+		<c:when test="${domainApiItem.apiType eq 'naver'}">
+			<c:set value="${domainApiItem.apiKey}" var="naverApiKey" />
+			<c:set value="${domainApiItem.apiSecretKey}" var="naverSecretKey" />
+		</c:when>
+		<c:when test="${domainApiItem.apiType eq 'naverLogin'}">
+			<c:set value="${domainApiItem.apiKey}" var="naverLoginApiKey" />
+			<c:set value="${domainApiItem.apiSecretKey}" var="naverLoginSecretKey" />
+		</c:when>
+	</c:choose>
+</c:forEach>
+<script>
+Kakao.init('${kakaoSecretKey}');
+Kakao.isInitialized(); 
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyAOWxt7I3JMyriiU3zyR8pIr6y4N_FWgrw",
+    authDomain: "gurcc-towne.firebaseapp.com",
+    databaseURL: "https://gurcc-towne.firebaseio.com",
+    projectId: "gurcc-towne",
+    storageBucket: "gurcc-towne.appspot.com",
+    messagingSenderId: "423874536750",
+    appId: "1:423874536750:web:42dbb0a1345841fffc46bf"
+};
+	
+	firebase.initializeApp(firebaseConfig);
+</script>
+
+<div class="header">
+	<div class="top">
+		<div class="top-logo"><a href="${_url}"></a></div>
+		<!-- 로그인, 마이페이지 START -->
+		<div class="option-menu">
+           	<div class="info-wrap">
+              <button class="center" type="button" onclick="window.open('http://gurcc.or.kr/')"></button>
+            </div>
+          	<div class="info-wrap">
+              <button class="blog" type="button" onclick="window.open('https://blog.naver.com/gurcc')"></button>
+            </div>
+            <div class="info-wrap">
+              <button class="info" type="button" onclick="location.href=':subdirectory:/home/content.do?menu=227'"></button>
+            </div>
+			<div class="login-wrap">
+				<c:if test="${curretHomeMember.key eq null}">
+					<button type="button" class="login" ></button>
+				</c:if>
+				<c:if test="${curretHomeMember.key > 0}">
+					<button type="button" class="logout"></button>
+				</c:if>
+			</div>
+			<div class="mypage-wrap">
+				<c:if test="${curretHomeMember.key > 0}">
+					<button type="button" class="mypage"></button>
+				</c:if>
+			</div>
+		</div>
+		<!-- 로그인, 마이페이지 END -->
+	</div>
+	<div class="main-menu">
+		<div class="main-menu-login-wrap ${curretHomeMember.key > 0 ? 'login' : ''}" style="display:none;">	
+			<ul>	
+				<c:if test="${curretHomeMember.key > 0}">	
+					<li class="main-menu-logout out"><a href="javascript:void(0);"><img alt="로그아웃" src="/townE/resources/images/townE/common/logout-icon.png"></a></li>	
+				</c:if>	
+				<c:if test="${curretHomeMember.key eq null}">	
+					<li class="main-menu-login in"><a href="javascript:void(0);"><img alt="로그인" src="/townE/resources/images/townE/common/login-icon.png"></a></li>	
+				</c:if>    	
+			</ul>	
+		</div>
+		<div class="main-menu-button-wrap">
+			<button class="main-menu-button">
+				<p>MENU</p>
+				<span class="main-menu-button-img"></span>
+			</button>
+		</div>
+		<ul class="main-menu-list">
+			<c:forEach var="item" items="${currentMainMenu}" varStatus="loop">
+				<c:if test="${item.depth eq 1}">
+					<li class="menu-townmap"><a href=":subdirectory:/home/content.do?menu=${item.key}">${item.title}</a></li>
+				</c:if>
+			</c:forEach>
+		</ul>
+	</div>
+</div>
+<!-- 상단 메뉴 종료 -->
+
+<!-- 공통 사이트맵(=햄버거 버튼 메뉴) 시작 -->
+<div class="sitemap-wrap">
+  <div class="sitemap-header">
+    <h2>메인 메뉴</h2>
+    <div class="sitemap-close-btn-wrap">
+      <button type="button" class="sitemap-close"></button>
+    </div>
+  </div>
+  <ul class="sitemap-menu-list">
+    <li class="sitemap-menu-home" style="display:none;"><a href=":subdirectory:/">
+      <div class="menu-home-icon"></div>
+      <p class="menu-title">홈</p>
+      </a></li>
+    <li><a href=":subdirectory:/home/programs/townlab/listByDefault?menu=225">
+      <div class="menu-townlab-icon"></div>
+      <p class="menu-title">마을활동</p>
+      <p class="menu-text">마을활동은 마을실천의제를 논의하고 진행과정을 기록하는 공간입니다.</p>
+      </a></li>
+    <li><a href=":subdirectory:/home/programs/community/listByDefaultC?menu=231">
+      <div class="menu-town-icon"></div>
+      <p class="menu-title">마을의제</p>
+      <p class="menu-text">마을의 문제를 발견하기 위해 주민들이 함께 의제를 이야기 합니다.</p>
+      </a></li>
+    <li><a href=":subdirectory:/home/programs/community/listByDefaultV?menu=224">
+      <div class="menu-townassemble-icon"></div>
+      <p class="menu-title">마을총회</p>
+      <p class="menu-text">주민들이 함께 마을 문제에 대해 토론하고 정보를 공유합니다.</p>
+      </a></li>
+    <li><a href=":subdirectory:/home/content.do?menu=242">
+      <div class="menu-commap-icon"></div>
+      <p class="menu-title">우리마을</p>
+      <p class="menu-text">마을별 활동을 모아볼수 있습니다.</p>
+      </a></li>
+    <li><a href=":subdirectory:/home/programs/comap/mapping/listByDefault?menu=222">
+      <div class="menu-commap-icon"></div>
+      <p class="menu-title">동네한바퀴</p>
+      <p class="menu-text">주민들의 시각에서 제공하는 정보로 함께 만들어가는 참여형 지도입니다.</p>
+      </a></li>
+<!--    
+    <li><a href=":subdirectory:/home/content.do?menu=226">
+      <div class="menu-record-icon"></div>
+      <p class="menu-title">마을기록관</p>
+      <p class="menu-text">마을의 변화와 문제해결 활동의 결과를 공유하는 공간입니다.</p>
+      </a></li>
+-->
+    <li><a href=":subdirectory:/home/content.do?menu=239">
+      <div class="menu-video-icon"></div>
+      <p class="menu-title">마을영상관</p>
+      <p class="menu-text">마을 활동 및 총회등 진행시 기록영상을 공유하는 공간입니다.</p>
+      </a></li>
+    <li><a href=":subdirectory:/home/programs/townmap/list?menu=223">
+      <div class="menu-townmap-icon"></div>
+      <p class="menu-title">마을자원지도</p>
+      <p class="menu-text">마을이 가지고 있는 자원을 확인하는 지도입니다.</p>
+      </a></li>
+  </ul>
+  <div class="sitemap-bottom ${curretHomeMember.key > 0 ? 'login' : ''}" style="display:none;">
+    <ul>
+      <c:if test="${curretHomeMember.key > 0}">
+         <li class="sitemap-mypage"><a href=":subdirectory:/home/programs/mypage/index?menu=234">마이페이지</a></li>
+	  </c:if>
+      <li class="sitemap-info"><a href=":subdirectory:/home/content.do?menu=227">안내</a></li>
+    </ul>
+  </div>
+</div>
+<!-- 공통 사이트맵(=햄버거 버튼 메뉴) 종료 -->
+
+<!-- 공통 비쥬얼 존 시작 -->
+<c:set var="currentMainMenu" value="${el:getCurrentMainMenu()}" />
+<c:set var="currentMenu" value="${el:getCurrentMenu()}" />
+<c:forEach var="item" items="${currentMainMenu}" varStatus="loop">
+	<c:if test="${item.depth eq 1 && item.key eq currentMenu.parentTopKey}">    
+		<c:set var="parentStep" value="${item.step}" />
+		<c:set var="navTitle" value="${item.title}" />
+		<c:set var="navDesc" value="${item.description}" />
+	</c:if>
+</c:forEach>
+
+<div class="visual-zone menu-${currentMenu.key}">
+  	<div class="site-back-wrap" style="display:none;">
+      <button class="site-back-button" type="button"></button>
+  	</div>
+   <div class="main-menu-login-wrap ${curretHomeMember.key > 0 ? 'login' : ''}" style="position: fixed; right: 3%; display:none;">	
+		<ul>	
+			<c:if test="${curretHomeMember.key > 0}">	
+				<li class="main-menu-logout out"><a href="javascript:void(0);"><img alt="로그아웃" src="/townE/resources/images/townE/common/logout-icon.png"></a></li>	
+			</c:if>	
+			<c:if test="${curretHomeMember.key eq null}">	
+				<li class="main-menu-login in"><a href="javascript:void(0);"><img alt="로그인" src="/townE/resources/images/townE/common/login-icon.png"></a></li>	
+			</c:if>    	
+		</ul>	
+	</div>
+  <!--	<div class="home-icon-wrap" style="display:none;">
+      	<button type="button" class="home-icon-button" onclick="goHomeClick();"></button>
+ 	</div>-->
+	<h2 onclick='$(".list-contents").scrollTop(0);$(".list-form").scrollTop(0);$(window).scrollTop(0);' style="cursor: pointer;">${currentMenu.title}</h2>
+	<p>${currentMenu.description}</p>
+  	<div class="main-menu" style="display:none;">
+		<div class="main-menu-button-wrap">
+			<button class="main-search-button" type="button"></button>
+		</div>
+		<ul class="main-menu-list">
+			<li class="menu-townmap"><a href="townmap.html">마을자원지도</a></li>
+			<li class="menu-commap"><a>동네한바퀴</a></li>
+			<li class="menu-talk"><a href="townAssemble.html">마을총회</a></li>
+			<li class="menu-townlap"><a>마을활동</a></li>
+			<li class="menu-townrecord"><a>마을기록관</a></li>
+			<li class="menu-info"><a>안내</a></li>
+		</ul>
+	</div>
+  	<button class="main-menu-button">
+      <p>MENU</p>
+      <span class="main-menu-button-img"></span>
+    </button>
+</div>
+<!-- 공통 비쥬얼 존 종료 -->
+
+
+<!-- 로그인 modal 시작  --> 
+<div id="loginModal" class="modal" style="display:none;">
+	<div class="login_wrap">
+		<div class="title">
+          <h2>로그인</h2>
+          <p>원하시는 로그인 유형을 선택 해주세요.</p>
+		</div>
+		<div class="login-type">
+			<ul>
+				<li><a href="javascript:void(0);" id="phoneLogin" >전화번호</a></li>
+				<li><a href="javascript:void(0);" id="kakaoLogin">카카오</a></li>
+	              <c:set var="URL" value="${pageContext.request.requestURL}" />
+	              <c:set var="idx" value="${fn:indexOf(URL,'townE')}"/>
+	              <c:set var="URL" value="${fn:substring(URL,0,idx)}"/>
+	              <c:url value="https://nid.naver.com/oauth2.0/authorize" var="naverUrl">
+						<c:param name="response_type" value="code" />
+						<c:param name="client_id" value="${naverLoginApiKey}" />
+						<c:param name="redirect_uri" value="${URL}/townE/home/programs/comap/login/naver" />
+						<c:param name="state" value="${sessionScope.naverState}" />
+				  </c:url>
+				<li><a href="javascript:void(0);" id="naverLogin" data-url="${naverUrl}">네이버</a></li>
+			</ul>
+		</div>
+		<div class="login-type-mobile">
+			<ul>
+				<li><a href="javascript:void(0);" id="phoneLogin2"><img src="/townE/resources/images/townE/common/04_login_phone.png"></a></li>
+				<li><a href="javascript:void(0);" id="kakaoLogin2"><img src="/townE/resources/images/townE/common/04_login_kakao.png"></a></li>
+				<li><a href="javascript:void(0);" id="naverLogin2" data-url="${naverUrl}"><img src="/townE/resources/images/townE/common/04_login_naver.png"></a></li>
+			</ul>
+		</div>
+	  	<div class="login-using-rink">
+			<a href="#" style="display:none;">회원가입방법</a>
+			<span><a href="/townE/home/content.do?menu=235">이용약관 및 개인정보처리방침</a><span>
+		</div>
+		<div style="cursor:pointer;background-color:#DDDDDD;text-align: center;padding-bottom: 10px;padding-top: 10px;" onClick="close_pop();">
+			<span class="pop_bt" style="font-size: 13pt;" >닫기</span>
+		</div>
+	</div>
+</div>
+<!-- 로그인 modal 종료   -->
+
+
+
+
+
+<script>
+var varUA = navigator.userAgent.toLowerCase(); //userAgent 값 얻기
+var fcmToken = "";
+var iosMemberKey = -1;
+var memberKey = '${curretHomeMember.key}';
+
+// fcmToken SET
+function setFcmToken(val){
+	fcmToken = val;
+}
+// memberKey GET
+function getMemberKey(val){
+	iosMemberKey = val;
+}
+// memberKey Put
+function putMemberKey(){
+	if (varUA.match('android') != null) { 
+	    //안드로이드 일때 처리
+	  	window.android.putMemberKey("${curretHomeMember.key}");
+	} else if (varUA.indexOf("iphone")>-1||varUA.indexOf("ipad")>-1||varUA.indexOf("ipod")>-1) { 
+	    //IOS 일때 처리
+		webkit.messageHandlers.ios.postMessage("putMemberKey||"+"${curretHomeMember.key}");
+	} 
+}
+
+if(memberKey > 0){
+	putMemberKey();
+}
+
+$(document).ready(function(){
+  
+	// user정보와 token 둘다 있을시에 토큰을 업데이트함(일정시간 지난 후 이유 : 핸드폰과 연동시에 바로 fcm토큰을 가져오지못하는 현상 발생)
+	setTimeout(function() {
+	  	if (varUA.match('android') != null) {
+	  		if("${curretHomeMember.key}"*1 > 0 && window.android.setFcmToken() != "" ){
+	          $.post("${_url}/home/member/updateFcmtoken", {memberKey : "${curretHomeMember.key}"*1 , fcmToken : window.android.setFcmToken()}, function(){});
+	  		}
+		} else if (varUA.indexOf("iphone")>-1||varUA.indexOf("ipad")>-1||varUA.indexOf("ipod")>-1) {
+			if(fcmToken != "" && "${curretHomeMember.key}"*1 > 0){
+				$.post("${_url}/home/member/updateFcmtoken", {memberKey : "${curretHomeMember.key}"*1 , fcmToken : fcmToken}, function(data){});	
+			}
+	  	}
+	}, 500);
+	
+	$("#testBtn").click(function(){
+		alert("${curretHomeMember.key}");
+		alert(window.android.setFcmToken());
+	});
+  
+	$("#member").click(function(){
+		if (varUA.match('android') != null) { 
+			//안드로이드 일때 처리
+			console.log(window.android.getMemberKey());
+		} else if (varUA.indexOf("iphone")>-1||varUA.indexOf("ipad")>-1||varUA.indexOf("ipod")>-1) { 
+			//IOS 일때 처리
+			alert(fcmToken);
+		} 
+	});
+    
+});
+</script>

@@ -1,0 +1,698 @@
+/*
+DB PK: MENUKEY=238
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2024-07-23 10:05:01
+수정일: 2026-01-05 10:22:22
+*/
+
+@charset "utf-8";
+/* 공통 CSS 시작 */
+*{
+    color: #191919;
+}
+.main_wrap div,
+.main_wrap h2,
+.main_wrap a,
+.main_wrap ul,
+.main_wrap li,
+.main_wrap p,
+.main_wrap h3,
+.main_wrap img,
+.main_wrap span,
+.main_wrap h4,
+.main_wrap button{
+	box-sizing: border-box;
+}
+.txt_cut1,.txt_cut2,.txt_cut3,.txt_cut4,.txt_cut5{display:-webkit-box;overflow:hidden;text-overflow:ellipsis;-webkit-box-orient:vertical;word-wrap:break-word;}
+.txt_cut1{-webkit-line-clamp:1; white-space: nowrap;/* 라인수 */ height: 1.3em; display: block;}
+.txt_cut2{-webkit-line-clamp:2;/* 라인수 */ height: 2.6em; line-height:1.3rem;}
+.txt_cut3{-webkit-line-clamp:3;/* 라인수 */ height: 3.9em;}
+.txt_cut4{-webkit-line-clamp:4;/* 라인수 */ height: 5.2em;}
+.txt_cut5{-webkit-line-clamp:5;/* 라인수 */ height: 6.5em;}
+
+/* 메인랩 시작*/
+.main_wrap{
+    width: 100%;
+    position: relative;
+}
+.content1400{
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+/* 메인랩 끝 */
+.m_main_banner{
+	display: none;
+}
+/* 메인이너 시작 */
+.main_inner{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+/* 메인이너 끝 */
+/* 메인이너 타이틀 시작*/
+.main_inner_title{
+    display: flex;
+    justify-content: space-between;
+}
+.main_inner_title h2{
+    font-size: 1.8rem;
+    font-weight: 550;
+	position: relative;
+}
+.main_inner_title h2::before{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: #191919;
+	position: absolute;
+    left: 0;
+    top: -10px;
+}
+.main_inner_title .all{
+    color: #757575;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+	transition: all 0.3s;
+}
+.main_inner_title .all::after{
+    content: '';
+    display: block;
+    width: 12px;
+    height: 11px;
+    background: url("/townE/image/file/1132");
+}
+/* 메인이너 타이틀 끝*/
+/* 메인이너 콘텐츠 시작 */
+.main_inner_content{
+    position: relative;
+    width: 100%;
+}
+/* 메인이너 콘텐츠 끝 */
+/* 메인이너랩 시작*/
+.main_inner_wrap{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+}
+/* 메인이너랩 끝*/
+
+.main_inner_wrap .main_inner1{
+    width: calc(100% / 2 - 14px);
+	display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.main_inner_wrap .main_inner2{
+    width: calc(100% / 2 - 14px);
+	display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/* 메인이너랩2 시작*/
+.main_inner_wrap2{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+/* 메인이너랩2 끝*/
+/* 메인이너 1 + 2 시작 */
+.main_inner_wrap2 .main_inner1{
+    width: calc(100% - 425px);
+}
+.main_inner_wrap2 .main_inner2{
+    width: 385px;
+}
+/* 메인이너 1 + 2 끝 */
+/* 공통 CSS 끝 */
+/* 배너 시작 */
+.main_banner{
+    position: relative;
+    width: 100%;
+}
+.main_banner img{
+    width: 100%;
+    overflow: hidden;
+}
+.m_main_banner{
+    position: relative;
+    width: 100%;
+}
+.m_main_banner img{
+    width: 100%;
+    overflow: hidden;
+}
+/* 배너 끝 */
+/* 마을의제 시작 */
+.maeej{
+    position: relative;
+    width: 100%;
+}
+.maeej ul{
+    position: relative;
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+.maeej ul li{
+    position: relative;
+    width: calc(100% / 5 - 20px);
+}
+.maeej ul li:nth-child(2n){
+    transform: translateY(25px);
+}
+.maeej .maeej_box{
+    width: 100%;
+    position: relative;
+    padding: 25px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 3px #efefef;
+	border: 1px solid #fff;
+	transition: all 0.3s;
+}
+.maeej .maeej_box::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #ff7272;
+    border-radius: 5px 5px 0 0 ;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.maeej_box .maeej_box_color{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    align-items: center;
+}
+.maeej_box_color .pink{
+    padding: 5px 10px;
+    background-color: #ff7272;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 550;
+}
+.maeej_box_color .gray{
+    color: #757575;
+}
+.maeej_box h3{
+    font-size: 1.12rem;
+    font-weight: 550;
+    margin-bottom: 20px;
+}
+/* 마을의제 끝 */
+/* 마을총회 + 마을활동 시작 */
+.maedouble{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+.maedouble ul{
+    width: 100%;
+}
+.maedouble ul li{
+    width: 100%;
+}
+.maedouble ul li div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 15px;
+	transition: all 0.3s;
+}
+.maedouble h3{
+    font-size: 1.1rem;
+    max-width: calc(100% - 190px);
+}
+.maedouble p{
+    color: #757575;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.maedouble p::after{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 12px;
+	background: url("/townE/image/file/1152") 50% 50% no-repeat;
+}
+/* 마을총회 + 마을활동 끝 */
+/* 동네한바퀴 시작 */
+.dongnhbq ul{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+.dongnhbq ul li{
+    width: calc(100% / 2 - 12.5px);
+}
+.dongnhbq .dong_box{
+    width: 100%;
+    position: relative;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px 3px #efefef;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-between;
+	border: 1px solid #fff;
+	transition: all 0.3s;
+}
+.dong_box .dong_state {
+    position: relative;
+    display: block;
+}
+.dong_box .dong_state::before {
+    content: '';
+    display: block;
+    width: 60px;
+    padding: 7px 0;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+.dong_box .dong_state.ing::before {
+    content: '진행';
+    background-color: #ff7272;
+    font-weight: 550;
+}
+.dong_box .dong_state.end::before {
+    content: '종료';
+    background-color: #757575;
+}
+.dong_box .dong_txt{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(100% - 160px);
+}
+.dong_box .dong_txt h4{
+    font-size: 1.12rem;
+    font-weight: 500;
+}
+.dong_box .dong_txt img{
+    width: 100px;
+    height: 18px;
+}
+.dong_box .dong_txt p {
+    color: #777;
+}
+.dong_box .dong_img {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dong_box .dong_img img {
+    max-width: 100%;
+}
+/* 동네한바퀴 끝 */
+/* 자료집 시작 */
+
+/* 자료집 끝 */
+.jarj{
+    position: relative;
+    width: 100%;
+}
+.jarj ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.jarj ul li{
+    width: 100%;
+    position: relative;
+}
+.jarj_box{
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+    background-color: #e6e6fd;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.watch{
+    padding: 25px 30px;
+	transition: all 0.3s;
+}
+.down{
+    padding: 20px 30px;
+	transition: all 0.3s;
+}
+.jarj_box_txt{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.jarj_box_txt p{
+    color: #757575;
+}
+.jarj_box_txt h4{
+    font-size: 1.12rem;
+    font-weight: 550;
+}
+.jarj_box_txt button{
+    position: relative;
+    border: 0;
+    background-color: #1b4079;
+    color: #fff;
+    border-radius: 15px;
+    padding: 8px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.watch_btn{
+    transition: all 0.3s;
+}
+.watch_btn::before{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    background: url("/townE/image/file/1148") 50% 50% no-repeat;
+	transition: all 0.3s;
+}
+.down_btn{
+    transition: all 0.3s;
+}
+.down_btn::before{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url("/townE/image/file/1147") 50% 50% no-repeat;
+	transition: all 0.3s;
+}
+/* 자료집 끝 */
+
+/* hover 효과 시작 */
+@media screen and (min-width: 1024px) {
+    .main_inner_title .all:hover{
+        gap: 15px;
+        transition: all 0.3s;
+    }
+    .maeej a:hover .maeej_box{
+        border: 1px solid #ff7272;
+        transition: all 0.3s;
+    }
+    .main_inner_title a:hover img{
+        transform: rotate( 180deg );
+        transition: all 0.3s linear;
+    }
+    .maedouble a:hover div{
+        background-color: #fafafa;
+		border-radius: 0 0 10px 10px;
+		transition: all 0.3s;
+    }
+    .dongnhbq a:hover .dong_box{
+        border: 1px solid #ccc;
+		transform: translateY(-5px);
+        transition: all 0.3s;
+    }
+   .watch:hover .watch_btn{
+        background-color: #fff;
+        color: #1b4079;
+        transition: all 0.5s;
+    }
+    .watch:hover .watch_btn::before{
+        background: url("/townE/image/file/1153");
+        transition: 0.5s;
+    }
+    .down:hover .down_btn{
+        background-color: #fff;
+        color: #1b4079;
+        transition: all 0.5s;
+    }
+    .down:hover .down_btn::before{
+        background: url("/townE/image/file/1154");
+        transition: 0.5s;
+    }
+}
+/* hover 효과 종료 */
+
+/* 1400 반응형 시작 */
+@media screen and (max-width: 1400px) {
+    .content1400{
+        width: calc(100% - 60px);
+        margin: 0 auto 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .maeej ul {
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .maeej ul li {
+        position: relative;
+        width: calc(100% / 4 - 15px);
+    }
+    .maeej ul li:nth-child(2n){
+        transform: translateY(0);
+    }
+    .maeej ul li:nth-of-type(5) {
+        display: none;
+    }
+}
+/* 1400 반응형 끝 */
+
+/* 1200 반응형 시작 */
+@media screen and (max-width: 1200px) {
+    .main_inner_wrap2 {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .main_inner_wrap2 .main_inner1 {
+        width: 100%;
+    }
+    .main_inner_wrap2 .main_inner2 {
+        width: 100%;
+    }
+    .jarj ul {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+    .jarj_box {
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        border-radius: 10px;
+        background-color: #e6e6fd;
+        display: flex;
+        flex-direction: row;
+        gap: 70px;
+        align-items: center;
+    }
+    .jarj_box_img{
+        position: relative;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+    }
+    .jarj_box_img img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .watch{
+        padding: 20px;
+    }
+    .down{
+        padding: 20px;
+    }
+}
+/* 1200 반응형 끝 */
+/* 1024 반응형 시작 */
+@media screen and (max-width: 1024px) {
+    .content1400 {
+        width: calc(100% - 60px);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+		padding-top: 100px;
+    }
+    .main_inner {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .maeej ul li {
+        position: relative;
+        width: calc(100% / 2 - 10px);
+    }
+    .jarj_box {
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        border-radius: 10px;
+        background-color: #e6e6fd;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
+    }
+    .main_inner_wrap .main_inner1 {
+        width: 100%;
+    }
+    .main_inner_wrap .main_inner2 {
+        width: 100%;
+    }
+    .main_inner_wrap {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .main_inner_wrap2 {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+/* 1024 반응형 끝 */
+/* 800 반응형 시작 */
+@media screen and (max-width: 800px){
+    .dongnhbq ul {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    .dongnhbq ul li {
+        width: 100%;
+    }
+}
+/* 800 반응형 끝 */
+/* 600 반응형 시작 */
+@media screen and (max-width: 600px){
+	.content1400 {
+        width: calc(100% - 60px);
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .maeej ul {
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .maeej ul li {
+        position: relative;
+        width: 100%;
+    }
+	.maedouble ul li h3{
+	max-width: 100%
+	}
+	.maedouble ul li p{
+	display: none;
+	}
+    .jarj ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    .dongnhbq ul {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .jarj ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .jarj_box {
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        border-radius: 10px;
+        background-color: #e6e6fd;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+/* 600 반응형 끝 */
+
+/* 500 반응형 시작*/
+@media screen and (max-width: 500px){
+		.m_main_banner{
+		display: block;
+	}
+		.main_banner{
+		display: none;
+	}
+}
+/* 500 반응형 끝*/
+

@@ -1,0 +1,294 @@
+<!--
+DB PK: MENUKEY=106
+용도: NU_CONTENTS 테이블의 HTML 컨텐츠
+생성일: 2018-03-05 13:06:29
+수정일: 2018-03-15 10:24:54
+-->
+
+<script src="/resources/js/jquery-3.1.0.min.js"></script>
+
+<div class="gh_pop_area">
+		<div class="gh_pop_opener">
+			<a href="#" onclick="clsCO('gh_pop_box', 'on', 0);">
+				<h2><strong>김해시</strong><br>인구변화</h2>
+				<p>김해의 인구</p>
+				<p><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('전체인구')}"/></p>
+			</a>
+		</div>
+		<!-- .gh_pop_box에 .on 추가시 팝업 활성화 -->
+		<div class="gh_pop_box">
+			<div class="gh_pop_wrap">
+				<h2><strong>김해시</strong> 인구변화</h2>
+             	<p class="standard_date">(2018년 1월 기준)</p>
+				<div class="gh_pop_left">
+					<ul>
+						<li>
+							<p>내국인</p>
+							<p><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('내국인')}"/>명</p>
+						</li>
+						<li>
+							<p>외국인</p>
+							<p><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('외국인')}"/>명</p>
+						</li>
+						<li>
+							<p>전체인구</p>
+							<p class="point_color"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('전체인구')}"/>명</p>
+						</li>						
+					</ul>
+					<a href="http://stat.gimhae.go.kr/" target="_blank" title="새창으로">김해시 공공데이터 플랫폼<br><strong>바로가기</strong></a>
+				</div>
+				<div class="gh_pop_right">
+					<div class="gh_map">
+						<!-- 녹색 .grn 주황 .rdy 빨강 .rd 추가 -->
+						<ul>
+							<li class="area1 ${dongPopulation:getDongPopulation(2018, 1).get('진영읍') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('진영읍') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('진영읍') >= 80000 ? 'rd' : 'rdy') : 'grn') : ''}">
+								<div>
+									<span class="hm"></span>
+									<p>진영읍</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('진영읍')}"/></p>
+								</div>
+							</li>
+							<li class="area2 ${dongPopulation:getDongPopulation(2018, 1).get('한림면') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('한림면') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('한림면') >= 80000 ? 'rd' : 'rdy') : 'grn') : ''}">
+								<div>
+									<span class="hm"></span>
+									<p>한림면</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('한림면')}"/></p>
+								</div>
+							</li>
+							<li class="area3 ${dongPopulation:getDongPopulation(2018, 1).get('생림면') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('생림면') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('생림면') >= 80000 ? 'rd' : 'rdy') : 'grn') : ''}">
+								<div>
+									<span class="hm"></span>
+									<p>생림면</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('생림면')}"/></p>
+								</div>
+							</li>
+							<li class="area4 ${dongPopulation:getDongPopulation(2018, 1).get('상동면') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('상동면') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('상동면') >= 80000 ? 'rd' : 'rdy') : 'grn') : ''}">
+								<div>
+									<span class="hm"></span>
+									<p>상동면</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('상동면')}"/></p>
+								</div>
+							</li>
+							<li class="area5 ${dongPopulation:getDongPopulation(2018, 1).get('대동면') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('대동면') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('대동면') >= 80000 ? 'rd' : 'rdy') : 'grn') : ''}">
+								<div>
+									<span class="hm"></span>
+									<p>대동면</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('대동면')}"/></p>
+								</div>
+							</li>
+							<li class="area6 type2 ${dongPopulation:getDongPopulation(2018, 1).get('불암동') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('불암동') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('불암동') >= 80000 ? 'rd' : 'rdy') : 'grn') : ''}">
+								<div>
+									<span class="hm"></span>
+									<p>불암동</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('불암동')}"/></p>
+								</div>
+							</li>
+							<li class="area7 type2 ${dongPopulation:getDongPopulation(2018, 1).get('삼안동') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('삼안동') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('삼안동') >= 80000 ? 'rd' : 'rdy') : 'grn') : ''}">
+								<div>
+									<span class="hm"></span>
+									<p>삼안동</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('삼안동')}"/></p>
+								</div>
+							</li>
+							<li class="area8 type2 ${dongPopulation:getDongPopulation(2018, 1).get('활천동') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('활천동') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('활천동') >= 80000 ? 'rd' : 'rdy') : 'grn') : ''}">
+								<div>
+									<span class="hm"></span>
+									<p>활천동</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('활천동')}"/></p>
+								</div>
+							</li>
+							<li class="area9 type2 ${dongPopulation:getDongPopulation(2018, 1).get('동상동') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('동상동') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('동상동') >= 80000 ? 'rd' : 'rdy') : 'grn') : ''}">
+								<div>
+									<span class="hm"></span>
+									<p>동상동</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('동상동')}"/></p>
+								</div>
+							</li>
+							<li class="area10 ${dongPopulation:getDongPopulation(2018, 1).get('부원동') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('부원동') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('부원동') >= 80000 ? 'rd' : 'rdy') : 'grn') : ''}">
+								<div>
+									<span class="hm"></span>
+									<p>부원동</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('부원동')}"/></p>
+								</div>
+							</li>
+							<li class="area11 ${dongPopulation:getDongPopulation(2018, 1).get('회현동') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('회현동') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('회현동') >= 80000 ? 'rd' : 'rdy') : 'grn') : ''}">
+								<div>
+									<span class="hm"></span>
+									<p>회현동</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('회현동')}"/></p>
+								</div>
+							</li>
+							<li class="area12 ${dongPopulation:getDongPopulation(2018, 1).get('북부동') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('북부동') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('북부동') >= 80000 ? 'rd' : 'rdy') : 'grn') : 'type2'}">
+								<div>
+									<span class="hm"></span>
+									<p>북부동</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('북부동')}"/></p>
+								</div>
+							</li>
+							<li class="area13 ${dongPopulation:getDongPopulation(2018, 1).get('내외동') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('내외동') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('내외동') >= 80000 ? 'rd' : 'rdy') : 'grn') : 'type2'}">
+								<div>
+									<span class="hm"></span>
+									<p>내외동</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('내외동')}"/></p>
+								</div>
+							</li>
+							<li class="area14 ${dongPopulation:getDongPopulation(2018, 1).get('칠산서부동') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('칠산서부동') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('칠산서부동') >= 80000 ? 'rd' : 'rdy') : 'grn') : 'type2'}">
+								<div>
+									<span class="hm"></span>
+									<p>칠산서부동</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('칠산서부동')}"/></p>
+								</div>
+							</li>
+							<li class="area15 ${dongPopulation:getDongPopulation(2018, 1).get('주촌면') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('주촌면') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('주촌면') >= 80000 ? 'rd' : 'rdy') : 'grn') : 'type2'}">
+								<div>
+									<span class="hm"></span>
+									<p>주촌면</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('주촌면')}"/></p>
+								</div>
+							</li>
+							<li class="area16 ${dongPopulation:getDongPopulation(2018, 1).get('장유1동') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('장유1동') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('장유1동') >= 80000 ? 'rd' : 'rdy') : 'grn') : 'type2'}">
+								<div>
+									<span class="hm"></span>
+									<p>장유1동</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('장유1동')}"/></p>
+								</div>
+							</li>
+							<li class="area17 ${dongPopulation:getDongPopulation(2018, 1).get('장유2동') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('장유2동') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('장유2동') >= 80000 ? 'rd' : 'rdy') : 'grn') : 'type2'}">
+								<div>
+									<span class="hm"></span>
+									<p>장유2동</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('장유2동')}"/></p>
+								</div>
+							</li>
+							<li class="area18 ${dongPopulation:getDongPopulation(2018, 1).get('장유3동') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('장유3동') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('장유3동') >= 80000 ? 'rd' : 'rdy') : 'grn') : 'type2'}">
+								<div>
+									<span class="hm"></span>
+									<p>장유3동</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('장유3동')}"/></p>
+								</div>
+							</li>
+							<li class="area19 ${dongPopulation:getDongPopulation(2018, 1).get('진례면') >= 30000 ? (dongPopulation:getDongPopulation(2018, 1).get('진례면') >= 50000 ? (dongPopulation:getDongPopulation(2018, 1).get('진례면') >= 80000 ? 'rd' : 'rdy') : 'grn') : ''}">
+								<div>
+									<span class="hm"></span>
+									<p>진례면</p>
+									<p class="dongValue"><fmt:formatNumber groupingUsed="true" value="${dongPopulation:getDongPopulation(2018, 1).get('진례면')}"/></p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- 우측상단 단위 -->
+					<div class="gh_standard">
+						<p>80,000명 이상</p>
+						<p>50,000명 이상</p>
+						<p>30,000명 이상</p>
+						<p>20,000명 미만</p>
+						<p></p>
+					</div>
+					<!-- 그래프 START -->
+					<div class="gh_st">
+						<ul>
+							<li>
+								<p class="grf">
+									<span style="height: ${dongPopulation:getYearPopulation().get('2010width')}%;">
+										<a class="graphVal">
+											<fmt:formatNumber value="${dongPopulation:getYearPopulation().get('2010')}" groupingUsed="true" />
+										</a>
+									</span>
+								</p>
+								<p>2010</p>
+							</li>
+							<li>
+								<p class="grf">
+									<span style="height: ${dongPopulation:getYearPopulation().get('2011width')}%;">
+										<a class="graphVal">
+											<fmt:formatNumber value="${dongPopulation:getYearPopulation().get('2011')}" groupingUsed="true" />
+										</a>
+									</span>
+								</p>
+								<p>2011</p>
+							</li>
+							<li>
+								<p class="grf">
+									<span style="height: ${dongPopulation:getYearPopulation().get('2012width')}%;">
+										<a class="graphVal">
+											<fmt:formatNumber value="${dongPopulation:getYearPopulation().get('2012')}" groupingUsed="true" />
+										</a>
+									</span>
+								</p>
+								<p>2012</p>
+							</li>
+							<li>
+								<p class="grf">
+									<span style="height: ${dongPopulation:getYearPopulation().get('2013width')}%;">
+										<a class="graphVal">
+											<fmt:formatNumber value="${dongPopulation:getYearPopulation().get('2013')}" groupingUsed="true" />
+										</a>
+									</span>
+								</p>
+								<p>2013</p>
+							</li>
+							<li>
+								<p class="grf">
+									<span style="height: ${dongPopulation:getYearPopulation().get('2014width')}%;">
+										<a class="graphVal">
+											<fmt:formatNumber value="${dongPopulation:getYearPopulation().get('2014')}" groupingUsed="true" />
+										</a>
+									</span>
+								</p>
+								<p>2014</p>
+							</li>
+							<li>
+								<p class="grf">
+									<span style="height: ${dongPopulation:getYearPopulation().get('2015width')}%;">
+										<a class="graphVal">
+											<fmt:formatNumber value="${dongPopulation:getYearPopulation().get('2015')}" groupingUsed="true" />
+										</a>
+									</span>
+								</p>
+								<p>2015</p>
+							</li>
+							<li>
+								<p class="grf">
+									<span style="height: ${dongPopulation:getYearPopulation().get('2016width')}%;">
+										<a class="graphVal">
+											<fmt:formatNumber value="${dongPopulation:getYearPopulation().get('2016')}" groupingUsed="true" />
+										</a>
+									</span>
+								</p>
+								<p>2016</p>
+							</li>
+							<li>
+								<p class="grf">
+									<span style="height: ${dongPopulation:getYearPopulation().get('2017width')}%;">
+										<a class="graphVal">
+											<fmt:formatNumber value="${dongPopulation:getYearPopulation().get('2017')}" groupingUsed="true" />
+										</a>
+									</span>
+								</p>
+								<p>2017</p>
+							</li>
+							<li>
+								<p class="grf">
+									<span style="height: ${dongPopulation:getYearPopulation().get('2018width')}%;">
+										<a class="graphVal" >
+											<fmt:formatNumber value="${dongPopulation:getYearPopulation().get('2018')}" groupingUsed="true" />
+										</a>
+									</span>
+								</p>
+								<p>2018</p>
+							</li>
+						</ul>
+						<div class="unit">
+							<h3>단위(명)</h3>
+							<p>560,000</p>
+							<p>540,000</p>
+							<p>520,000</p>
+							<p>500,000</p>
+							<p>480,000</p>
+						</div>
+					</div>
+				</div>
+				<a href="#" class="gh_close" onclick="clsCO('gh_pop_box', 'on', 123);"><img src="/resources/images/population/btn_close.png" alt="창닫기"></a>
+			</div>
+		</div>
+	</div>

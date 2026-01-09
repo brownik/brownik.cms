@@ -1,0 +1,40 @@
+/*
+DB PK: MENUKEY=99
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2017-10-24 21:08:37
+수정일: 2018-02-22 11:04:57
+*/
+
+
+.statis_alt{width:100%;height:150px;text-align:center;color:#272635;font-size:20px;line-height:150px;}
+.statis_info_wrap{clear:both;position:relative;border-top:2px solid #1a1a1a;}
+
+
+.statis_info_list{position:relative;padding-left:20%;border-bottom:1px solid #1a1a1a;}
+.statis_info_list h3{display:inline-block;position:absolute;top:0;left:0;width:20%;}
+.statis_info_list h3 a{display:block;width:95%;padding-left:4%;color:#121212;font-size:18px;font-weight:600;line-height:80px;background:url(/resources/images/sub/data/br_type_1.gif) 90% 50% no-repeat;}
+.statis_info_list h3 a:hover{background:url(/resources/images/sub/data/br_type_2.gif) 90% 50% no-repeat;}
+.statis_info_list h3.lineH2 a{height:60px;padding-top:20px;line-height:22px;}
+.statis_info_list.dis h3 a:hover, .statis_info_list.dis h3 a{background:url(/resources/images/sub/data/br_type_3.gif) 90% 50% no-repeat;}
+.statis_info_list table{clear:both;width:100%;border-collapse:collapse;text-align:center;font-size:13px;background-color:#fff;}
+.statis_info_list table tr th, .statis_info_list table tr td{padding:10px;border:1px solid #cacaca;font-family:'Noto Sans KR',sans-serif;}
+.statis_info_list table tr th{border-top:0;color:#121212;}
+.statis_info_list table tr td{border-bottom:0;}
+
+.statis_info_cont{display:none;position:relative;padding:20px;border-bottom:1px solid #1a1a1a;background-color:#f7f9fc;}
+.statis_info_cont h4{margin-bottom:10px;padding-left:30px;color:#121212;font-size:17px;font-weight:600;line-height:30px;background:url(/resources/images/sub/data/br_h4.gif) 0 50% no-repeat;}
+.statis_info_cont p{margin-bottom:5px;padding-left:30px;color:#121212;font-size:16px;font-weight:300;line-height:30px;background:url(/resources/images/sub/data/br_p.gif) 4px 50% no-repeat;}
+.statis_info_cont ul{height:auto;padding:15px;padding-top:5px;}
+.statis_info_cont ul li{padding-bottom:5px;padding-left:15px;font-size:13px;font-weight:300;background:url(/resources/images/sub/data/br_li.gif) 0 10px no-repeat;}
+.statis_info_cont ul li span{display:block;padding-top:5px;padding-bottom:5px;padding-left:10px;font-size:13px;font-weight:300;line-height:15px;background:url(/resources/images/sub/data/br_span.gif) 0 10px no-repeat;}
+.statis_info_cont span.btn_close{position:absolute;right:0;bottom:0;}
+
+li.statis_info.on .statis_info_list h3 a, li.statis_info.on .statis_info_list h3 a:hover{background:url(/resources/images/sub/data/br_type_2.gif) 90% 50% no-repeat;}
+li.statis_info.on .statis_info_cont{display:block;}
+
+
+.statis_division_cboth:after{content:''; display:block; clear:both;}
+.statis_info_cont h4, .statis_info_cont div p, .statis_info_cont ul li{letter-spacing:0px;}
+.statis_info_cont .statis_division_45{display:inline-block;width:45%; padding-right:5%; float:left;}
+.statis_info_cont .statis_division_100{width:100%}
+.statis_info_cont .statis_division_100:before{content:''; display:block; clear:both;}

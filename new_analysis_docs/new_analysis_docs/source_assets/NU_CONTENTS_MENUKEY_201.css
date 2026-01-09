@@ -1,0 +1,77 @@
+/*
+DB PK: MENUKEY=201
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2019-02-12 11:29:46
+수정일: 2019-02-12 18:30:03
+*/
+
+h1,h2,h3,h4,h5,a,fieldset,ul,li,dl,dt,dd,p,span,table,thead,tbody,tr,td,th,select,input{margin: 0;padding: 0; text-decoration: none;}
+fieldset{border: 0;}
+button {outline:none; cursor:pointer;}
+input, select, textarea {outline:none;}
+select::-ms-expand {display:none}
+
+#container {width:100%; position: relative; z-index:2; clear: both; height:1200px; margin: 0 auto;}
+.data-visualization_head-bg {position:absolute; z-index:1; top:253px; left:0; width:100%; height:300px; background-image:url(/imap/image/file/1057); background-repeat:no-repeat; background-size:cover;}
+
+/* 상단 검색/카테고리 란 시작 */
+#container section.data-visualization_head {width:100%; height:250px; padding-top:50px;}
+	/* 텍스트 */
+	#container section.data-visualization_head .data-visualization_head-title {width:305px; height:75px; margin-bottom:50px; word-break:keep-all;}
+	#container section.data-visualization_head .data-visualization_head-title h3 {font-size:22px; font-weight:500; color:#545857; margin-bottom:15px;}
+	#container section.data-visualization_head .data-visualization_head-title p {font-size:18px; font-weight:300; color:#545857;}
+	/* 검색기능 */
+	#container section.data-visualization_head fieldset.data-visualization_head-searchBox {position:relative; bottom:15px;}
+	#container section.data-visualization_head fieldset.data-visualization_head-searchBox select {position:relative; float:left; width:94px; height:33px; padding:0 8px; border:1px solid #989f9d; line-height:1em; font-size:16px; font-weight:300; color:#545857; background-image:url(/imap/image/file/1058); background-repeat:no-repeat; background-position:92% 50%; background-color:#fff; appearance:none; -webkit-appearance:none; -moz-appearance:none;}
+	#container section.data-visualization_head fieldset.data-visualization_head-searchBox #data-visualization_head-searchBox-text {position:relative; float:left; left:-1px; width:684px; height:33px; padding:0 8px; border:1px solid #989f9d; font-size:16px; font-weight:400; color:#545857;}
+	#container section.data-visualization_head fieldset.data-visualization_head-searchBox #data-visualization_head-searchBox-text::placeholder {font-size:16px; font-weight:300; color:#8a9390;}
+	#container section.data-visualization_head fieldset.data-visualization_head-searchBox #data-visualization_head-searchBox-btn {position:relative; float:left; left:-2px; width:70px; height:35px; cursor:pointer; background:#10815d; border:none; font-size:16px; font-weight:600; color:#fff; line-height:1em; text-align:center; transition:0.3s;}
+	#container section.data-visualization_head fieldset.data-visualization_head-searchBox #data-visualization_head-searchBox-btn:hover {background:#2a5a4b;}
+	/* 카테고리 메뉴 (네비게이션바) */
+	#container section.data-visualization_head nav.data-visualization_head-categoryNavi {width:100%; height:auto; margin-top:30px;}
+	#container section.data-visualization_head nav.data-visualization_head-categoryNavi ul {height:60px;}
+	#container section.data-visualization_head nav.data-visualization_head-categoryNavi ul li {position:relative; float:left; background:#f4f7f6; width:100px; height:40px; padding-top:20px; text-align:center; font-size:18px; font-weight:400; color:#545857; transition:0.3s; border-radius:5px 5px 0 0; cursor:pointer;}
+	#container section.data-visualization_head nav.data-visualization_head-categoryNavi ul li:hover {background:#fff;}
+	#container section.data-visualization_head nav.data-visualization_head-categoryNavi ul li.on {background:#fff;}
+/* 상단 검색/카테고리 란 끝 */
+
+/* 하단 리스트 란 시작 */
+#container section.data-visualization_body {margin-top:30px; width:100%; height:auto;}
+	#container section.data-visualization_body ul li {position:relative; float:left; width:448px; height:218px; border:1px solid #abb3b0; background:#fff; margin:0 48px 35px 0; cursor:pointer; transition:0.3s;}
+	#container section.data-visualization_body ul li:hover {box-shadow:0px 0px 0px 2px #dae6e1;}
+	#container section.data-visualization_body ul li:nth-child(3),
+	#container section.data-visualization_body ul li:nth-child(6),
+	#container section.data-visualization_body ul li:nth-child(9) {margin:0 0 35px 0;}
+	#container section.data-visualization_body ul li .data-visualization_body-image {width:448px; height:140px; border-bottom:1px solid #abb3b0; background:url(/imap/image/file/1059) 100% 100% no-repeat;}
+	#container section.data-visualization_body ul li .data-visualization_body-image img {width:448px; height:140px;}
+	#container section.data-visualization_body ul li .data-visualization_body-text {height:47px; padding:15px 20px;}
+	#container section.data-visualization_body ul li .data-visualization_body-text h4 {position:relative; float:left; font-size:16px; font-weight:500; color:#505050; margin-bottom:8px; width:408px; white-space:nowrap; text-overflow:ellipsis; overflow:hidden;}
+	#container section.data-visualization_body ul li .data-visualization_body-text p {position:relative; float:right; font-size:16px; font-weight:300; color:#505050;}
+/* 하단 리스트 란 끝 */
+
+/* 페이지 컨트롤 시작 */
+.dc_board_paging {position:absolute; text-align:center; width:100%; bottom:45px;}
+.dc_board_paging img { margin:21px 2px; }
+.dc_board_paging a { margin:20px 5px; }
+
+	.page{ width:1000px; padding:4px 0 4px 0;  text-align:center; border:1px solid #bbb;color:#666;background-image:none;background-color:#fff}
+	.page span.on{ padding:0 0; border:1px solid #D8D8D8; background-color:#F8F8F8; font-weight:bold;}
+	.page span.off{ padding:0 0; color:#999;}
+	.page a {width:32px;height:23px;line-height:23px;display:inline-block;}
+	.page span.on a {font-weight:bold;font-size:1.1em;color:#000000; color:#fff;border-color:#1491e0;background-color:#16a5ff;}
+	.page.active {color:#2677cc; font-weight:bold; border:1px solid #2677cc;} 
+	a.page {width:32px;height:23px;line-height:23px;display:inline-block;}
+
+	/** 페이징 처리 **/
+	.paging{text-align:center;margin:15px 0}
+	.paging.num .btn{vertical-align:middle;margin:0 2px}
+	.paging.num .btn.btn_arrow{margin:0 4px}
+	.btn{display:inline-block;border-radius:3px;padding:1px;text-decoration:none;background:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#eee))}
+	.btn span{display:block;margin:3px}
+	.btn.large{font-size:14px;line-height:16px}
+	.btn.btn_arrow.arrow_left,.btn.btn_arrow.arrow_right{border:1px solid #bbb;background-color:#f5f5f5;background:-webkit-gradient(linear,left top,left bottom,from(#fff),to(#eee))}
+	.btn.btn_paging{border:1px solid #bbb;color:#666;text-align:center;background-image:none;background-color:#fff}
+	.btn.btn_paging.current{color:#fff;border-color:#1491e0;background-color:#16a5ff}
+	.btn.btn_arrow span{margin:9px 15px;width:8px;height:11px;text-indent:-9999px}
+	.btn.btn_paging span{width:32px;height:23px;line-height:23px}
+/* 페이지 컨트롤 시작 */

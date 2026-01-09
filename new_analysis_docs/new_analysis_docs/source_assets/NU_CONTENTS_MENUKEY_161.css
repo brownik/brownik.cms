@@ -1,0 +1,33 @@
+/*
+DB PK: MENUKEY=161
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-11-02 18:31:35
+수정일: 2019-04-10 10:30:43
+*/
+
+.mom_multi{overflow:hidden;}
+.mom_multi .multi_video{width:50%; float:left;}
+.mom_multi .multi_year{float:left; width:50%;}
+.mom_multi .multi_year img{width:80%;}
+
+.text-title {color: #2478a4;}
+.sub_box ul li{background:url(/photo/view?id=1451437484) 5px 8px no-repeat; padding-left:15px; line-height:22px; font-size:13px; letter-spacing:-1px;}
+.sub_box ul li ul li{padding-bottom:5px; font-size:13px;}
+.sub_box .sub01_1_txt{background:url(/resources/images/mobile/sub/sub01_txt2.gif)0 9px no-repeat; font-size:13px; font-weight:normal; color:#888; padding-left:15px;}
+
+.sub_box h3{background:url(/photo/view?id=1451438052) 0 6px no-repeat; padding-left:15px; line-height:20px;}
+
+
+h2.mom_h2{background:url(/photo/view?id=1451438052) 0 6px no-repeat; padding-left:15px;}
+p.text-img{background:url(/photo/view?id=1451437484) 5px 8px no-repeat; padding-left:15px;}
+
+@media only screen and (min-width : 100px) and (max-width : 355px){	
+    .mom_multi .multi_video{width:100%; float:none;}
+	.mom_multi .multi_year{width:100%;}
+}
+
+@media only screen and (min-width : 356px) and (max-width : 750px){
+    .mom_multi .multi_video{width:100%; float:none;}
+	.mom_multi .multi_year{width:100%;}
+	.mom_multi .multi_year img{width:70%;}
+}

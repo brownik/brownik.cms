@@ -1,0 +1,735 @@
+<!--
+DB PK: MENUKEY=125
+용도: NU_CONTENTS 테이블의 HTML 컨텐츠
+생성일: 2018-06-25 11:18:54
+수정일: 2018-06-25 11:23:25
+-->
+
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="나주 공공데이터, 공공데이터 플랫폼, 나주 공공데이터 플랫폼">
+  <meta name="Description" content="나주 공공데이터 플랫폼">
+  <title>나주 공공데이터 플랫폼</title>
+  <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+  <link rel="stylesheet" type="text/css" href="css/layout.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+  <style>
+	#section0 {background:url('common/bg1.jpg') no-repeat 50% 0; background-size:cover}
+	#section1 {background:url('common/bg2.jpg') no-repeat 50% 0; background-size:cover}
+	#section2 {background:url('common/bg3.jpg') no-repeat 50% 0; background-size:cover}
+  </style>
+  <script>
+	$(document).ready(function() {
+				$('#fullpage').fullpage({
+						anchors:['firstPage', 'secondPage', 'thirdPage']
+				});
+
+				//네비바 드롭다운
+				$(".header-body > ul li.depth1").mouseover(function(){	
+						$(this).children(".depth2").stop().slideDown();
+						});
+				 $(".header-body > ul li.depth1").mouseleave(function(){
+						$(this).children(".depth2").stop().slideUp();
+						});
+				//사이트 맵
+				 $(".siteMap-on").click(function(){
+					 $(".siteMap-on").removeClass("on");
+					 $(".siteMap-on").addClass("off");
+					 $(".siteMap-off").removeClass("off");
+					 $(".siteMap-off").addClass("on");
+					 $(".siteMap-wrap").removeClass("off");
+					 $(".siteMap-wrap").addClass("on");
+				  });
+				 $(".siteMap-off").click(function(){
+					$(".siteMap-off").removeClass("on");
+					$(".siteMap-off").addClass("off");
+					$(".siteMap-on").removeClass("off");
+					$(".siteMap-on").addClass("on");
+					$(".siteMap-wrap").removeClass("on");
+					$(".siteMap-wrap").addClass("off");
+				 });
+				//사업지도 view number
+				$(".b-Map .map-list ul li").click(function(){
+					$(".b-Map .viewNum .num").removeClass("on");
+					var dataNum = $(this).attr("data-num");
+					$("div[data-num=" + dataNum + "]").addClass("on");
+				});
+				$(".map-list ul li").click(function(){
+					$(".b-Map .map-list ul li").removeClass("active");
+					$(this).addClass("active");
+				});
+	});
+  </script>
+ </head>
+ <body class="fp-viewing-0">
+
+<header>
+	<div class="header-wrap">
+		<div class="header-top">
+			<ul>
+				<li><a href="#"><span class="block1">나주시청 바로가기</span><span class="block2"><i class="xi-external-link"></i></span></a></li>
+				<li><a href="#"> 소통나주 참여하기</a></li>
+			</ul>
+		 </div><!-- //header-top -->
+
+		 <nav class="header-body">
+
+			<h1><a href="/SDM/naju_data/main.html"><img src="common/logo1.png" alt="나주시 공공데이터 플랫폼 로고" title="나주시 공공데이터 플랫폼" /></a></h1>
+
+			<ul>
+
+				<li class="depth1">
+					<a href="#">나주의 변화</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#">주민참여</a></li>
+							<li><a href="#">경제</a></li>
+							<li><a href="#">복지/건강</a></li>
+							<li><a href="#">환경/안전</a></li>
+							<li><a href="#">교육</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="depth1">
+					<a href="#">기본통계</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#">나주의 하루</a></li>
+							<li><a href="#">인구/가구</a></li>
+							<li><a href="#">보건/복지</a></li>
+							<li><a href="#">교육/문화</a></li>
+							<li><a href="#">교통</a></li>
+							<li><a href="#">환경</a></li>
+							<li><a href="#">주택/건설</a></li>
+							<li><a href="#">소방/안전</a></li>
+							<li><a href="#">경제/공공행정</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="depth1">
+					<a href="#">사업지도</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#">사업지도</a></li>
+							<li><a href="#">권역별</a></li>
+							<li><a href="#">사업별</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="depth1">
+					<a href="#">정책지도</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#">나주의 안전</a></li>
+							<li><a href="#">나주의 교육</a></li>
+							<li><a href="#">나주의 보건복지</a></li>
+							<li><a href="#">나주의 축산업</a></li>
+							<li><a href="#">나주의 산림공원</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="depth1">
+					<a href="#">마을지도</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#">마을지도 소개</a></li>
+							<li><a href="#">마을지도</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="depth1">
+					<a href="#">공공데이터</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#">공공데이터 소개</a></li>
+							<li><a href="#">데이터셋</a></li>
+							<li><a href="#">오픈 API</a></li>
+							<li><a href="#">FILE DATA</a></li>
+							<li><a href="#">통계자료</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="depth1">
+					<a href="#">커뮤니티매핑</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#">커뮤니티매핑 활동 및 결과</a></li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="depth1">
+					<a href="#">이용안내</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#">공지사항</a></li>
+							<li><a href="#">공공데이터 이용안내</a></li>
+							<li><a href="#">통계관련사이트</a></li>
+						</ul>
+					</div>
+				</li>
+
+			</ul>
+
+			<a href="#" class="btn-siteMap">
+				<span class="siteMap-on on">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</span>
+				<span class="siteMap-off off">
+					<i class="xi-close"></i>
+				</span>
+			</a>
+
+		 </nav><!-- //header-body-->
+	</div><!-- //header-wrap -->	
+	<div class="siteMap-wrap">
+		<ul>
+			<li class="siteMenu">
+				<h2>나주의 변화</h2>
+				<ul>
+					<li><a href="#">주민참여</a></li>
+					<li><a href="#">경제</a></li>
+					<li><a href="#">복지/건강</a></li>
+					<li><a href="#">환경/안전</a></li>
+					<li><a href="#">교육</a></li>
+				</ul>
+			</li>
+			<li class="siteMenu">
+				<h2>기본통계</h2>
+				<ul>
+					<li><a href="#">나주의 하루</a></li>
+					<li><a href="#">인구/가구</a></li>
+					<li><a href="#">보건/복지</a></li>
+					<li><a href="#">교육/문화</a></li>
+					<li><a href="#">교통</a></li>
+					<li><a href="#">환경</a></li>
+					<li><a href="#">주택/건설</a></li>
+					<li><a href="#">소방/안전</a></li>
+					<li><a href="#">경제/공공행정</a></li>
+				</ul>
+			</li>
+			<li class="siteMenu">
+				<h2>사업지도</h2>
+				<ul>
+					<li><a href="#">사업지도</a></li>
+					<li><a href="#">권역별</a></li>
+					<li><a href="#">사업별</a></li>
+				</ul>
+			</li>
+			<li class="siteMenu">
+				<h2>정책지도</h2>
+				<ul>
+					<li><a href="#">나주의 안전</a></li>
+					<li><a href="#">나주의 교육</a></li>
+					<li><a href="#">나주의 보건복지</a></li>
+					<li><a href="#">나주의 축산업</a></li>
+					<li><a href="#">나주의 산림공원</a></li>
+				</ul>
+			</li>
+			<li class="siteMenu">
+				<h2>마을지도</h2>
+				<ul>
+					<li><a href="#">마을지도 소개</a></li>
+					<li><a href="#">마을지도</a></li>
+				</ul>
+			</li>
+			<li class="siteMenu">
+				<h2>공공데이터</h2>
+				<ul>
+					<li><a href="#">공공데이터 소개</a></li>
+					<li><a href="#">데이터셋</a></li>
+					<li><a href="#">오픈 API</a></li>
+					<li><a href="#">FILE DATA</a></li>
+					<li><a href="#">통계자료</a></li>
+				</ul>
+			</li>
+			<li class="siteMenu">
+				<h2>커뮤니티매핑</h2>
+				<ul>
+					<li><a href="#">커뮤니티매핑<br />활동 및 결과</a></li>
+				</ul>
+			</li>
+			<li class="siteMenu">
+				<h2>이용안내</h2>
+				<ul>
+					<li><a href="#">공지사항</a></li>
+					<li><a href="#">공공데이터 이용안내</a></li>
+					<li><a href="#">통계관련사이트</a></li>
+				</ul>
+			</li>
+		</ul>
+	 </div><!-- //siteMap-wrap -->
+ </header><!-- //header -->
+
+<!-- content 시작 -->
+ <section id="fullpage" class="fullpage-wrapper">
+
+	<section id="section0" class="section fp-section fp-table" data-anchor="firstPage">
+
+		<h1><img src="common/pg-tit.png" alt="시민과 소통하는 행복한 나주" /></h1>
+
+		<article class="graph-wrap">
+			<div class="graph-ctrl">
+				<a href="#" title="이전으로"><i class="xi-step-backward xi-2x"></i></a>
+				<a href="#" title="정지하기"><i class="xi-pause xi-2x"></i></a>
+				<a href="#" title="재생하기"><i class="xi-play xi-2x"></i></a>
+				<a href="#" title="다음으로"><i class="xi-step-forward xi-2x"></i></a>
+			</div>
+			<section class="graph1">
+				<p>나주시 주요 통계</p>
+				<h2 class="title">사업체<h2>
+				<div class="graph-body">
+					<ul>
+						<li class="graph-bar" style="height:100px;">
+							<div>
+								<p>10,001</p>
+								<h3>2013년</h3>
+							</div>
+						</li>
+						<li class="graph-bar" style="height:130px;">
+							<div>
+								<p>30,423</p>
+								<h3>2014년</h3>
+							</div>
+						</li>
+						<li class="graph-bar" style="height:150px;">
+							<div>
+								<p>44,218</p>
+								<h3>2015년</h3>
+							</div>
+						</li>
+						<li class="graph-bar" style="height:220px;">
+							<div>
+								<p>47,900</p>
+								<h3>2016년</h3>
+							</div>
+						</li>
+						<li class="graph-bar" style="height:250px;">
+							<div>
+								<p>51,235</p>
+								<h3>2017년</h3>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</article>
+		
+		<article class="stats">
+			<h2>통계로 보는 <span>나주</span></h2>
+			<p>나주시의 변천사를 한눈에 확인 하실 수 있습니다.</p>
+			<ul>
+				<li><a href="#">주민참여</a></li>
+				<li><a href="#">경제</a></li>
+				<li><a href="#">복지/건강</a></li>
+				<li><a href="#">환경/안전</a></li>
+				<li><a href="#">교육</a></li>
+				<li><a href="#">나주의 하루</a></li>
+			</ul>
+		</article>
+
+		<article class="data-set">
+			<h2>공공데이터</h2>
+			<p>다양한 분류의 통계자료를 제공합니다.</p>
+			<ul>
+				<li><a href="#">일반행정</a></li>
+				<li><a href="#">산업경제</a></li>
+				<li><a href="#">복지</a></li>
+				<li><a href="#">환경</a></li>
+				<li><a href="#">안전</a></li>
+				<li><a href="#">교통</a></li>
+				<li><a href="#">도시관리</a></li>
+				<li><a href="#">보건</a></li>
+				<li><a href="#">문화관광</a></li>
+				<li><a href="#">교육</a></li>
+			</ul>
+			<a href="#">전체보기 <i class="xi-plus"></i></a>
+			<div class="set-ctrl">
+				<a href="#" class="left"><i class="xi-angle-left xi-2x"></i></a>
+				<a href="#" class="right"><i class="xi-angle-right xi-2x"></i></a>
+			</div>
+		</article>
+
+	</section><!-- //section0 -->
+		
+	<section id="section1" class="section fp-section fp-table" data-anchor="secondPage">
+		<div class="b-Map">
+			<div class="map-title">
+				<p>BUSINESS MAP</p>
+				<h2>사업지도</h2>
+			</div><!-- //map-title -->
+			<div class="viewNum">
+				<div class="num num1"  data-num="view1">
+					<div class="MP">1</div>
+					<div class="NA">2</div>
+					<div class="DS">3</div>
+					<div class="SB">4</div>
+					<div class="GN">5</div>
+					<div class="YG">6</div>
+					<div class="SW">7</div>
+					<div class="LC">8</div>
+					<div class="YS">9</div>
+					<div class="GC">10</div>
+					<div class="SP">11</div>
+					<div class="NP">12</div>
+					<div class="DD">13</div>
+					<div class="BH">14</div>
+					<div class="SJ">15</div>
+					<div class="BN">16</div>
+					<div class="GS">17</div>
+					<div class="DG">18</div>
+					<div class="WG">19</div>
+				</div>
+				<div class="num num2"  data-num="view2">
+					<div class="MP">1</div>
+					<div class="NA">2</div>
+					<div class="DS">3</div>
+					<div class="SB">4</div>
+					<div class="GN">5</div>
+					<div class="YG">6</div>
+					<div class="SW">7</div>
+					<div class="LC">8</div>
+					<div class="YS">9</div>
+					<div class="GC">10</div>
+					<div class="SP">11</div>
+					<div class="NP">12</div>
+					<div class="DD">13</div>
+					<div class="BH">14</div>
+					<div class="SJ">15</div>
+					<div class="BN">16</div>
+					<div class="GS">17</div>
+					<div class="DG">18</div>
+					<div class="WG">19</div>
+				</div>
+				<div class="num num3" data-num="view3">
+					<div class="MP">1</div>
+					<div class="NA">2</div>
+					<div class="DS">3</div>
+					<div class="SB">4</div>
+					<div class="GN">5</div>
+					<div class="YG">6</div>
+					<div class="SW">7</div>
+					<div class="LC">8</div>
+					<div class="YS">9</div>
+					<div class="GC">10</div>
+					<div class="SP">11</div>
+					<div class="NP">12</div>
+					<div class="DD">13</div>
+					<div class="BH">14</div>
+					<div class="SJ">15</div>
+					<div class="BN">16</div>
+					<div class="GS">17</div>
+					<div class="DG">18</div>
+					<div class="WG">19</div>
+				</div>
+				<div class="num num4" data-num="view4">
+					<div class="MP">1</div>
+					<div class="NA">2</div>
+					<div class="DS">3</div>
+					<div class="SB">4</div>
+					<div class="GN">5</div>
+					<div class="YG">6</div>
+					<div class="SW">7</div>
+					<div class="LC">8</div>
+					<div class="YS">9</div>
+					<div class="GC">10</div>
+					<div class="SP">11</div>
+					<div class="NP">12</div>
+					<div class="DD">13</div>
+					<div class="BH">14</div>
+					<div class="SJ">15</div>
+					<div class="BN">16</div>
+					<div class="GS">17</div>
+					<div class="DG">18</div>
+					<div class="WG">19</div>
+				</div>
+				<div class="num num5" data-num="view5">
+					<div class="MP">1</div>
+					<div class="NA">2</div>
+					<div class="DS">3</div>
+					<div class="SB">4</div>
+					<div class="GN">5</div>
+					<div class="YG">6</div>
+					<div class="SW">7</div>
+					<div class="LC">8</div>
+					<div class="YS">9</div>
+					<div class="GC">10</div>
+					<div class="SP">11</div>
+					<div class="NP">12</div>
+					<div class="DD">13</div>
+					<div class="BH">14</div>
+					<div class="SJ">15</div>
+					<div class="BN">16</div>
+					<div class="GS">17</div>
+					<div class="DG">18</div>
+					<div class="WG">19</div>
+				</div>
+				<div class="num num6" data-num="view6">
+					<div class="MP">1</div>
+					<div class="NA">2</div>
+					<div class="DS">3</div>
+					<div class="SB">4</div>
+					<div class="GN">5</div>
+					<div class="YG">6</div>
+					<div class="SW">7</div>
+					<div class="LC">8</div>
+					<div class="YS">9</div>
+					<div class="GC">10</div>
+					<div class="SP">11</div>
+					<div class="NP">12</div>
+					<div class="DD">13</div>
+					<div class="BH">14</div>
+					<div class="SJ">15</div>
+					<div class="BN">16</div>
+					<div class="GS">17</div>
+					<div class="DG">18</div>
+					<div class="WG">19</div>
+				</div>
+				<div class="num num7" data-num="view7">
+					<div class="MP">1</div>
+					<div class="NA">2</div>
+					<div class="DS">3</div>
+					<div class="SB">4</div>
+					<div class="GN">5</div>
+					<div class="YG">6</div>
+					<div class="SW">7</div>
+					<div class="LC">8</div>
+					<div class="YS">9</div>
+					<div class="GC">10</div>
+					<div class="SP">11</div>
+					<div class="NP">12</div>
+					<div class="DD">13</div>
+					<div class="BH">14</div>
+					<div class="SJ">15</div>
+					<div class="BN">16</div>
+					<div class="GS">17</div>
+					<div class="DG">18</div>
+					<div class="WG">19</div>
+				</div>
+				<div class="num num8" data-num="view8">
+					<div class="MP">1</div>
+					<div class="NA">2</div>
+					<div class="DS">3</div>
+					<div class="SB">4</div>
+					<div class="GN">5</div>
+					<div class="YG">6</div>
+					<div class="SW">7</div>
+					<div class="LC">8</div>
+					<div class="YS">9</div>
+					<div class="GC">10</div>
+					<div class="SP">11</div>
+					<div class="NP">12</div>
+					<div class="DD">13</div>
+					<div class="BH">14</div>
+					<div class="SJ">15</div>
+					<div class="BN">16</div>
+					<div class="GS">17</div>
+					<div class="DG">18</div>
+					<div class="WG">19</div>
+				</div>
+				<div class="num num9" data-num="view9">
+					<div class="MP">1</div>
+					<div class="NA">2</div>
+					<div class="DS">3</div>
+					<div class="SB">4</div>
+					<div class="GN">5</div>
+					<div class="YG">6</div>
+					<div class="SW">7</div>
+					<div class="LC">8</div>
+					<div class="YS">9</div>
+					<div class="GC">10</div>
+					<div class="SP">11</div>
+					<div class="NP">12</div>
+					<div class="DD">13</div>
+					<div class="BH">14</div>
+					<div class="SJ">15</div>
+					<div class="BN">16</div>
+					<div class="GS">17</div>
+					<div class="DG">18</div>
+					<div class="WG">19</div>
+				</div>
+				<div class="num num10" data-num="view10">
+					<div class="MP">1</div>
+					<div class="NA">2</div>
+					<div class="DS">3</div>
+					<div class="SB">4</div>
+					<div class="GN">5</div>
+					<div class="YG">6</div>
+					<div class="SW">7</div>
+					<div class="LC">8</div>
+					<div class="YS">9</div>
+					<div class="GC">10</div>
+					<div class="SP">11</div>
+					<div class="NP">12</div>
+					<div class="DD">13</div>
+					<div class="BH">14</div>
+					<div class="SJ">15</div>
+					<div class="BN">16</div>
+					<div class="GS">17</div>
+					<div class="DG">18</div>
+					<div class="WG">19</div>
+				</div>
+			</div>
+			<div class="map-list">
+				<p>지도를 기반으로 나주시의 사업정보를 알아볼 수 있습니다.</p>
+				<ul>
+					<li data-num="view1">시민소통</li>
+					<li data-num="view2">자립형교육</li>
+					<li data-num="view3">역사문화관광도시</li>
+					<li data-num="view4">스마트시티</li>
+					<li data-num="view5">안전도시</li>
+					<li data-num="view6">녹색도시</li>
+					<li data-num="view7">일자리 및 지역경제</li>
+					<li data-num="view8">도시재생 및 정주여건</li>
+					<li data-num="view9">보건·복지·체육</li>
+					<li data-num="view10">농업·농촌</li>
+				</ul>
+			</div><!-- //map-list -->
+		</div><!-- //businessMap -->
+		<div class="b-List">
+			<div class="list-title">
+				<h2><span>나주</span> 사업 목록</h2>
+				<p>NAJU BUSINESS LIST</p>
+			</div><!-- //list-title -->
+			<div class="b-List-body">
+				<ul>
+					<li>
+						<a href="#">
+							<span><img src="common/naju-map-bg.png" alt="" style="width:173px; height:112px; background-size:cover;"/></span>
+							<p class="title">행정방송망 고도화 사업</p>
+							<p class="date">2015.11.05 ~ 2016.02.02</p>
+							<p class="progress-bar">
+							<span class="bar1"></span>
+							<span class="bar2" style="width:40%; max-width:175px;"></span>
+							<span class="progress-text">진행율 <span>40</span>%</span>
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span><img src="common/naju-map-bg.png" alt="" style="width:173px; height:112px; background-size:cover;"/></span>
+							<p class="title">행정방송망 고도화 사업</p>
+							<p class="date">2015.11.05 ~ 2016.02.02</p>
+							<p class="progress-bar">
+								<span class="bar1"></span>
+								<span class="bar2" style="width:100%; max-width:175px;"></span>
+								<span class="progress-text">진행율 <span>100</span>%</span>
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span><img src="common/naju-map-bg.png" alt="" style="width:173px; height:112px; background-size:cover;"/></span>
+							<p class="title">행정방송망 고도화 사업</p>
+							<p class="date">2015.11.05 ~ 2016.02.02</p>
+							<p class="progress-bar">
+								<span class="bar1"></span>
+								<span class="bar2" style="width:100%; max-width:175px;"></span>
+								<span class="progress-text">진행율 <span>100</span>%</span>
+							</p>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span><img src="common/naju-map-bg.png" alt="" style="width:173px; height:112px; background-size:cover;"/></span>
+							<p class="title">행정방송망 고도화 사업</p>
+							<p class="date">2015.11.05 ~ 2016.02.02</p>
+							<p class="progress-bar">
+								<span class="bar1"></span>
+								<span class="bar2" style="width:90%; max-width:175px;"></span>
+								<span class="progress-text">진행율 <span>90</span>%</span>
+							</p>
+						</a>
+					</li>
+				</ul>
+				<a href="#">전체보기 <i class="xi-plus"></i></a>
+			</div><!-- //b-List-body -->
+		</div><!-- //businessList -->
+	</section><!-- //section1 -->
+	
+	<section id="section2" class="section fp-section fp-table" data-anchor="thirdPage">
+		<div class="map-wrap">
+			<div class="policy">
+				<h2>정책지도</h2>
+				<p>인구, 안전, 보건, 복지, 경제 등<br />나주시의 정책현황을 확인할 수 있습니다.</p>
+				<span><a href="#">더보기 <i class="xi-search"></i></a></span>
+			</div><!-- //policy -->
+			<div class="town">
+				<h2>마을지도</h2>
+				<p>실생활에 필요한 정보를<br />테마별로 분류하여 제공해 드립니다.</p>
+				<span><a href="#">더보기 <i class="xi-search"></i></a></span>
+			</div><!-- //town -->
+			<div class="mapping">
+				<h2>커뮤니티 매핑</h2>
+				<p>직접 참여하여 만드는 참여형 지도</br>커뮤니티매핑(Community Mapping)</p>
+				<span><a href="#">더보기 <i class="xi-search"></i></a></span>
+			</div><!-- //mapping -->
+		</div><!-- //map-wrap -->
+
+		<footer>
+			<div class="footer-wrap">
+				<h1><img src="common/logo2.png" alt="공공데이터 플랫폼 footer 로고" /></h1>
+				<div class="footer-info">
+					<ul>
+						<li><a href="#">이용안내</a></li>
+						<li><a href="#">저작권정책</a></li>
+						<li><a href="#">이메일주소 무단수집거부</a></li>
+						<li><a href="#">도로명주소안내</a></li>
+						<li><a href="#">전체메뉴</a></li>
+					</ul>
+				</div><!-- //footer-info -->
+				<span class="addr">(58263) 전라남도 나주시 시청길 22(송월동)   TEL:1577-7800   FAX:061-339-2896</span>
+				<span class="warning">본 홈페이지에 게시된 이메일주소 자동 수집을 거부하며, 이를 위반시 정보통신망법에 의해 처벌됨을<br />유념하시기 바랍니다.</span>
+				<span class="copyright">COPYRIGHT ⓒ NAJU-SI, ALL RIGHT RESERVED.</span>
+				<div class="download">
+					<ul>
+						<li><a href="#"></a></li>
+						<li><a href="#"></a></li>
+					</ul>
+				</div><!-- //download -->
+			</div><!-- //footer-wrap -->
+		</footer>
+	</section><!-- //section2 -->
+
+</section><!-- //fullpage -->
+<div id="fp-nav" class="right">
+	<ul>
+		<li>
+			<a href="#firstPage" class>
+				<span></span>
+			</a>
+			<div class="fp-tooltip right">첫번째 페이지</div>
+		</li>
+
+		<li>
+			<a href="#secondPage" class>
+				<span></span>
+			</a>
+			<div class="fp-tooltip right">두번째 페이지</div>
+		</li>
+
+		<li>
+			<a href="#thirdPage" class>
+				<span></span>
+			</a>
+			<div class="fp-tooltip right">세번째 페이지</div>
+		</li>
+	</ul>
+</div><!-- //fp-nav -->
+  
+ </body>
+</html>

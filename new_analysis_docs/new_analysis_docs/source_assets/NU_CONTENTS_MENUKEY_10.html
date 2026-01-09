@@ -1,0 +1,75 @@
+<!--
+DB PK: MENUKEY=10
+용도: NU_CONTENTS 테이블의 HTML 컨텐츠
+생성일: 2016-09-26 14:05:19
+수정일: 2019-10-17 09:11:40
+-->
+
+			<div class="acWrap">
+				<ul>
+					<li><a href="javascript:scrollWin(1)">화재발생</a></li>
+					<li><a href="javascript:scrollWin(1)">장소별 화재발생 현황</a></li>
+					<li><a href="javascript:scrollWin(2)">119구급 활동 실적</a></li>
+				</ul>
+              	<p>※ 통계법 제27조의2(통계작성·공표과정에서의 영향력 행사, 누설 및 목적 외 사용의 금지 등)에 따라 공표전 통계는 공개하지 않습니다.</p>
+			</div>
+			<div class="graphWrap autoH">
+				<!-- 화재발생 -->
+				<div class="bay2 oneLine">
+					<graph:createTitle datasetGraphKey="49" /> 
+					<div class="bay_cont autoH">
+						<div style="width:660px; height:350px; display:inline-block; margin-left:0px;">
+							  <graph:createGraph datasetKey="86" datasetGraphKey="49" />
+						</div>
+					</div>
+					<p class="chartSource">
+                      	<graph:createOrigin datasetGraphKey="49" />
+                  	</p>
+				</div>
+				<!-- 장소별 화재발생 현황 -->
+				<div class="bay2 oneLine">
+					<graph:createTitle datasetGraphKey="52" /> 
+					<div class="bay_cont autoH">
+						<div style="width:660px; height:400px; display:inline-block; margin-left:0px;">
+							  <graph:createGraph datasetKey="89" datasetGraphKey="52" />
+						</div>
+					</div>
+					<p class="chartSourceCircle">
+                  		<graph:createOrigin datasetGraphKey="52" />
+                  	</p>
+				</div>
+				<!-- 119구급 활동 실적 -->
+				<div class="bay2 twoLine">
+					<graph:createTitle datasetGraphKey="54" /> 
+					<div class="bay_cont autoH">
+						<div style="width:660px; height:350px; display:inline-block; margin-left:0px;">
+							  <graph:createGraph datasetKey="90" datasetGraphKey="54" />
+						</div>
+					</div>
+					<p class="chartSource">
+                      	<graph:createOrigin datasetGraphKey="54" />
+                  	</p>
+				</div>
+			</div>
+
+
+<script>
+
+var LineRevision = 20;
+
+function scrollWin(num) {
+	if (num == 1) {
+		var oneLine = $(".oneLine").offset();
+		$('html, body').animate({scrollTop: oneLine.top-LineRevision}, 300);
+	} else if (num == 2) {
+		var twoLine = $(".twoLine").offset();
+		$('html, body').animate({scrollTop: twoLine.top-LineRevision}, 300);
+	} else if (num == 3) {
+		var threeLine = $(".threeLine").offset();
+		$('html, body').animate({scrollTop: threeLine.top-LineRevision}, 300);
+	}
+}
+  
+  
+</script>
+  

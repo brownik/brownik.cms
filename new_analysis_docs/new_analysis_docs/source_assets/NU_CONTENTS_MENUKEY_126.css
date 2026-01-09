@@ -1,0 +1,64 @@
+/*
+DB PK: MENUKEY=126
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-06-25 13:59:13
+수정일: 2018-08-14 12:26:36
+*/
+
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+/* CSS Document */
+
+*{margin:0; padding:0; letter-spacing:-1px;}
+a {text-decoration:none; color:inherit;}
+li {list-style:none;}
+.text_hide{text-indent:-9999px;font-size:0;line-height:0;overflow:hidden;}
+.main_title{font-size:22px;color:#000;font-weight:600;text-align:center;padding:70px 0 50px;}
+
+.fullpage_slide{background-color:#eaeaea;height:900px;position:relative;}
+.slide_prev{position:absolute;background:url('/naju/image/file/606') 0 0 no-repeat;width:90px;height:19px;top:50%;left:1%;}
+.slide_next{position:absolute;background:url('/naju/image/file/607') 0 0 no-repeat;width:90px;height:19px;top:50%;right:1%;}
+.fullpage_title{width:532px;padding:134px 0;margin:0 auto;}
+
+.main_boxshadow{height:100%;box-shadow:0 6px rgba(0,0,0,.3);}
+
+ul.slide_button_area{text-align:center;}
+.fullpage_title ul li{display:inline-block;}
+.fullpage_title ul li:nth-child(2){padding:0 10px;}
+.fullpage_title ul li a.slide_on{background:url('/naju/image/file/603') 0 0 no-repeat;width:16px;height:16px;display:block;}
+.fullpage_title ul li a.slide_off{background:url('/naju/image/file/604') 0 0 no-repeat;width:16px;height:16px;display:block;}
+
+
+/*  메인슬라이드 컨텐츠1   */
+
+
+.fullpage_content1{height:500px;width:1352px;margin:0 auto;}
+.fullpage_content1 .policy_map{width:350px;height:500px;background-color:#fff;float:left;}
+p.policy_menu_color{content:"";background-color:#3484c1;width:100%;height:6px;}
+.policy_map_icon1{background:url('/naju/image/file/596') no-repeat 0 0;width:153px;height:153px;display:block;margin:0 auto;}
+.main_menu_text{text-align:center;padding:45px 0 22px;}
+a.main_review{background:url('/naju/image/file/597') no-repeat 0 0;width:36px;height:36px;display:block;margin:0 auto;}
+
+.fullpage_content1 .town_map{width:350px;height:500px;background-color:#fff;float:left;margin:0 20px;}
+.town_map_icon1{background:url('/naju/image/file/598') no-repeat 0 0;width:153px;height:153px;display:block;margin:0 auto;}
+.main_menu_text{text-align:center;padding:56px 0 22px;}
+a.main_review{background:url('/naju/image/file/597') no-repeat 0 0;width:36px;height:36px;display:block;margin:0 auto;}
+p.town_menu_color{content:"";background-color:#53ae8f;width:100%;height:6px;}
+
+.fullpage_content1 .main_right{width:611px;height:500px;float:left;}
+
+.commu_mapping{background-color:#52b193;height:245px;width:100%;margin-bottom:10px;position:relative;}
+.commu_mapping_txt{padding:40px;}
+.commu_mapping h2{font-size:22px;color:#fff;font-weight:600;}
+.commu_mapping span{color:#fff;font-size:13px;font-weight:100;}
+.commu_mapping p{color:#fff;font-size:15px;margin:20px 0 40px;}
+a.commu_review{background:url('/naju/image/file/601') no-repeat 0 0;width:36px;height:36px;display:block;}
+.commu_mapping_icon{background:url('/naju/image/file/599') no-repeat 0 0;width:204px;height:198px;display:block;position:absolute;right:60px;top:21px;}
+
+
+.naju_citizen{background-color:#f4de28;height:245px;width:100%;position:relative;}
+.naju_citizen_txt{padding:40px;}
+.naju_citizen h2{font-size:22px;color:#5a4800;font-weight:600;}
+.naju_citizen span{color:#a58c0b;font-size:13px;font-weight:100;}
+.naju_citizen p{color:#a58c0b;font-size:15px;margin:20px 0 40px;}
+a.naju_review{background:url('/naju/image/file/602') no-repeat 0 0;width:36px;height:36px;display:block;}
+.naju_citizen_icon{background:url('/naju/image/file/600') no-repeat 0 0;width:204px;height:198px;display:block;position:absolute;right:60px;top:21px;}

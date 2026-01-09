@@ -1,0 +1,55 @@
+/*
+DB PK: MENUKEY=140
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-09-10 09:43:55
+수정일: 2018-11-23 08:54:24
+*/
+
+/* 삭제 */
+#container .subTitle {display:none;}
+
+.sub_block {margin-top:35px; padding:40px; border:1px solid #dadbe0; border-radius:10px; background-color:#fff; box-shodow:0 4px 0 rgba(0,0,0,.1); overflow-x:hidden;}
+
+.townInfo {border-radius:8px; padding:0px 30px 30px 30px; margin-left:305px; min-height:700px;} /* 페이지로딩시 잠깐 스크롤 생기는 부분 때문에 mh 추가함 */
+.townInfo h2 {border-bottom:1px solid #d4d6dd; margin-bottom:30px; padding:20px 0 20px 45px; background:url(:subdirectory:/image/file/702) 15px 50% no-repeat; font-size:20px; color:#121212; font-weight:600}
+.town_base {clear:both; width:100%; border-collapse:collapse; font-size:15px;}
+.town_base * {font-family: 'Nanum Gotic';font-size: 14px;} /*20170125 hh ★ */
+.town_base tr th, .town_base tr td {padding:10px;}
+.town_base tr th {border:1px solid #c6c8cd; color:#121212; background-color:#f1f3fa; text-align: center; border-collapse:collapse;}
+.town_base tr:first-child th {border-top:1px solid #2f2f2f;}
+.town_base tr td {border:1px solid #c6c8cd; text-align:center;}
+.town_base tr td:first-child, .town_base tr th:first-child {border-left:1px solid #2f2f2f;}
+.town_base tr td:last-child, .town_base tr th:last-child {border-right:1px solid #2f2f2f;}
+.town_base tr td {border-bottom:1px solid #2f2f2f;}
+.town_base .thAC {background-color:#fafbfd}
+
+.town_history {clear:both; width:100% border-collapse:collapse; font-size:15px;}
+.town_history tr th, .town_history tr td {padding:10px; font-family: 'Nanum Gothic';}
+.town_history tr th {color:#121212; width:115px; text-align:left; padding-left:20px; background:url(:subdirectory:/image/file/703) 5px 17px no-repeat; font-size:15px; vertical-align:top;}
+.town_history tr td .blet {padding-left:20px; background:url(/image/file/26) 5px 50% no-repeat;}
+
+.townInfo_sector1, .townInfo_sector2 {padding-botton:30px; position:relative;}
+.townInfo_sector1 span {display:block; position:absolute; top:96px; left:0; width:250px; height:160px; overflow:hidden; border-radius:5px;}
+.townInfo_sector1 span img {width:100%; height:100%;}
+.townInfo_sector1 p {padding-left:270px; min-height:160px; line-height:23px;}
+.townInfo_sector2 p span {display:inline-block; margin-right:5px; border-radius:10px; overflow:hidden; width:14px; height:13px; background:url(:subdirectory:/image/file/1037) 50% 50% no-repeat;}
+.townInfo_sector2 p b {display:inline-block; margin-bottom:5px}
+.townInfo_sector3 div {width:49.5%; float:left; padding-bottom:20px;}
+.townInfo_sector3 div img {width:100%;}
+
+/* 마을지도 */
+.towninfoBox_wrap {width:291px; position:absolute; top:40px; border:1px solid #dadbe0; border-radius:10px;}
+.towninfoBox_wrap .townBox-1 { }
+.towninfoBox_wrap .townBox-1 img {width:208px; height:210px; position:absolute; top:31px; left:0; z-index:2; margin-left:29px; margin-top:-10px;}
+.towninfoBox_wrap .townBox-1 ul {position:relative; width:100%; height:155px; padding-top:235px;}
+.towninfoBox_wrap .townBox-1 ul li a {display:inline-block; font-family:dotum; font-size:12px; line-height:30px; float:left; width:96px; text-align:center; text-decoration:none; color:#888; border-left:1px solid #dadbe0; border-top:1px solid #dadbe0;}
+.towninfoBox_wrap .townBox-1 ul li:nth-child(3n+1) a {border-left:0}
+.towninfoBox_wrap .townBox-1 ul li a:hover {color:#aaa;}
+.towninfoBox_wrap .townBox-1 ul li a.on {font-weight:600; color:#46AB8B;}
+.towninfoBox_wrap .townBox-1 ul li a.on2 {font-weight:600; color:rgba(70, 171, 139, 0.6);}
+
+
+
+p {font-family:'Nanum Gothic'; font-size:15px;}
+p b {color:#242424;}
+p b span {color:#5E71E4;}

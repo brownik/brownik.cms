@@ -1,0 +1,17 @@
+/*
+DB PK: MENUKEY=103
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-01-19 16:46:35
+수정일: 2019-10-17 09:12:05
+*/
+
+.subPolicy_wrap{position: relative; clear: both}
+.policy_box{position: relative; clear: both;  border: 1px solid #e7eaee; box-shadow:0 5px 0 rgba(0,0,0,.1); padding: 10px; margin-bottom: 15px}
+.policy_box dt{padding-left: 40px; background: url(/resources/images/common/br_policy.gif) 10px 50% no-repeat; margin-bottom: 10px;}
+.policy_box dd{border-top: 1px solid #e9e9e9; padding: 20px 0; display: none}
+.policy_box dt a{font-size: 20px;  font-weight: 600; color: #121212; padding: 15px 0; display: block; width: 100%; background: url(/resources/images/common/btn_open.gif) 99% 50% no-repeat}
+.policy_box dt a img{margin:4px 10px 0 10px;}
+.policy_box dd img{margin:0 auto; display:block;}
+.policy_box.on dt a{background: url(/resources/images/common/btn_close.gif) 99% 50% no-repeat}
+.policy_box.on dd{display: block}
+.subVIsual5{background:url(/resources/images/sub/visual/bg_visual5.jpg) 50% 0 

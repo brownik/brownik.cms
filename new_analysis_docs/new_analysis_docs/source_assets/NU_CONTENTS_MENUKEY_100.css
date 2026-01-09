@@ -1,0 +1,17 @@
+/*
+DB PK: MENUKEY=100
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2017-10-25 09:33:36
+수정일: 2019-10-17 09:11:59
+*/
+
+.policyWrap{clear:both;position:relative;width:100%;height:auto;padding-bottom:40px}
+.policyWrap li{display:inline-block;position:relative;width:365px;height:510px;margin:0 57px;background:url(:subdirectory:/resources/images/sub/policy/bg_policy_tail.gif) 0 100% no-repeat}
+.policyWrap li span.kind{display:inline-block;position:absolute;top:30px;left:25px;padding:5px 10px;border:1px solid #dde4f3;border-radius:5px;background:url(:subdirectory:/resources/images/sub/policy/bg_block.png);font-size:14px;font-weight:600;color:#fff; z-index: 56}
+.policyWrap li span.top{display:inline-block;position:absolute;top:0;left:0;background:url(:subdirectory:/resources/images/sub/policy/bg_policy_top.png); width: 365px; height: 25px; z-index: 55}
+.policyWrap li span.pic{display:block;position:absolute;top:0;left:1px;width: 363px; height: 290px;}
+.policyWrap li h3,.policyWrap li p{width:300px;margin:0 auto}
+.policyWrap li h3{padding-top:320px;padding-bottom:10px;font-size:28px;font-weight:600;color:#2a2a2a;letter-spacing:-2px}
+.policyWrap li p{margin-bottom: 25px; line-height: 20px; height: 40px; font-size:15px;font-weight:300;color:#2a2a2a; overflow:hidden; text-overflow:ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /* 라인수 */ -webkit-box-orient: vertical; word-wrap:break-word; }
+.policyWrap li a{display:inline-block;clear:both;margin-left:32px;padding:12px 60px 12px 15px;border:1px solid #c6cedc;border-radius:5px;background:url(:subdirectory:/resources/images/main/icon_life_more.gif) 85% 50% no-repeat;font-size:15px;font-weight:300;color:#444}
+.policyWrap li a:hover{border:1px solid #181818;font-weight:600;color:#121212}

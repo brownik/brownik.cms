@@ -1,0 +1,97 @@
+/*
+DB PK: MENUKEY=110
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-04-10 16:16:24
+수정일: 2019-10-17 09:10:57
+*/
+
+
+.clear_fix{clear:both;}
+a {cursor:pointer}
+
+.main_container{height:auto;width:1446px;margin:0 auto;}
+.content_area{padding:40px;}
+
+.content_area h3{font-size:23px;color:#222;font-weight:bold;padding-bottom:25px;}
+.mam_gwangsan{height:470px;}
+.content_area .main_view-mam{float:right}
+.content_area .main_view-map{float:right}
+.content_area .main_view-model{float:right}
+.content_area .main_view-book{float:right}
+.mam_gwangsan ul li{border:1px solid #e6e6e6;}
+.mam_gwangsan .mam_left{float:left;width:865px;}
+.mam_gwangsan .mam_left li{display:inline-block;width:272px;height:366px;text-align:center;float:left}
+.mam_gwangsan .mam_left li:nth-of-type(2){margin:0 10px;}
+
+.mam_gwangsan .mam_left .mam_img{position:relative;}
+.mam_gwangsan .mam_left img.mam_icon{position:absolute;top:-2px;left:-2px;}
+.mam_gwangsan .mam_left .mam_lefttxt{width:90%;height:16%;padding:15px;}
+.mam_gwangsan .mam_left .mam_lefttxt h2{font-size:18px;font-weight:bold;color:#555;margin-bottom:10px;overflow:hidden;text-overflow: ellipsis;white-space: nowrap;width: 100%;}
+.mam_gwangsan .mam_left .mam_lefttxt p{color:#777;font-size:16px;height:78px;font-weight:300;width: 100%; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; /* 라인수 */ -webkit-box-orient: vertical; word-wrap:break-word; line-height: 1.2em; height: 3.6em; margin-bottom:15px;}
+
+
+
+
+.btn_view{width:200px;height:42px;margin:0 auto;display:block;border:1px solid #b5b5b5;cursor:pointer;overflow:hidden;box-sizing:border-box;position:relative; z-index: 5;}
+.button_eff{width:200px;height:42px;background:#0fad7b;position:absolute;transition:all .5s ease;left:-200px;z-index:1;}
+.btn_view a{transition:all .5s ease;z-index:2;color:#999;font-size:14px;line-height:40px; z-index:10; position: relative; display: block;}
+.btn_view:hover .button_eff{left:0;}
+.btn_view:hover a{color:#fff;font-weight:bold;}
+
+
+
+
+.mam_gwangsan .mam_left .mam_lefttxt span{font-family:'Nanum Gothic',serif;color:#999;font-size:14px;line-height:40px; }
+.left_txt{text-align:center;}
+
+
+.mam_gwangsan .mam_right{float:right;height:367px;width:500px;background:#f4f4f4; overflow:hidden}
+.mam_gwangsan .mam_right .no-mapping {display:block; text-align:center; font-size:16px; font-weight:300; color:#a4a4a4; padding-top:45px;}
+.mam_gwangsan .mam_right ul li{height:121px; background:#fff;}
+.mam_gwangsan .mam_right ul li:first-child{}
+.mam_gwangsan .mam_right ul li:last-child{border-bottom:1px solid #e6e6e6 !important;}
+.mam_gwangsan .mam_right ul li .mapping_txt{display:inline-block;width:58%;margin:29px 0;}
+.mam_gwangsan .mam_right ul li .mapping_txt h2{font-size:18px;color:#555;font-weight:bold;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 92%; }
+.mam_gwangsan .mam_right ul li .mapping_txt p{font-size:16px;color:#777;font-weight:400;margin-bottom:4px;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 91%;
+	}
+.mam_gwangsan .mam_right ul li .mapping_txt span{font-size:16px;color:#777;font-weight:300;}
+.mam_gwangsan .mam_right ul li a img{transform:translateY(65%);}
+
+.village_map{height:470px;}
+.village_left{float:left;}
+.village_map .village_cont ul li{border:1px solid #ccc;width:245px;float:left;height:182px;text-align:center;}
+.village_map .village_cont ul li img{margin-top:16px;}
+.village_map .village_cont ul li h2{font-size:17px;font-weight:bold;color:#555;}
+.village_map .village_cont ul li:first-child{border-right:none;width:245px;border-bottom:none;}
+.village_map .village_cont ul li:nth-of-type(2){border-right:none;border-bottom:none;}
+.village_map .village_cont ul li:nth-of-type(3){border-bottom:none;}
+.village_map .village_cont ul li:nth-of-type(4){border-right:none;}
+.village_map .village_cont ul li:last-child{border-left:none;}
+
+.model_detail {display:inline-block; width:48%; margin-right:3.7%}
+.model_detail .model_cont {border:1px solid #cccccc; text-align:center; height:400px}
+.model_detail .model_cont img {padding-top:95px}
+
+.ebook_detail {display:inline-block; width:48%; vertical-align:top}
+.ebook_detail .book_cont {height:400px}
+.ebook_detail .book_cont ul {height:245px; padding-top:21px}
+.ebook_detail .book_cont ul li {font-size:18px; font-weight:300; color:#424242; padding-bottom:10px}
+.ebook_detail .book_cont ul li:hover {color:#1e8131; font-weight:400}
+.ebook_detail .book_cont ul li span {display:inline-block; width:40px; height:40px; margin-right:5px; background:url(:subdirectory:/image/file/1028) 100% 100% no-repeat}
+.ebook_detail .book_cont ul li p {display:inline-block; margin-left:5px; vertical-align:top; padding-top:10px}
+
+.ebook_detail .book_cont .book_cont_footer {width:660px; height:135px; border:1px solid #cccccc; text-align:center}
+.ebook_detail .book_cont .book_cont_footer .book-img {display:inline-block; width:404px; float:left}
+.ebook_detail .book_cont .book_cont_footer .book-text {display:inline-block; width:250px; height:100px; padding-top:18px; padding-right:6px}
+.ebook_detail .book_cont .book_cont_footer .book-text span {font-size:14px; font-weight:300; color:#424242}
+.ebook_detail .book_cont .book_cont_footer .book-text p {font-size:25px; font-weight:400; color:#2d2d2d}
+.ebook_detail .book_cont .book_cont_footer .book-text .book-btn {background:#10815d; width:130px; color:#fff; font-size:12px; font-weight:300; border-radius:25px; padding:3px 6px; margin:0 auto; margin-top:15px; text-align:center}
+.ebook_detail .book_cont .book_cont_footer .book-text .book-btn span {background:url(:subdirectory:/image/file/1030) 100% 100% no-repeat; display:inline-block; width:20px; height:10px; margin-right:6px}

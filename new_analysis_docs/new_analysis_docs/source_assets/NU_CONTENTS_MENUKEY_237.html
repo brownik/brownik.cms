@@ -1,0 +1,119 @@
+<!--
+DB PK: MENUKEY=237
+용도: NU_CONTENTS 테이블의 HTML 컨텐츠
+생성일: 2023-12-15 17:56:13
+수정일: 2026-01-05 16:40:07
+-->
+
+<script src="${_url}/resources/plugins/graph/d3/d3.v7.min.js"></script>
+
+<div class="container">
+<div class="info-content-wrap">
+  			<div class="acWrap">
+				<ul>
+					<li><a href="javascript:scrollWin(1);">분야별 마을의제 현황</a></li>
+					<li><a href="javascript:scrollWin(2);">연도별 마을의제 수립 행정동 현황</a></li>
+					<li><a href="javascript:scrollWin(2);">자치구별 마을의제 수립 행정동 현황</a></li>
+                  	<li><a href="javascript:scrollWin(3);">연도별 마을코디네이터 선발 인원 수</a></li>
+                    <li><a href="javascript:scrollWin(3);">연도별 마을청년활동가 선발 인원 수</a></li>
+					<li><a href="javascript:scrollWin(4);">연도별 협치마을사업 추진 행정동 수</a></li>
+					<li><a href="javascript:scrollWin(4);">자치구별 협치마을사업 추진 행정동 수</a></li>
+                  	
+				</ul>
+			</div>
+			<div class="graphWrap autoH">
+              
+              	 <!-- 분야별 마을의제 현황 -->
+              	<div class="bay1 oneLine">
+					<graph:createTitle datasetGraphKey="2" />
+					<div class="bay_cont autoH">
+                        <div style="width:1380px; height:350px; display:inline-block; margin-left:0px;">
+							<graph:createGraph datasetKey="666" datasetGraphKey="2" />
+						</div>
+					</div>
+					<p class="chartSource">
+                      	<graph:createOrigin datasetGraphKey="2" /> 
+                  	</p>
+				</div>
+
+
+                <!-- 연도별 마을의제 수립 행정동 현황 -->
+              	<div class="bay2 twoLine">
+					 <graph:createTitle datasetGraphKey="3" />
+					<div class="bay_cont autoH">
+                        <div style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+							<graph:createGraph datasetKey="667" datasetGraphKey="3" />
+						</div>
+					</div>
+					<p class="chartSource">
+                      	<graph:createOrigin datasetGraphKey="3" />
+                  	</p>
+				</div>
+              
+
+              
+              <!-- 자치구별 마을의제 수립 행정동 현황 -->
+				<div class="bay2 twoLine">
+					<graph:createTitle datasetGraphKey="4" />
+					<div class="bay_cont autoH">
+                        <div style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+							<graph:createGraph datasetKey="668" datasetGraphKey="4" />
+						</div>
+					</div>
+					<p class="chartSource">
+                  		<graph:createOrigin datasetGraphKey="4" />
+                  	</p>
+				</div>
+
+              	<!-- 연도별 마을코디네이터 선발 인원 수 -->
+				<div class="bay2 threeLine">
+					<graph:createTitle datasetGraphKey="5" />
+					<div class="bay_cont autoH">
+                        <div style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+							<graph:createGraph datasetKey="669" datasetGraphKey="5" />
+						</div>
+					</div>
+					<p class="chartSource">
+                  		<graph:createOrigin datasetGraphKey="5" />
+                  	</p>
+				</div>
+              	<!-- 연도별 마을청년활동가 선발 인원 수 -->
+				<div class="bay2 threeLine">
+					<graph:createTitle datasetGraphKey="6" />
+					<div class="bay_cont autoH">
+                        <div style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+							<graph:createGraph datasetKey="670" datasetGraphKey="6" />
+						</div>
+					</div>
+					<p class="chartSource">
+                  		 <graph:createOrigin datasetGraphKey="6" />
+                  	</p>
+				</div>
+              <!-- 연도별 협치마을사업 추진 행정동 수 -->
+              <div class="bay2 fourLine">
+					<graph:createTitle datasetGraphKey="7" />
+					<div class="bay_cont autoH">
+                        <div style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+							<graph:createGraph datasetKey="671" datasetGraphKey="7" />
+						</div>
+					</div>
+					<p class="chartSource">
+                      	<graph:createOrigin datasetGraphKey="7" />
+                  	</p>
+				</div>
+              <!-- 자치구별 협치마을사업 추진 행정동 수 -->
+              <div class="bay2 fourLine">
+					<graph:createTitle datasetGraphKey="8" />
+					<div class="bay_cont autoH">
+                        <div style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+							<graph:createGraph datasetKey="672" datasetGraphKey="8" />
+						</div>
+					</div>
+					<p class="chartSource">
+                      	<graph:createOrigin datasetGraphKey="8" />
+                  	</p>
+				</div>
+ 			</div>
+  </div>
+</div>
+  

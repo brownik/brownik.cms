@@ -1,0 +1,22 @@
+/*
+DB PK: MENUKEY=107
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-03-29 13:23:32
+수정일: 2018-03-29 16:09:59
+*/
+
+[data-type='btn']{
+	width : 10vh;
+	height : 5vh;
+	border-radius : 1vh;
+	transition: width,height,background-color,font-size;
+	transition-duration:2s;
+	outline:none;
+}
+
+[data-type='btn']:hover{
+	width : 15vh;
+	height : 10vh;
+	background-color : white;
+	font-size : 2em;
+}

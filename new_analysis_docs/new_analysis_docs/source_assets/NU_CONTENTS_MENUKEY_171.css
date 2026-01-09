@@ -1,0 +1,61 @@
+/*
+DB PK: MENUKEY=171
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-11-05 16:40:48
+수정일: 2018-11-09 11:01:42
+*/
+
+		* { margin:0; padding:0; }
+		li { list-style: none; }
+		a { text-decoration:none; }
+		body { font-family:'Noto Sans KR',sans-serif; }
+		input[type=text], input[type=password], input[type=submit], input[type=search], textarea { -webkit-appearance:none; }
+		@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);	
+
+
+		.sb_mb_container { width:100%; background-color:#fff; padding-top:5px; }
+
+		/* mb_form */
+		.mb_form_wrap { padding:10px 4%; }
+		.mb_form_wrap .form_box { display:inline-block; width:47%; height:40px; border:1px solid #ddd; color:#2e2e2e; border-radius: 3px; font-size:16px; }
+		.mb_form_wrap .mb_board_tap { margin-right:3%; float:left; -webkit-appearance: none;  background:none;  }
+		.mb_form_wrap .mb_board_tap .select_box{ font-size:16px;  width:100%; height:40px;line-height:40px; background:url(':subdirectory:/image/file/1388') center right no-repeat; background-size:36px;-webkit-appearance:none; border:0; padding-left:10px; }
+		.mb_form_wrap .mb_search {  }
+		.mb_form_wrap .mb_search .search_input { font-size:16px;  display:inline-block; background:none; width:65%; height:40px;  border:0; padding-left:15px; }
+		.mb_form_wrap .mb_search .search_btn { width:24%; display:inline-block; border:0; background:none; height:40px; overflow:hidden; position:relative; float:right;}
+		.mb_form_wrap .mb_search .search_btn img { width:55px; margin-left:-20px; }
+		/* mb_form  종료 */
+
+		/* list */
+		.mb_tbl_list { padding:0 4%; }
+		.mb_tbl_list ul .mb_con_table { border-bottom:1px solid #eee; padding:10px 0; }
+		.mb_tbl_list ul .mb_con_table div { position: relative; }
+		.mb_tbl_list ul .mb_con_table div .list_num { width:10%; display: inline-block; font-weight:500; border letter-spacing:0px; line-height:24px; float:left; padding:5px 0; color:#666; font-size:12px; }
+		.mb_tbl_list ul .mb_con_table div .list_con { width:80%; display: inline-block;}
+		.mb_tbl_list ul .mb_con_table div .list_subject a {padding:5px 0; font-size:16px; color:#000; font-weight:500; }
+		.mb_tbl_list ul .mb_con_table div .list_category { font-size:15px; color:#666; font-weight:400; background-color:#f1f1f1; border-radius:5px; padding:0 4px; margin-right:5px; }
+		.mb_tbl_list ul .mb_con_table div ul li { display: inline-block; padding:3px 0; padding-right:4px;  }
+		/* list 종료 */
+
+		/* paging */
+		.mb_paging { width:100%; text-align: center; padding:20px 0; }
+		.mb_paging span a { margin:2px; display: inline-block; width:30px; height:30px; border:1px solid #d9d4d4; font-size:14px;  background-color: #fff; font-weight:600; line-height: 29px; border-radius: 5px; color:#666; }
+		.mb_paging .mb_present { background-color:#8b8e99; color:#fff; }
+		.mb_paging .mb_numPN { display: inline-block; }
+		.mb_paging .mb_numPN a { font-size:10px; } 
+		/* paging 종료 */
+
+		/* view 시작 */
+		.mb_container { background-color:#fff; padding:15px 4%; padding-bottom:20px; text-align:center;  }
+		.mb_view_content {  border:1px solid #D6D6D7; border-radius:10px; box-shadow:2px 2px 0px 2px #f5f5f5; margin-bottom:20px; }
+		.mb_view_content > .mb_view_tit { border-radius: 10px 10px 0px 0px; color:#000; text-align: center; font-size:15px; font-weight:500; line-height: 20px; padding:15px 0; background-color:#f7f8f9;}
+		.mb_view_content table { border-collapse: collapse; }
+		.mb_view_content table tr {  border-bottom:1px solid #efefef; line-height:20px;text-align: left;  }
+		.mb_view_content table tr th {color:#000; width:35%; border-right:1px solid #efefef; color:#000; font-size:14px; font-weight:500; line-height: 20px; padding-left:10px; }
+		.mb_view_content table tr td { padding:10px 10px;  font-size:14px; color:#666; }
+		.mb_view_content table tr td ul li { display:inline-block;  }
+		.mb_view_content table tr td ul li img { width:40px; }
+
+		.board_btn { margin:0 auto; display:inline; background-color:#6174e4; padding:5px 15px; border-radius:5px; font-size:16px; font-weight:500; }
+		.board_btn a { color:#fff; }  
+		/* view 종료 */

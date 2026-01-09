@@ -1,0 +1,51 @@
+/*
+DB PK: MENUKEY=199
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-11-07 19:54:14
+수정일: 2019-04-10 11:50:44
+*/
+
+.page_tbl{ width:100%; border-bottom: 2px solid #231f20;border-top: 2px solid #231f20; margin-top: 15px;}
+				.page_tbl thead tr td{ font-size:13px; font-weight:600; padding:3px 0; text-align:center; border-bottom: 2px solid #231f20;}
+				.page_tblR{ border-left: 1px solid #CECECE;}
+				.page_tbl tbody tr td{ font-size:12px; padding:3px 0; text-align:center; border-bottom: 1px solid #CECECE; background-color:#F6F6F6;}
+				.page_map { padding:5px; border: 1px solid #CECECE; background-color:#F1F1F1; width:100%; height:300px;}
+				.page_tbl tr td{border-left:1px solid #CECECE}
+				.page_tbl tr td:first-child{border-left:0;}
+				.page_tbl tr td.c_green{color: #699B37;}
+				.page_tbl tr td.c_yellow{color: #DE9E17;}
+				.page_tbl tr td.c_red{color: #B51010;}
+				h3.tit{background:url() 0 6px no-repeat; padding-left:15px; line-height:20px;font-size: 13px;font-weight: bold;color:#2478a4;}
+				dd.txt-1{font-size:13px;padding-left:5px;}
+  
+  #LegendTitle
+{
+  background-color: #000;
+  font-size: 11px;
+  width: 100px;
+  font-weight: bold;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display:inline-block;
+  text-align:center; 
+  margin-bottom: -6px;
+}
+
+#LegendList
+{
+	height:100%; 
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #000;
+  overflow-x:hidden; 
+ 	overflow-y:auto;
+ 	text-align:left;
+ 	
+ 	padding-top: 10px;
+ 	padding-bottom: 2px;
+ 	padding-left: 5px;
+ 	padding-right: 5px;
+ 	
+ 	border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}

@@ -1,0 +1,196 @@
+/*
+DB PK: MENUKEY=106
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-03-05 13:06:29
+수정일: 2018-03-15 10:24:54
+*/
+
+@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
+::selection{background:#42B4EC;color:#222}
+/* common */
+html,body,div,span,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,blockquote,p,address,pre,cite,form,fieldset,table,th,td,legend,label{margin:0;padding:0;border:0;font-size:100%;font-family:'Noto Sans KR',sans-serif;letter-spacing:-.06em}
+input,textarea,select{margin:0;padding:0;font-family:'Nanum Gothic',sans-serif}
+
+.ft_titi{font-family: 'Titillium Web', sans-serif;}
+.ft_jjM{font-family: 'Jeju Myeongjo', serif;}
+
+a{text-decoration:none}
+
+body{line-height:120%;color:#776f67;letter-spacing:0;-webkit-text-size-adjust:none}
+.clear{display:none !important}
+.clearBg{background:none !important}
+.txtdown{word-break:break-all}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+fieldset,img,abbr,acronym,label{border:0 none}
+.blind,legend{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+blockquote:before,blockquote:after,q:before,q:after{content:''}
+ol,ul,dl{list-style:none}
+hr{display:none}
+fieldset{border:0}
+label,select,input,textarea{vertical-align:middle}
+img{vertical-align:top}
+.hand{cursor:pointer}
+.txtCut{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.txt_cut1, .txt_cut2, .txt_cut3, .txt_cut4, .txt_cut5{overflow:hidden; text-overflow:ellipsis; display: -webkit-box; -webkit-box-orient: vertical; word-wrap:break-word; }
+.txt_cut1{-webkit-line-clamp: 1; /* 라인수 */ }
+.txt_cut2{-webkit-line-clamp: 2; /* 라인수 */ }
+.txt_cut3{-webkit-line-clamp: 3; /* 라인수 */ }
+.txt_cut4{-webkit-line-clamp: 4; /* 라인수 */ }
+.txt_cut5{-webkit-line-clamp: 5; /* 라인수 */ }
+.txtCut2{overflow:hidden; text-overflow:ellipsis; display: -webkit-box; -webkit-line-clamp: 2; /* 라인수 */ -webkit-box-orient: vertical; word-wrap:break-word; }
+
+.alignCenter{text-align:center !important}
+.alignLeft{text-align:left !important}
+.alignRight{text-align:right !important}
+.fontNomal{font-weight:normal !important}
+
+.rightBDnone{border-right:none !important}
+.leftBDnone{border-left:none !important}
+.bdNone{border:none !important}
+
+.cboth::before{display:table;content:''}
+.cboth::after{display:table;content:''}
+.cboth::after{clear:both}
+.cboth{-ms-zoom:1}
+
+.autoH:after{display:block;clear:both;content:' '}
+.autoH{*zoom:1}
+
+.disPB{display:inline-block;*display:inline;vertical-align:top;zoom:1}
+address,caption,em,cite{font-weight:normal;font-style:normal}
+ins{text-decoration:none}
+del{text-decoration:line-through}
+
+/* skip navi */
+#skip_navi{overflow:hidden;position:absolute;top:-10px;left:0;line-height:0}
+
+/* table */
+table{border-collapse:separate;border:0 none;border-spacing:0}
+caption{font-weight:normal;text-align:left}
+
+.bs{box-shadow:0 3px 0 rgba(0,0,0,.2)}
+
+.gh_pop_area{position: fixed; top: 0; right: 0; height: 100%; z-index: 333;}
+.gh_pop_opener{width: 172px; height: 239px; position: absolute; top: calc(50% - 142px); right: 0; padding-top: 45px; background: url(/resources/images/population/bg_open.png) 0 0 no-repeat}
+.gh_pop_opener h2{padding-left: 30px; height: 128px; color: #282828; font-size: 23px; font-weight: 200; line-height: 28px}
+.gh_pop_opener h2 strong{font-weight: 600}
+.gh_pop_opener p:nth-of-type(1){font-size: 15px; color: #fff; text-align: center; height: 54px;}
+.gh_pop_opener p:nth-of-type(2){font-size: 20px; font-weight: 600; color: #fff; text-align: center;}
+
+.gh_pop_box{height: 100%; width: 100%; position: fixed; top: 0; right: 0; background: url(/resources/images/population/bg_tr_px.png); display: none}
+.gh_pop_box.on{display: block}
+.gh_pop_wrap{width: 1100px; height: 100%; position: absolute; top: 0; right: 0; background: url(/resources/images/population/bg.jpg)0 0 no-repeat; background-size: cover}
+.gh_pop_wrap h2{padding-left:75px; margin-left: 40px; color: #121212; margin-top: 62px; margin-bottom: 55px; font-size: 37px; font-weight: 200; background: url(/resources/images/population/br_title) 0 50% no-repeat; height: 60px; line-height: 60px}
+.gh_pop_wrap h2 strong{font-weight: 600}
+.gh_pop_wrap .standard_date{position:absolute; top:118px; left:237px; font-size:15px; color:#121212;}
+
+.gh_pop_left{width: 270px; border: 1px solid #7d7a70; border-radius: 8px; padding:10px 25px; background-color: #d8d5c8; margin-left: 40px}
+.gh_pop_left li{height: 130px; padding: 45px 10px 0 10px; text-align: right; border-bottom: 1px dotted #fff}
+.gh_pop_left li:nth-of-type(1){background: url(/resources/images/population/bg_hm1.png) 0 50% no-repeat}
+.gh_pop_left li:nth-of-type(2){background: url(/resources/images/population/bg_hm2.png) 0 50% no-repeat}
+.gh_pop_left li:nth-of-type(3){background: url(/resources/images/population/bg_hm3.png) 0 50% no-repeat; border: 0}
+.gh_pop_left li p{line-height: 40px; height: 40px; font-weight: 600}
+.gh_pop_left li p:nth-of-type(1){font-size: 30px; color: #121212}
+.gh_pop_left li p:nth-of-type(2){margin-bottom:3px; font-size: 35px; color: #eb7222;}
+.gh_pop_left li span{font-size: 15px; color: #121212}
+.gh_pop_left a{display: block; line-height: 30px; color: #282828; border: 1px solid #a7a49f; padding: 25px 0 25px 30px; margin-bottom: 20px; border-radius: 5px; background: url(/resources/images/population/bg_btn.png) 90% 50% no-repeat; background-color: #f0cb5a; font-size: 15px;}
+.gh_pop_left a strong{font-size: 28px;color: #7b600c;}
+.gh_pop_left a:hover{border-color: #8A5213}
+.gh_pop_left ul li p.point_color{ color:#da3333; position:relative; z-index:0;}
+.gh_pop_left ul li p.point_color:after{content:''; display:inline-block; width:165px; height:15px; position:absolute; top:21px; left:94px; z-index:-1; background:url(/resources/images/population/undeline_y.png)no-repeat;}
+
+.gh_pop_right{width: 750px; height: 910px; position: absolute; top: 0; left: 340px}
+
+.gh_map, .gh_map ul{width: 750px; height: 750px; position: relative}
+.gh_map, .gh_map ul::before{content: ''; display: block; width: 750px; height: 750px; background: url(/resources/images/population/bg_map_line.png) 0 0 no-repeat; position:  absolute; z-index: 1; top: 0; left: 0}
+
+.gh_map ul li{width: 750px; height: 750px; position: absolute; top: 0; left: 0;}
+.gh_map ul li > div{position: absolute; z-index: 33; text-align: center;}
+
+.gh_map ul li > div span{width: 17px; height: 31px; position: relative; background: url(/resources/images/population/ic_hm.png) no-repeat;display: inline-block; vertical-align: middle}
+.gh_map ul li > div p:nth-of-type(1){font-size: 13px; height: 16px; line-height: 16px; color: #121212;letter-spacing: 0}
+.gh_map ul li > div p:nth-of-type(2){font-size: 13px; height: 20px; display: inline-block; border: 1px solid #815f32; border-radius: 4px; padding: 0 5px; background: url(/resources/images/population/bg_tf.png);line-height: 20px; color: #121212;letter-spacing: 0; font-weight: 600}
+
+
+li.grn .hm{background-position-x: -17px}
+li.rdy .hm{background-position-x: -34px}
+li.rd .hm{background-position-x: -51px}
+
+li.area1,li.area2,li.area3,li.area4,li.area5,li.area6,li.area7,li.area8,li.area9,li.area10{background: url(/resources/images/population/map1.png) no-repeat;}
+
+li.area11,li.area12,li.area13,li.area14,li.area15,li.area16,li.area17,li.area18,li.area19{background: url(/resources/images/population/map2.png) no-repeat;}
+
+
+.gh_map ul li.area1{background-position-y:0}
+.gh_map ul li.area2{background-position-y:-750px}
+.gh_map ul li.area3{background-position-y:-1500px}
+.gh_map ul li.area4{background-position-y:-2250px}
+.gh_map ul li.area5{background-position-y:-3000px}
+.gh_map ul li.area6{background-position-y:-3750px}
+.gh_map ul li.area7{background-position-y:-4500px}
+.gh_map ul li.area8{background-position-y:-5250px}
+.gh_map ul li.area9{background-position-y:-6000px}
+.gh_map ul li.area10{background-position-y:-6750px}
+.gh_map ul li.area11{background-position-y:0}
+.gh_map ul li.area12{background-position-y:-750px}
+.gh_map ul li.area13{background-position-y:-1500px}
+.gh_map ul li.area14{background-position-y:-2250px}
+.gh_map ul li.area15{background-position-y:-3000px}
+.gh_map ul li.area16{background-position-y:-3750px}
+.gh_map ul li.area17{background-position-y:-4500px}
+.gh_map ul li.area18{background-position-y:-5250px}
+.gh_map ul li.area19{background-position-y:-6000px}
+
+li.grn{background-position-x: -750px}
+li.rdy{background-position-x: -1500px}
+li.rd{background-position-x: -2250px}
+
+.gh_map ul li.area1 > div{top: 260px; left: 120px}
+.gh_map ul li.area2 > div{top: 230px; left: 255px}
+.gh_map ul li.area3 > div{top: 170px; left: 355px}
+.gh_map ul li.area4 > div{top: 210px; left: 500px}
+.gh_map ul li.area5 > div{top: 360px; left: 600px}
+.gh_map ul li.area6 > div{top: 490px; left: 615px}
+.gh_map ul li.area7 > div{top: 350px; left: 480px}
+.gh_map ul li.area8 > div{top: 520px; left: 555px}
+.gh_map ul li.area9 > div{top: 560px; left: 573px}
+.gh_map ul li.area10 > div{top: 555px; left: 510px}
+.gh_map ul li.area11 > div{top: 540px; left: 440px}
+.gh_map ul li.area12 > div{top: 335px; left: 390px}
+.gh_map ul li.area13 > div{top: 420px; left: 375px}
+.gh_map ul li.area14 > div{top: 510px; left: 360px}
+.gh_map ul li.area15 > div{top: 400px; left: 290px}
+.gh_map ul li.area16 > div{top: 505px; left: 272px}
+.gh_map ul li.area17 > div{top: 540px; left: 180px}
+.gh_map ul li.area18 > div{top: 610px; left: 280px}
+.gh_map ul li.area19 > div{top: 410px; left: 160px}
+
+.gh_map ul li.area6.type2 div p, .gh_map ul li.area8.type2 div p, .gh_map ul li.area9.type2 div p{display: inline-block;vertical-align: middle}
+
+.gh_map ul li.area6 > div::before{content: ''; position: absolute; top: 0; left: -90px; display: block; width: 100px; height: 29px; background: url(/resources/images/population/s_line1.png) 0 0 no-repeat}
+.gh_map ul li.area8 > div::before{content: ''; position: absolute; top: -45px; left: -70px; display: block; width: 89px; height: 57px; background: url(/resources/images/population/s_line2.png) 0 0 no-repeat}
+.gh_map ul li.area9 > div::before{content: ''; position: absolute; top: -120px; left: -120px; display: block; width: 141px; height: 131px; background: url(/resources/images/population/s_line3.png) 0 0 no-repeat}
+.gh_map ul li.area10 > div::before{content: ''; position: absolute; top: -60px; left: -50px; display: block; width: 71px; height: 73px; background: url(/resources/images/population/s_line4.png) 0 0 no-repeat}
+.gh_map ul li.area11 > div::before{content: ''; position: absolute; top: -64px; left: -5px; display: block; width: 27px; height: 76px; background: url(/resources/images/population/s_line5.png) 0 0 no-repeat}
+
+
+.gh_standard{position: absolute; top: 100px; right:10px;}
+.gh_standard p{padding-left: 25px; line-height: 30px; font-size: 13px; color: #121212}
+.gh_standard p:nth-of-type(1){background: url(/resources/images/population/ic_hm1.png) 0 50% no-repeat}
+.gh_standard p:nth-of-type(2){background: url(/resources/images/population/ic_hm2.png) 0 50% no-repeat}
+.gh_standard p:nth-of-type(3){background: url(/resources/images/population/ic_hm3.png) 0 50% no-repeat}
+.gh_standard p:nth-of-type(4){background: url(/resources/images/population/ic_hm4.png) 0 50% no-repeat}
+
+.gh_st{width: 720px; height: 180px;  position: absolute; bottom: 20px; left: 75px}
+.gh_st ul{position: absolute; bottom:0; right: 71px; width: 583px; height: 170px; background: url(/resources/images/population/bg_line.png) 0 0 no-repeat}
+.gh_st ul li{height: 170px; width: 11%; float: left; text-align: center}
+.gh_st ul li p:nth-of-type(1){position: relative; width: 15px; height: 140px; display: inline-block;}
+.gh_st ul li p:nth-of-type(1) span{position: absolute; display: inline-block; border-radius: 3px; width: 15px; bottom: 0; left: 0; background-color: #ea803a}
+.gh_st ul li p:nth-of-type(2){font-size: 13px; font-weight: 600; color: #121212}
+.gh_st > div h3{font-size: 12px; height: 20px; color: #121212}
+.gh_st > div p{font-size: 13px; font-weight: 600; height: 30px; color: #121212}
+
+a.gh_close{display: inline-block; width: 68px; height: 68px; position: absolute; top: 15px; right: 30px; border: 1px solid #7d7a70; border-radius: 4px; overflow: hidden; z-index: 44}
+a.gh_close:hover{border-color: #121212}
+
+.graphVal{display: inline-block; margin-top:-1.2em; margin-left:-24px; color:black; font-size:15px; position:absolute;}

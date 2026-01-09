@@ -1,0 +1,23 @@
+/*
+DB PK: MENUKEY=128
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-07-05 09:40:51
+수정일: 2018-07-05 09:51:55
+*/
+
+	svg { background-color: rgba(0,0,0,0.5); border: 1px solid}
+    svg .municipality { fill: blue; stroke: #CCC; }
+    svg .municipality:hover { opacity:0.7; }
+    svg .municipality.p0, svg .swatch.p0 { fill: rgb(247,251,255); }
+    svg .municipality.p1, svg .swatch.p1 { fill: rgb(222,235,247); }
+    svg .municipality.p2, svg .swatch.p2 { fill: rgb(198,219,239); }
+    svg .municipality.p3, svg .swatch.p3 { fill: rgb(158,202,225); }
+    svg .municipality.p4, svg .swatch.p4 { fill: rgb(107,174,214); }
+    svg .municipality.p5, svg .swatch.p5 { fill: rgb(66,146,198); }
+    svg .municipality.p6, svg .swatch.p6 { fill: rgb(33,113,181); }
+    svg .municipality.p7, svg .swatch.p7 { fill: rgb(8,81,156); }
+    svg .municipality.p8, svg .swatch.p8 { fill: rgb(8,48,107); }
+    svg text { font-size: 10px; }
+	.tooltip { position: absolute;max-width: 400px;height: auto;padding: 5px;background-color: rgba(0,0,0); -webkit-border-radius: 5px;-moz-border-radius: 5px;
+    border-radius: 5px;-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+    pointer-events: none;font-size: 12px; margin:5px;}

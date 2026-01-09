@@ -1,0 +1,51 @@
+/*
+DB PK: MENUKEY=150
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-11-02 18:23:06
+수정일: 2018-11-21 18:55:03
+*/
+
+* { margin:0; padding:0; }
+		li { list-style: none; }
+		a { text-decoration:none; }
+		body { font-family:'Noto Sans KR',sans-serif; }
+		input[type=text], input[type=password], input[type=submit], input[type=search], textarea { -webkit-appearance:none; }
+		@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+		
+		
+
+		/* 콘텐츠 시작 */
+		.mb_container { width:100%; background-color:#fff; padding:10px 0;} 
+		.mb_content {  }
+		.mb_content .mb_select_wrap { width:94%; padding:7px 0; ㅁmargin:0 auto; border:1px solid #e3e3e3; background-color:#f9f9f9; border-radius:5px; text-align:center; margin-left: 10px;}
+		.mb_content .mb_select_wrap .town_list { width:70%; height:40px; font-size:15px; line-height:40px; border:1px solid #d4d6dd; padding-left:10px; font-weight:500; background:url(':subdirectory:/image/file/1040') center right no-repeat; background-size:36px; background-color:#fff; -webkit-appearance:none; border-radius:0px; } 
+		
+		.mb_townInfo_wrap { padding:5px 4%; }
+		.mb_townInfo_wrap div h2 { color:#000; font-size:16px; border-bottom:1px solid #d4d6dd; background-size:20px; background:url(':subdirectory:/image/file/702') 5px 10px no-repeat; padding:10px 0 10px 35px; font-weight:500; margin-bottom:10px;  } 
+		
+		/* 섹션01 시작 */
+		.mb_townInfo_wrap .mb_towninfo_section1 { padding-bottom:10px; }
+		.mb_townInfo_wrap .mb_towninfo_section1 span {display:inline-block; margin-right:5px; border-radius:10px; overflow:hidden; width:14px; height:14px; background:url(:subdirectory:/image/file/1037) 50% 50% no-repeat;}
+		.mb_townInfo_wrap .mb_towninfo_section1 b {display:inline-block; margin-bottom:5px}
+		.mb_townInfo_wrap .mb_towninfo_section1 p { width:95%; margin:0 auto; padding:5px 0; letter-spacing:-0.5px; font-size:14px;}
+		.mb_townInfo_wrap .mb_towninfo_section1 p img { margin-right:8px; }
+		/* 섹션01 종료 */
+
+		/* 섹션02 시작 */
+		.mb_townInfo_wrap .mb_townInfo_section2 { padding-bottom:10px; }
+		.mb_townInfo_wrap .mb_townInfo_section2 table { border-collapse:collapse; } 
+		.mb_townInfo_wrap .mb_townInfo_section2 table tr {border-bottom:1px dashed #efefef;   font-size:14px; color:#666; }
+		.mb_townInfo_wrap .mb_townInfo_section2 table tr th { letter-spacing:0.5px; font-weight:500;  width:25%; font-size:12px;  color:#000;  }
+		.mb_townInfo_wrap .mb_townInfo_section2 table tr td { padding:5px 0;  padding-left:5px; }
+		/* 섹션02 종료 */
+
+		/* 섹션03 시작 */
+		.mb_townInfo_wrap .mb_townInfo_section3 { padding-bottom:10px; }
+		/*.mb_townInfo_wrap .mb_townInfo_section3 .mb_graph_people { width:50%; }*/
+		.mb_townInfo_wrap .mb_townInfo_section3 .mb_town_base { width:100%; border-collapse:collapse; border:1px solid #efefef; border-radius:10px; margin-top:10px; }
+		.mb_townInfo_wrap .mb_townInfo_section3 .mb_town_base tr { font-size:14px; }
+		.mb_townInfo_wrap .mb_townInfo_section3 .mb_town_base tr th { width:25%; background-color:#f7f8f9; color:#000; border:1px solid #efefef; }
+		.mb_townInfo_wrap .mb_townInfo_section3 .mb_town_base tr td {  padding:3px 10px; border-bottom: 1px dashed #efefef; }
+		/* 섹션03 종료 */
+
+		.standard_date {float: right; padding-bottom: 15px; padding-top: 5px;}

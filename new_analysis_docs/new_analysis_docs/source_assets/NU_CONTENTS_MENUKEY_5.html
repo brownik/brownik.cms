@@ -1,0 +1,82 @@
+<!--
+DB PK: MENUKEY=5
+용도: NU_CONTENTS 테이블의 HTML 컨텐츠
+생성일: 2016-09-26 14:05:05
+수정일: 2019-10-17 09:11:38
+-->
+
+			<div class="acWrap">
+				<ul>
+					<li><a href="javascript:scrollWin(1)">건축허가(연면적, 동)</a></li>
+					<li><a href="javascript:scrollWin(1)">건축허가(용도별)</a></li>
+					<li><a href="javascript:scrollWin(2)">주택현황</a></li>
+					<li><a href="javascript:scrollWin(2)">용도지역</a></li>
+				</ul>
+              	<p>※ 통계법 제27조의2(통계작성·공표과정에서의 영향력 행사, 누설 및 목적 외 사용의 금지 등)에 따라 공표전 통계는 공개하지 않습니다.</p>
+			</div>
+			<div class="graphWrap autoH">
+				<!--건축허가(연면적,동)-->
+				<div class="bay2 oneLine">
+					<graph:createTitle datasetGraphKey="40" /> 
+					<div class="bay_cont autoH">
+						<div id="chart2" style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+							 <graph:createGraph datasetKey="61" datasetGraphKey="40" />
+						</div>
+					</div>
+					<p class="chartSource">
+                  		<graph:createOrigin datasetGraphKey="40" />
+                  	</p>
+				</div>
+				<!--건축허가(용도별)-->
+				<div class="bay2 oneLine">
+					<graph:createTitle datasetGraphKey="63" /> 
+					<div class="bay_cont autoH">
+						<div id="chart2" style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+							 <graph:createGraph datasetKey="100" datasetGraphKey="63" />
+						</div>
+					</div>
+					<p class="chartSource">
+                      	<graph:createOrigin datasetGraphKey="63" />
+                  	</p>
+				</div>
+				<!--주택현황-->
+				<div class="bay2 twoLine">
+					<graph:createTitle datasetGraphKey="64" /> 
+					<div class="bay_cont autoH">
+						<div id="chart2" style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+							 <graph:createGraph datasetKey="101" datasetGraphKey="64" />
+						</div>
+					</div>
+					<p class="chartSource">
+                  		<graph:createOrigin datasetGraphKey="64" />
+                  	</p>
+				</div>
+				<!--용도지역-->
+				<div class="bay2 threeLine">
+					<graph:createTitle datasetGraphKey="66" /> 
+					<div class="bay_cont autoH">
+						<div id="chart2" style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+							 <graph:createGraph datasetKey="103" datasetGraphKey="66" />
+						</div>
+					</div>
+					<p class="chartSource">
+                      	<graph:createOrigin datasetGraphKey="66" />
+                  	</p>
+				</div>
+			</div>
+<script>
+var LineRevision = 20;
+
+function scrollWin(num) {
+	if (num == 1) {
+		var oneLine = $(".oneLine").offset();
+		$('html, body').animate({scrollTop: oneLine.top-LineRevision}, 300);
+	} else if (num == 2) {
+		var twoLine = $(".twoLine").offset();
+		$('html, body').animate({scrollTop: twoLine.top-LineRevision}, 300);
+	} else if (num == 3) {
+		var threeLine = $(".threeLine").offset();
+		$('html, body').animate({scrollTop: threeLine.top-LineRevision}, 300);
+	}
+}
+</script>

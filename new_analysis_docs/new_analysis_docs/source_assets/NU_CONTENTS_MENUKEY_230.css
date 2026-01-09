@@ -1,0 +1,53 @@
+/*
+DB PK: MENUKEY=230
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2019-10-18 07:06:49
+수정일: 2025-12-29 10:19:54
+*/
+
+.login_wrap{position: relative; width: 480px; margin: 0 auto; padding: 40px; margin-top:0px; margin-bottom: 20px; border: 1px solid #d2dae7; background-color: #fff;  box-shadow:0 5px 0 rgba(0,0,0,.05);}
+.title{border-bottom: 1px solid #e7ebf2; padding-bottom:25px;}
+.title h2{position: relative; padding-bottom:25px; line-height: 1.2em; font-size:24px; font-weight: 600; color:#323a40;}
+.title h2::before{content: ''; display: block; width: 50px; height: 5px; background-color:#e94746; position: absolute; bottom:10px; left: 0}
+.title p{line-height: 1.2em; font-size: 16px; font-weight: 300; color:#323a40;}
+.login_wrap > div:nth-of-type(2){text-align: center; padding:25px 0 15px 0;}
+.login_wrap > div:nth-of-type(2) ul li{width: calc(100% / 3 - 5px); display: inline-block; padding: 15px 0}
+.login_wrap > div:nth-of-type(2) ul li a{display: inline-block; padding-top: 80px; color: #091931; font-weight: 300; font-size: 15px; text-align: center; position: relative}
+
+.login_wrap > div:nth-of-type(2) ul li a::before{content: ''; position: absolute; top: 0; left: calc(50% - 35px); display: inline-block; width: 69px; height: 69px; border: 1px solid #e2e5f1;box-shadow:0 0px 0 rgba(0,0,0,.05); vertical-align: top; border-radius: 50%; background: url(:subdirectory:/resources/images/townE/common/bg_login_type_set.png) no-repeat; transition: all .3s}
+.login_wrap > div:nth-of-type(2) ul li a:hover::before{box-shadow:0 5px 0 rgba(0,0,0,.05); transition: all .3s; transform: translateY(-5px)}
+.login_wrap > div:nth-of-type(2) ul li #phoneLogin::before{background-position: -350px 0}
+.login_wrap > div:nth-of-type(2) ul li #facebookLogin::before{background-position: 0 0}
+.login_wrap > div:nth-of-type(2) ul li #twitterLogin::before{background-position: -70px 0}
+.login_wrap > div:nth-of-type(2) ul li #googleLogin::before{background-position: -140px 0}
+.login_wrap > div:nth-of-type(2) ul li #naverLogin::before{background-position: -210px 0;}
+.login_wrap > div:nth-of-type(2) ul li #kakaoLogin::before{background-position: -280px 0}
+
+.login_wrap .apple-login {position:relative; width:calc(100%); margin:0 auto; text-align:center; border:1px solid #d2dae7; border-radius:10px; margin-bottom:8px; transition:all .3s;}
+.login_wrap .apple-login:hover {box-shadow:0 5px 0 rgba(0,0,0,.05); transition:all .3s; transform:translateY(-5px);}
+.login_wrap .apple-login a {display:flex; justify-content:center; align-items:center; width:100%; height:100%; border-radius:10px; font-size:15px; font-weight:400; color:#323a40; padding:15px 0;}
+.login_wrap .apple-login a img {display:inline-block; width:20px; margin-right:7px;}
+
+.login-using-rink {position:relative; width:480px; display:none;}
+.login-using-rink a {font-size:16px; font-weight:400; color:#323a40; width:100%; display:block; text-align:center;}
+
+.login-type-mobile{display:none;}
+
+
+@media (max-width:1000px){
+.login_wrap{position: relative; width: calc(100% - 0px); margin:0; padding:0; border:0; box-shadow:inherit;}
+.login-using-rink {display:block; width:calc(100% - 20px); margin:0 auto; margin-top:15px;}
+
+.title,
+.login-type{display:none;}
+.login-type-mobile{display:block;}
+.login-type-mobile,
+.login-type-mobile ul{position:relative; width:100%; display:inline-block;}
+.login-type-mobile ul li{width:100%; display:inline-block; width:100%; margin-bottom:10px;}
+.login-type-mobile ul li a{display:inline-block; width:100%;}
+.login-type-mobile ul li a img{width:100%;}
+}
+
+@media (max-width:450px){
+	.login_wrap{margin-top:55px;}
+}

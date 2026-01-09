@@ -1,0 +1,102 @@
+/*
+DB PK: MENUKEY=146
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-10-08 13:55:09
+수정일: 2019-04-11 16:25:20
+*/
+
+@media only screen and (min-width : 356px) and (max-width : 750px){	
+    body{min-width:100px;}
+    #mb_header{padding-bottom: 10px !important;}
+    #container .section_02 .section_Wrap span.sec_info span{font-size:12px !important;}
+    #container .section_01 .section_Wrap span.sec_info span{font-size:12px !important;}
+
+    @media only screen and (max-width: 750px) and (min-width: 356px){
+    #container #mb_banner .banner_btn {left:40% !important;}
+    #container .section_02 .section_Wrap h2.sec_title,
+    #container .section_01 .section_Wrap h2.sec_title{font-size:14px !important;}
+    }
+
+    @media only screen and (max-width: 355px) and (min-width: 100px){
+    #container .section_02 .section_Wrap h2.sec_title,
+    #container .section_01 .section_Wrap h2.sec_title{font-size:14px !important;}
+    #container .section_01 .section_Wrap span.sec_info img{width: 40%;}
+    #container .section_02 .section_Wrap span.sec_info img{width: 59%;}
+    }
+
+    .list2:first img {display:none;}
+
+    /*banner*/
+    #container #mb_banner{position:relative; width:100%; overflow:hidden;}
+    #container #mb_banner ul li{float:left; width:100%;}
+    #container #mb_banner ul li img{width:100%; height:auto;}
+
+    #container #mb_banner .banner_btn{position:absolute; left:47%; top:78%;}
+    #container #mb_banner .banner_btn img{cursor:pointer;}
+    #container #mb_banner .banner_btn img.banner_on{width:50%;}
+    #container #mb_banner .banner_btn a{display:inline-block; width:18px; height:18px; cursor:pointer; background:url(':subdirectory:/images/mobile/main/btn_bn.png') 0 0 no-repeat; text-indent:-9999px}
+    #container #mb_banner .banner_btn a.active{width:45px; height:18px; background:url(':subdirectory:/images/mobile/main/btn_bn_on.png') 0 0 no-repeat;}
+
+
+
+    /*section01 - 마을안내지도*/
+    #container .section_01{width:100%; background-color:#fff; overflow:hidden; margin-top:-42px; padding-bottom:20px;}
+    #container .section_01 legend{display:none;}
+    #container .section_01 .section_Wrap{width:96%; margin:0 auto; overflow:hidden;}
+    #container .section_01 .section_Wrap h2.sec_title{padding-top:10px; font-size:16px; color:#6c6c6c;}
+    #container .section_01 .section_Wrap span.sec_info{width:33%; display:block; text-align:center; float:left; margin-top:10px;}
+    #container .section_01 .section_Wrap span.sec_info span{display:block; font-size:12px; font-weight:bold; padding-top:7px;}
+
+    /*section02 - 생활정보서비스*/
+    #container .section_02{width:100%; background-color:#fff; overflow:hidden; padding-bottom:20px; border-top:6px solid #ffb249;}
+    #container .section_02 .section_Wrap{width:96%; margin:0 auto; overflow:hidden;}
+    #container .section_02 .section_Wrap h2.sec_title{padding-top:10px; font-size:16px; color:#6c6c6c;}
+    #container .section_02 .section_Wrap span.sec_info{width:25%; display:block; text-align:center; float:left; margin-top:10px;}
+    #container .section_02 .section_Wrap span.sec_info span{display:block; font-size:12px; font-weight:bold; padding-top:7px;}
+    #container .section_02 .section_Wrap span.sec_info a{position:relative;display:inline-block;}
+    .newmarker{position:absolute; top:4px; right:16px; display:block; width:20%; height:20%;}
+    .newmarker img{width:100%; height:100%;}
+
+    /*section03 - 맘편한광산, GIS정책지도*/
+    #container .section_03{width:100%; overflow:hidden; margin-top:20px; padding-bottom:30px;}
+    #container .section_03 legend{display:none;}
+    #container .section_03 .section_Wrap{width:92%; margin:0 auto; overflow:hidden;}
+    #container .section_03 .section_Wrap span img{width:100%;}
+    #container .section_03 .section_Wrap span.sec03_banner1{float:left; width:48%;}
+    #container .section_03 .section_Wrap span.sec03_banner2{float:right; width:48%;}
+    #container .section_03 .section_Wrap span.sec03_banner3 img{margin-bottom:10px;}
+
+    #container .section_04{display:none;}
+}
+
+
+
+
+
+* {margin:0px; padding:0px;}
+
+/* 애니메이션 캔버스 */
+.animation_canvas  {  overflow:hidden; position:relative; float:left; width:100%; }
+.slide_section { position:absolute; }
+
+#leftMove { top:50%;	left:2%; }
+#rightMove { top:50%; left:96%; }
+
+.move_arrow {	display:table-cell;	vertical-align:middle;	}
+
+/* 슬라이드 패널 */
+.slider_panel { width:calc(800px * 3);	/* 사용할 크기 x 갯수 */ position:relative; }
+
+/* 슬라이드 이미지 */
+.slider_image {	float:left; width:360px; }
+
+/* 컨트롤 패널  */
+.control_panel  { position:absolute; overflow:hidden; top:90%; left:45%; }
+.control_button { font-size:11px; width:13px; height:13px; border:1px solid #D4D4D4; background-color:#F4F4F4; position:relative;  float:left;
+cursor:pointer; margin-left:3px; margin-right:3px; text-align:center; font-weight:bold; border-radius:10px;}
+
+/* 컨트롤 마우스 오버  */
+.control_button:hover { border:1px solid #F4F4F4; background-color:#D4D4D4; color:#FFFFFF; }
+
+/* 컨트롤 현재 영역  */
+.control_button.active { border:1px solid #24822A; background-color:#24822A; color:#FFFFFF; }

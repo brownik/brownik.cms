@@ -1,0 +1,557 @@
+<!--
+DB PK: MENUKEY=1
+용도: NU_CONTENTS 테이블의 HTML 컨텐츠
+생성일: 2016-09-26 13:28:19
+수정일: 2026-01-05 10:23:17
+-->
+
+<!-- 현재 로그인한 회원정보 -->
+<c:set var="curretHomeMember" value="${el:getCurrentHomeMember()}" />
+<c:set var="currentMainMenu" value="${el:getCurrentMainMenu()}" />
+
+ <!-- 팝업창 영역 START  -->
+
+  
+<div class="popup-wrap one" style="display:none;">
+    <div class="popup-content" style="position:relative;">
+      <a href="/townE/download/file/pdf/1130" target="_blank">
+      <img src="/townE/image/file/1129" alt="마을e척척 활용 안내서">
+      </a>
+    </div>
+    <div class="bottom-wrap">
+      <div class="popup-check-wrap">
+        <input type="checkbox" id="24hour1">
+        <label for="24hour1" class="popup-check">24시간 동안 다시 열람하지 않습니다.</label>
+      </div>
+      <button type="button" name="popupCloseBtn1">닫기</button>
+    </div>
+</div>
+<!--
+<div class="popup-wrap two" style="display:none;">
+    <div class="popup-content" style="position:relative;">
+      <a href="https://online.fliphtml5.com/qtcbd/aehy/" target="_blank">
+      <img src="${_url}/resources/images/popup/2024-06-18.jpg" alt="6월 3주 주간소식">
+      </a>
+    </div>
+    <div class="bottom-wrap">
+      <div class="popup-check-wrap">
+        <input type="checkbox" id="24hour2">
+        <label for="24hour2" class="popup-check">24시간 동안 다시 열람하지 않습니다.</label>
+      </div>
+      <button type="button" name="popupCloseBtn2">닫기</button>
+    </div>
+</div>
+-->
+<!-- 컨텐츠 시작 -->
+<div class="main-container">
+	<div class="main-assemble-wrap">
+		<div class="main-assemble-content">
+			<div class="assemble-content-list top">
+				<ul>
+					<c:forEach items="${mainTaglib:getCommunityItemList()}" var="communityItem" begin="0" end="5" step="1">
+						<li>
+							<a href="/townE/home/programs/communication/view?itemKey=${communityItem.communityItemKey}&menu=231">
+								<c:if test="${fn:length(communityItem.fileList) > 0}">
+									<c:forEach items="${communityItem.fileList}" var="file" varStatus="fileLoop">
+										<c:if test="${fileLoop.index eq 0}">
+											<div class="assemble-item-thumb" style="background:url(/townE/home/programs/communication/down?fileKey=${file.fileKey}) 100% 100% no-repeat; background-size:cover;"></div>
+										</c:if>
+									</c:forEach>
+								</c:if>
+								<div class="assemble-item-object">
+									<!-- 마을 이름 -->
+									<div class="town-name">[${communityItem.belongTownInfoName}] ${communityItem.belongCommunityName}</div>
+									<!-- 의제 제목 -->
+									<div class="town-title">${communityItem.title}</div>
+									<span>▶</span>
+								</div>
+							</a>
+						</li>
+					</c:forEach>
+				</ul>
+			</div>
+			<div class="assemble-content-title">
+				<h1>마을의제</h1>
+				<p>주민들이 함께 마을 문제에 대해 토론하고 정보를 공유합니다.</p>
+			</div>
+			<div class="assemble-content-list bottom">
+				<ul>
+					<c:forEach items="${mainTaglib:getCommunityItemList()}" var="communityItem" begin="6" end="11" step="1">
+						<li>
+							<a href="/townE/home/programs/communication/view?itemKey=${communityItem.communityItemKey}&menu=231">
+								<c:if test="${fn:length(communityItem.fileList) > 0}">
+									<c:forEach items="${communityItem.fileList}" var="file" varStatus="fileLoop">
+										<c:if test="${fileLoop.index eq 0}">
+											<div class="assemble-item-thumb" style="background:url(/townE/home/programs/communication/down?fileKey=${file.fileKey}) 100% 100% no-repeat; background-size:cover;"></div>
+										</c:if>
+									</c:forEach>
+								</c:if>
+								<div class="assemble-item-object">
+									<!-- 마을 이름 -->
+									<div class="town-name">[${communityItem.belongTownInfoName}] ${communityItem.belongCommunityName}</div>
+									<!-- 의제 제목 -->
+									<div class="town-title">${communityItem.title}</div>
+									<span>▶</span>
+								</div>
+							</a>
+						</li>
+					</c:forEach>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 마을의제 영역 END -->
+  	<!-- 마을총회 영역 -->
+	<div class="main-vote-wrap">
+	    <div class="main-vote-content">
+			<div class="main-vote-title">
+			<h1>마을총회</h1>
+		    <p>의제를 결정하고 문제를 해결하기 위한 투표를 진행합니다.</p>
+		</div>
+		<div class="main-vote-list">
+			<ul>
+				<c:if test="${fn:length(mainTaglib:getCommunityVoteItemList()) < 1}">
+					<li class="main-vote-list-item-nodata"></li>
+				</c:if>
+				<!-- 데이터가 없을 경우 이 li가 보입니다. -->
+
+				<c:forEach items="${mainTaglib:getCommunityVoteItemList()}" var="communityVoteItem" begin="0" end="3" step="1">
+					<li>
+						<a href="/townE/home/programs/communication/view?itemKey=${communityVoteItem.communityItemKey}&menu=224">
+							<div class="all-item-text">
+								<c:choose>
+									<c:when test="${communityVoteItem.voteStatus eq 'G'}">
+										<span class="vote-category start"></span>
+									</c:when>
+									<c:when test="${communityVoteItem.voteStatus eq 'W'}">
+										<span class="vote-category wait"></span>
+									</c:when>
+									<c:when test="${communityVoteItem.voteStatus eq 'S' }">
+										<span class="vote-category stop"></span>
+									</c:when>
+									<c:when test="${communityVoteItem.voteStatus eq 'E' || communityVoteItem.voteStatus eq 'F'}">
+										<span class="vote-category end"></span>
+									</c:when>
+								</c:choose>
+								<!-- 마을총회 투표 제목 -->
+								<div class="vote-title">${communityVoteItem.voteTitle}</div>
+								<!-- 마을총회 투표 내용 -->
+								<p>${el:nl2br(communityVoteItem.voteContents)}</p>
+							</div>
+						</a>
+					</li>
+				</c:forEach>			
+			</ul>
+		</div>
+	</div>
+</div>
+  
+	<div class="main-other-wrap">
+		<!-- 마을활동 영역 START -->
+		<div class="main-townlab-wrap">
+			<div class="main-townlab-title">
+				<h1>마을활동</h1>
+				<p>마을실천의제를 논의하고 진행과정을 기록하는 공간입니다.</p>
+			</div>
+			<div class="main-townlab-content">
+				<!-- 마을활동 제목 영역:최신순 -->
+				<div class="main-townlab-tab">
+					<div class="main-townlab-tab-nodata" style="${fn:length(mainTaglib:getLabList()) < 1 ? '' : 'display:none;'}">등록된 마을활동이 없습니다</div>
+					<c:if test="${fn:length(mainTaglib:getLabList()) > 0}">
+						<ul>
+							<c:forEach items="${mainTaglib:getLabList()}" var="labItem" begin="0" end="3" step="1" varStatus="loop">
+								<li ${loop.index eq '0' ? 'class="on"' : ''} data-labUid="${labItem.uid}" >${labItem.title}</li>
+							</c:forEach>
+						</ul>
+					</c:if>
+					<button type="button" class="more-townlab-btn">더보기</button>
+				</div>
+				<!-- 마을활동 상세 컨텐츠 영역 -->
+				<div class="main-townlab-list-box">
+					
+				</div>
+			</div>
+		</div>
+		<!-- 마을활동 영역 END -->
+		<!-- 동네한바퀴 영역 START -->
+		<div class="main-commap-wrap">
+			<ul>
+				<!-- 동네한바퀴 타이틀 영역 -->
+				<li class="main-commap-title">
+					<p class="main-commap-title-eng">COMMUNITY MAPPING</p>
+					<h1>동네한바퀴</h1>
+					<p class="main-commap-title-kor">주민 스스로 지역 문제점을 발굴하고 공유하기 위한 커뮤니티매핑</p>
+					<button type="button" class="go-commap" onclick="location.href='/townE/home/programs/comap/mapping/listByDefault?menu=222'">바로가기</button>
+				</li>
+				<c:forEach items="${mainTaglib:getComapList()}" var="comapItem" begin="0" end="6" step="1">
+					<li onclick="location.href='/townE/home/programs/comap/mapping/index?comapDayUid=${comapItem.uid}&menu=222'">
+						<button type="button" class="go-commap-item ${comapItem.image ne null && comapItem.image ne '' ? 'img': ''}" onclick="location.href='/townE/home/programs/comap/mapping/index?comapDayUid=${comapItem.uid}&menu=222'"></button>
+						<div class="main-commap-item ${comapItem.image ne null && comapItem.image ne '' ? 'img': ''}">
+							<div>
+								<span>${comapItem.belongTownInfoName}</span>
+								<h2>${comapItem.title}</h2>
+							</div>
+						</div>
+						<img src="/townE/home/programs/comap/mapping/downloadComapThumbImage?uid=${comapItem.uid}" onerror="this.style.display='none'">
+					</li>
+				</c:forEach>
+			</ul>
+		</div>
+	</div>
+	<!-- 하단 메뉴 영역 -->
+	<div class="bottom-menu-wrap">
+		<ul>
+			<li>
+				<a href="/townE/home/programs/townmap/list?menu=223">
+					<img src="/townE/resources/images/townE/common/bottom-menu-townmap.png">
+					<h3>마을자원지도</h3>
+					<p>각 지역의 테마별 지도를 확인하실 수 있습니다.</p>
+				</a>
+			</li>
+			<li>
+				<a href="/townE/home/content.do?menu=226">
+					<img src="/townE/resources/images/townE/common/bottom-menu-townrecord.png">
+					<h3>마을기록관</h3>
+					<p>마을의 변화와 문제해결 활동의 결과를 공유하는 공간입니다.</p>
+				</a>
+			</li>
+			<li>
+				<a href="/townE/home/content.do?menu=227">
+					<img src="/townE/resources/images/townE/common/bottom-menu-town.png">
+					<h3>안내</h3>
+					<p>마을e척척 플랫폼에 대해 소개합니다.</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- 컨텐츠 종료 -->
+  
+  
+<!-- 컨텐츠 시작 : 어플 버전 : 2019년 버전 : 숨김 -->
+<div class="main-container-mobile" style="display:none !important;">
+	<!-- 마을의제 START -->
+	<div class="main-assemble-content">
+		<div class="assemble-content-list">
+			<div class="content-list-title">
+				<h1>마을의제</h1>
+				<a href="/townE/home/programs/community/listByDefaultC?menu=231">목록으로</a>
+			</div>
+			<ul>
+				<c:if test="${fn:length(mainTaglib:getCommunityItemList()) < 1}">
+					<li class="main-nodata"></li>
+				</c:if>
+				<c:forEach items="${mainTaglib:getCommunityItemList()}" var="communityItem" begin="0" end="11" step="1">
+					<li>
+						<span class="getCommunityItem" data-uid="${communityItem.communityItemKey}">
+							<c:if test="${fn:length(communityItem.fileList) > 0}">
+								<c:forEach items="${communityItem.fileList}" var="file" varStatus="fileLoop">
+									<c:if test="${fileLoop.index eq 0}">
+										<div class="assemble-item-thumb" style="background:url(/townE/home/programs/communication/down?fileKey=${file.fileKey}) 100% 100% no-repeat; background-size:cover;"></div>
+									</c:if>
+								</c:forEach>
+							</c:if>
+							<div class="town-title">${communityItem.title}</div>
+							<div class="assemble-item-object">
+								<a href="/townE/home/programs/communication/view?itemKey=${communityItem.communityItemKey}&menu=231">
+                                  <img src="/townE/resources/images/townE/common/ic-searchopen.png" width="24px">
+                              	</a>
+							</div>
+						</span>
+					</li>
+				</c:forEach>
+			</ul>
+		</div>
+		<div class="assemble-content-info" style="display:none;">
+			
+		</div>
+	</div>
+	<!-- 마을의제 END -->
+	<!-- 마을총회 START -->
+	<div class="main-vote-content">
+		<div class="content-list-title">
+			<h1>마을총회</h1>
+			<a href="/townE/home/programs/community/listByDefaultV?menu=224">목록으로</a>
+		</div>
+		<ul>
+			<c:if test="${fn:length(mainTaglib:getCommunityVoteItemList()) < 1}">
+				<li class="main-nodata"></li>	
+			</c:if>
+			<c:forEach items="${mainTaglib:getCommunityVoteItemList()}" var="communityVoteItem" begin="0" end="11" step="1">
+				<li>
+					<a href="/townE/home/programs/communication/view?itemKey=${communityVoteItem.communityItemKey}&menu=224">
+						<div class="main-vote-info">
+							<!-- 투표 상태값(start/stop/end/wait) -->
+							<c:choose>
+								<c:when test="${communityVoteItem.voteStatus eq 'G'}">
+									<span class="main-vote-state start"></span>
+								</c:when>
+								<c:when test="${communityVoteItem.voteStatus eq 'W'}">
+									<span class="main-vote-state wait"></span>
+								</c:when>
+								<c:when test="${communityVoteItem.voteStatus eq 'S' }">
+									<span class="main-vote-state stop"></span>
+								</c:when>
+								<c:when test="${communityVoteItem.voteStatus eq 'E' || communityVoteItem.voteStatus eq 'F'}">
+									<span class="main-vote-state end"></span>
+								</c:when>
+							</c:choose>
+							<!-- 투표 공감수/댓글수 -->
+							<div class="main-vote-info-number">
+								<span class="vote-info-icon sympathy">${communityVoteItem.itemLike}</span>
+								<span class="vote-info-icon comment">${communityVoteItem.itemCommentCount}</span>
+							</div>
+						</div>
+						<div class="main-vote-title">${communityVoteItem.voteTitle}</div>
+						<div class="main-vote-date"><fmt:formatDate value="${communityVoteItem.regDate}" pattern="yyyy-MM-dd HH:mm" /></div>
+					</a>
+				</li>
+			</c:forEach>
+		</ul>
+	</div>
+	<!-- 마을총회 END -->
+  
+  	<!-- 마을활동 영역 START -->
+  <div class="main-townlab-content">
+    <div class="content-list-title">
+      <h1>마을활동</h1>
+      <a href="/townE/home/programs/townlab/listByDefault?menu=225">목록으로</a>
+    </div>
+    <!-- 아무 데이터 없을 때 -->
+    <div class="main-townlab-content-noData" style="${fn:length(mainTaglib:getLabList()) < 1 ? '' : 'display:none;'}">등록된 마을활동이 없습니다</div>
+    <!-- 마을활동 타이틀이 나열되는 목록 -->
+    <div class="main-townlab-mainList" style="/*display:none;*/">
+      	<c:if test="${fn:length(mainTaglib:getLabList()) > 0}">
+			<ul>
+				<c:forEach items="${mainTaglib:getLabList()}" var="labItem" begin="0" end="3" step="1" varStatus="loop">
+					<li ${loop.index eq '0' ? 'class="on"' : ''} data-labUid="${labItem.uid}" >${labItem.title}</li>
+				</c:forEach>
+			</ul>
+		</c:if>
+    </div> 
+    <!-- 첨부 이미지 있는 경우 -->
+    <div class="main-townlab-box" style="/*display:none;*/"></div>
+  </div>
+  <!-- 마을활동 영역 END -->
+  
+  <!-- 동네한바퀴 영역 START -->
+  <div class="main-commap-content">
+    <div class="content-list-title">
+      <h1>동네한바퀴</h1>
+      <a href="/townE/home/programs/comap/mapping/listByDefault?menu=222">목록으로</a>
+    </div>
+    <div class="main-commap-list-wrap">
+      <ul>
+        <!-- 데이터가 없을 땐, li안에 a가 사라지고 li에 class="main-nodata"가 적용됩니다. -->
+        <c:forEach items="${mainTaglib:getComapList()}" var="comapItem" begin="0" end="6" step="1">
+        <li class="${fn:length(mainTaglib:getComapList()) > 0 ? '' : 'main-nodata'}">
+          	<c:if test="${fn:length(mainTaglib:getComapList()) > 0}">
+              <a href="/townE/home/programs/comap/mapping/index?comapDayUid=${comapItem.uid}&menu=222">
+                <div class="main-commap-list-img-box"><img src="/townE/home/programs/comap/mapping/downloadComapThumbImage?uid=${comapItem.uid}" onerror="this.style.display='none'"></div>
+                <div class="main-commap-list-townName">${comapItem.belongTownInfoName}</div>
+                <div class="main-commap-list-title">${comapItem.title}</div>
+                <div class="main-commap-list-button">▶</div>
+              </a>
+             </c:if>
+          </li>
+          </c:forEach>
+      </ul>
+    </div>
+  </div>
+  <!-- 동네한바퀴 영역 END -->
+  
+	<!-- 기타 아이콘 START -->
+	<div class="bottom-menu-wrap">
+		<ul>
+			<li>
+				<a href="/townE/home/programs/townmap/list?menu=223">
+                  	<div><img src="/townE/resources/images/townE/common/bottom-menu-townmap.png"></div>
+					<h3>마을자원지도</h3>
+				</a>
+			</li>
+			<li>
+				<a href="/townE/home/content.do?menu=226">
+                  	<div><img src="/townE/resources/images/townE/common/bottom-menu-townrecord.png"></div>
+					<h3>마을기록관</h3>
+				</a>
+			</li>
+			<li>
+				<a href="/townE/home/content.do?menu=227">
+                  	<div><img src="/townE/resources/images/townE/common/bottom-menu-town.png"></div>
+					<h3>안내</h3>
+				</a>
+			</li>
+		</ul>
+      	<div class="bottom-menu-wrap-text">마을e척척은 행정안전부가 주최하고, 한국정보화 진흥원이 주관하는 ‘2019년 디지털 사회혁신 프로젝트'의 지원을 받아 개발하였습니다.</div>
+	</div>
+	<!-- 기타 아이콘 END -->
+</div>
+<!-- 컨텐츠 종료 -->
+
+<!-- 컨텐츠 시작 : 어플 버전 : 2020년 버전 : 숨김 -->
+<div class="main-container-mobile2" style="display:none !important;">
+	<div class="main">
+	  <div class="mainBox">
+		  <div class="btnWrap">
+			  <h2>마을때문에 고민이신가요?</h2>
+			  <div class="btnBox">
+				  <ul>
+					  <li>
+						  <a href="/townE/home/programs/townmap/list?menu=223">
+							  <h3>마을자원지도</h3>
+							  <p>마을이<br>가진 보물</p>
+							  <img src="/townE/resources/images/townE/common/04_main_1.png" alt="마을자원지도">
+						  </a>
+					  </li>
+					  <li>
+						  <a href="/townE/home/programs/comap/mapping/listByDefault?menu=222">
+							  <h3>동네한바퀴</h3>
+							  <p>우리가 만드는<br>마을지도</p>
+							  <img src="/townE/resources/images/townE/common/04_main_2.png" alt="마을지도">
+						  </a>
+					  </li>
+					  <li>
+						  <a href="/townE/home/programs/community/listByDefaultV?menu=224">
+							  <h3>마을총회</h3>
+							  <p>우선의제 투표</p>
+							  <img src="/townE/resources/images/townE/common/04_main_3.png" alt="마을총회">
+						  </a>
+					  </li>
+					  <li>
+						  <a href="/townE/home/programs/community/listByDefaultC?menu=231">
+							  <h3>마을의제</h3>
+							  <p>마을에 대한<br>생각 올리기</p>
+							  <img src="/townE/resources/images/townE/common/04_main_4.png" alt="마을의제">
+						  </a>
+					  </li>
+				  </ul>
+			  </div>
+		  </div>
+		  <div class="btnWrap one">
+			  <h2>마을을 기록해보세요.</h2>
+			  <div class="btnBox">
+				  <ul>
+					  <li>
+						  <a href="/townE/home/programs/townlab/listByDefault?menu=225">
+							  <h3>마을활동</h3>
+							  <p>활동기록 · 공유</p>
+						  </a>
+					  </li>
+					  <li>
+						  <a href="/townE/home/programs/townrecord/recordList?menu=226">
+							  <h3>마을기록관</h3>
+							  <p>마을사례집</p>
+						  </a>
+					  </li>
+				  </ul>
+			  </div>
+		  </div>
+	  </div>
+  </div>
+</div>
+<!-- 컨텐츠 종료 -->
+  
+<!-- 2021년 개편 메인어플디자인 시작 -->
+<div class="maeuli_wrapper">
+    <div class="notice_wrap">
+        <img src="/townE/resources/images/ic_notice.png" alt="공지사항 아이콘">
+        <c:set var="noticeItemList" value="${mainTaglib:getBoardNoticeItemList()}" />
+         <c:if test="${noticeItemList[0].notice eq 'Y'}">
+         <a href="${_url}/home/board/view.do?boardKey=1&key=${noticeItemList[0].key}">
+        <p class="txtCut1 txt_cut1">${noticeItemList[0].title}</p>
+        </a>
+        </c:if>
+    </div>
+    <div class="town_wrap">
+        <h2>동네한바퀴<a href="/townE/home/programs/comap/mapping/listByDefault?menu=222">&#62;</a></h2>
+        <div class="list">
+            <ul>
+            <c:forEach items="${mainTaglib:getComapList()}" var="comapItem" begin="0" end="6" step="1">
+                <li>
+                    <a href="/townE/home/programs/comap/mapping/index?comapDayUid=${comapItem.uid}&menu=222">
+                        <span class="img">
+							<c:choose>
+								<c:when test="${comapItem.image ne null && comapItem.image ne ''}">
+		                            <img src="/townE/home/programs/comap/mapping/downloadComapThumbImage?uid=${comapItem.uid}" alt="동네한바퀴 이미지" onerror="this.style.display='none'">
+								</c:when>
+								<c:otherwise>
+		                            <img src="/townE/resources/images/img_default.png" alt="동네한바퀴 이미지" onerror="this.style.display='none'">
+								</c:otherwise>
+							</c:choose>                        
+                        </span>
+                        <h3 class="txtCut1 txt_cut2">[${comapItem.belongTownInfoName}] ${comapItem.title}</h3>
+                        <span class="time txtCut1 txt_cut1">
+                        	<fmt:formatDate value="${comapItem.startDate}" pattern="yyyy-MM-dd" />
+                        	~ <fmt:formatDate value="${comapItem.endDate}" pattern="yyyy-MM-dd" />
+                        </span>
+                    </a>
+                </li>
+             </c:forEach>
+            </ul>
+        </div>
+    </div>
+    <div class="assembly_wrap">
+        <h2>마을총회<a href="/townE/home/programs/community/allListV?menu=224">&#62;</a></h2>
+        <div class="list">
+            <ul>
+            <c:forEach items="${mainTaglib:getCommunityVoteItemList()}" var="communityVoteItem" begin="0" end="3" step="1">
+                <li>
+                    <a href="/townE/home/programs/communication/view?itemKey=${communityVoteItem.communityItemKey}&menu=224">
+                    	<c:choose>
+							<c:when test="${communityVoteItem.voteStatus eq 'G'}">
+								<span class="circle start">투표<br>진행</span>
+							</c:when>
+							<c:when test="${communityVoteItem.voteStatus eq 'W'}">
+								<span class="circle wait">투표<br>대기</span>
+							</c:when>
+							<c:when test="${communityVoteItem.voteStatus eq 'S' }">
+								<span class="circle stop">투표<br>정지</span>
+							</c:when>
+							<c:when test="${communityVoteItem.voteStatus eq 'E' || communityVoteItem.voteStatus eq 'F'}">
+								<span class="circle end">투표<br>종료</span>
+							</c:when>
+						</c:choose>
+                        <div>
+                            <span class="group txtCut1 txt_cut1">[${communityVoteItem.belongTownInfoName}] ${communityVoteItem.belongCommunityName}</span>
+                            <h3 class="txtCut1 txt_cut1">${communityVoteItem.voteTitle}</h3>
+                            <span class="time txtCut1 txt_cut1">
+                            	<fmt:formatDate value="${communityVoteItem.startDate}" pattern="yyyy-MM-dd" />
+                            	~ <fmt:formatDate value="${communityVoteItem.endDate}" pattern="yyyy-MM-dd" />
+                            </span>
+                        </div>
+                    </a>
+                </li>
+            </c:forEach>
+            </ul>
+        </div>
+    </div>
+    <div class="etc_wrap">
+        <ul>
+            <li>
+                <a href="/townE/home/programs/community/allListC?&menu=231" class="etc_1">
+                    <h3>마을의제</h3>
+                    <p>마을에 대한<br>생각 올리기</p>
+                </a>
+            </li>
+            <li>
+                <a href="/townE/home/programs/townlab/labList?&menu=225" class="etc_2">
+                    <h3>마을활동</h3>
+                    <p>활동기록<br>및 공유</p>
+                </a>
+            </li>
+            <li>
+                <a href="/townE/home/programs/townrecord/recordList?menu=226" class="etc_3">
+                    <h3>마을기록관</h3>
+                    <p>마을사례집</p>
+                </a>
+            </li>
+            <li>
+                <a href="/townE/home/programs/townmap/list?menu=223" class="etc_4">
+                    <h3>마을자원지도</h3>
+                    <p>마을이<br>가진 보물</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 2021년 개편 메인어플디자인 종료 -->

@@ -1,0 +1,13 @@
+/*
+DB PK: MENUKEY=134
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-08-16 13:10:31
+수정일: 2019-05-10 13:35:28
+*/
+
+span.day-windowWrap-bg {height:802px !important; top:-52px !important;}
+
+.joinP-wrap ul.joinP-list li {display:list-item !important; position:relative; float:left; width:70px; height:93px;}
+.joinP-wrap ul.joinP-list li .joinP-img {position:relative; margin:0 auto; background:url(:subdirectory:/image/file/1083) 100% 100% no-repeat !important;}
+#comapInsertForm .dayPlus-content .dayPlus-list .day4-category{display:none}
+#kermab-all-wrap .kermap-list-wrap .list-search select {min-width:0; max-width:160px; padding-right:35px !important;}

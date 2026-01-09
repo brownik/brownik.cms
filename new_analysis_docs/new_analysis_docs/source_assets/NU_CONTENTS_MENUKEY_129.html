@@ -1,0 +1,91 @@
+<!--
+DB PK: MENUKEY=129
+용도: NU_CONTENTS 테이블의 HTML 컨텐츠
+생성일: 2018-07-10 18:39:50
+수정일: 2018-08-14 12:26:36
+-->
+
+<div id="containerWrap">
+
+	<div class="comapWrap">
+		
+		<div class="searchBox1">
+			<div class="part1"><img src="/naju/image/file/592" style="margin: 3px 5px 0 0">카테고리</div>
+			<div class="part2"><img src="/naju/image/file/593" style="margin: 4px 7px 0 0">날짜</div>
+			<button type="button" id="searchAct">검색하기<img src="/naju/image/file/594" style="margin: 3px 0 0  5px"></button>
+		</div>
+
+		<div class="comapList">
+			<ul>
+				<li>
+					<div class="list_img"><img src=""></div>
+					<div class="CL_contents">
+						<h3><img src="">길이 울퉁불퉁해요</h3>
+						<p class="CL_add">전라남도 나주시 송월동 970-2<br>밝은마을 만들기 "지역 현안 발굴"</p>
+						<p class="CL_part">교통안전 > 보행안전</p>
+						<p class="CL_writer">문성관</p><p class="CL_date">2018-07-01</p>
+					</div>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+				<li>
+				</li>
+			</ul>
+		</div>
+
+		<div class="searchBox2">
+			<button type="button" id="closeBtn">닫기<img src="/naju/image/file/594" style="margin: 3px 0 0 5px; transform:rotate(180deg)"></button>
+			<ul>
+				<li>
+					<input type="checkbox" name="chk_info" value="comapday">
+					<p style="margin-right:18px;">커맵데이</p>
+						<select id="cate1">
+							<option value="-1">전체</option>
+						</select>
+				</li>
+				<li>
+					<input type="checkbox" name="chk_info" value="category1" checked>
+					<p style="margin-right:11px;">카테고리1</p>
+						<select id="cate2">
+							<option value="-1">전체</option>
+						</select>
+				</li>
+				<li>
+					<input type="checkbox" name="chk_info" value="category2" checked>
+					<p style="margin-right:11px;">카데고리2</p>
+						<select id="cate1">
+							<option value="-1">전체</option>
+						</select>
+				</li>
+				<li>
+					<input type="checkbox" name="chk_info" value="date">
+					<p style="margin-right:17px;">기한검색</p>
+						<jsp:useBean id="today" class="java.util.Date" />
+						<jsp:useBean id="beforeMonth" class="java.util.Date" />
+						<jsp:setProperty name="beforeMonth" property="time" value="${today.time - (1000 * 60 * 60 * 24 * 30)}"/>
+						<fmt:formatDate pattern="yyyy-MM-dd" var="startDate" value="${beforeMonth}" />
+						<input type="text" id="startDate" value="${startDate}" style="width:105px; height:34px; border:solid 1px #5783dd; display:inline-block; text-align:center;" />
+						<p class="abc" style="display:inline-block; padding:0 6px;">~</p>
+						<fmt:formatDate pattern="yyyy-MM-dd" var="endDate" value="${today}" />
+						<input type="text" id="endDate" value="${endDate}" style="width:105px; height:34px; border:solid 1px #5783dd; display:inline-block; text-align:center;" />
+				</li>
+				<li style="height:73px; background:#eef2f9; padding-top:23px; margin-top:0;">
+					<button type="button" id="searchBtn">검색<img src="/naju/image/file/595" style="margin: 3px 0 0 7px"></button>
+				</li>
+			</ul>
+		</div>
+
+		<div class="comapBox">
+		</div>
+
+	</div>
+	
+</div>

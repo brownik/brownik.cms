@@ -1,0 +1,14 @@
+/*
+DB PK: MENUKEY=81
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2017-06-19 16:25:49
+수정일: 2019-04-10 10:30:43
+*/
+
+
+/*통계관련 사이트*/
+.site_ul li{display:inline-block;float:left;position:relative;width:341px;margin-bottom:17px;margin-left:15px;border:1px solid #e4e4e4;border-radius:5px;background-color:#fff;}
+.site_ul li:hover{border-color:#222;}
+.site_ul li .site_logo{display:block;padding:35px 0;text-align:center;}
+.site_ul li .site_logo img{width:190px;height:50px;}
+.site_ul li .site_name{display:block;padding:15px;border-top:1px solid #e4e4e4;text-align:center;color:#000;}

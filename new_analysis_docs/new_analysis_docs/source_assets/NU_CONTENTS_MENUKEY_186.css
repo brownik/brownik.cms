@@ -1,0 +1,29 @@
+/*
+DB PK: MENUKEY=186
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-11-06 16:32:39
+수정일: 2018-11-07 14:18:09
+*/
+
+.title_select { margin-bottom:0; }
+        #body_c { width:90%; margin:0 auto; overflow:hidden; }
+        .txt_ex{display: block;margin: 0 auto;color: #4269A8;}
+        .tepBox2 ul .tep_off:hover{background-color: #205f7e;}
+        .border2 { border-bottom:2px solid #d8d8d8; }
+        .MAT20 { margin-top:20px; }
+	    .MAB30 { margin-bottom:30px; }
+	    
+	    .text-title { font-size:14px; color:#2478a4; background:url(/photo/view?id=1451438052) 0 6px no-repeat; padding-left:15px; line-height:20px; }
+	    
+        .table_ex{width: 100%;  }
+        .table_ex tr { width:100%; }
+        .table_ex tr td { width:100%; display:block; }
+        .table_ex .tit_bot02{margin-bottom: 10px;}
+        .txt_ex { padding-left:10px; }
+        .txt_ex strong { background:url(/photo/view?id=1451437484) 5px 8px no-repeat; padding-left:15px; line-height:22px; font-size:13px; letter-spacing:-1px; color:#555;  }
+        .txt_ex span { background:url(/resources/images/mobile/sub/sub01_txt2.gif)0 9px no-repeat; font-size:13px; font-weight:normal; color:#888; padding-left:15px; }
+        
+        .tit_bot01,.tit_bot02 { padding-left:10px; margin:10px 0; }
+        .tit_bot01 span, .tit_bot02 span { letter-spacing:-1px; line-height:1.7em; background:url(/resources/images/mobile/sub/sub01_txt2.gif)0 9px no-repeat; font-size:13px; font-weight:normal; color:#888; padding-left:15px;  }
+        
+        .contents_imgBox01 img { width:100%; margin:30px 0; }

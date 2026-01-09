@@ -1,0 +1,67 @@
+/*
+DB PK: MENUKEY=198
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-11-07 10:12:56
+수정일: 2018-11-13 09:32:02
+*/
+
+* { margin:0; padding:0; }
+li { list-style: none; }
+a { text-decoration:none; }
+body { font-family:'Noto Sans KR',sans-serif; }
+input[type=text], input[type=password], input[type=submit], input[type=search], textarea { -webkit-appearance:none; }
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+/* 셀렉트 시작 */
+.select_wrap { width:100%; }
+.select_wrap .select_box { display: inline-block; float:left; background-color:#fff; border-left:1px solid #efefef; border-bottom:1px solid #e1e1e1; }
+.select_wrap .select_box:first-child { width:33.3%; border-left:0; }
+.select_wrap .select_box select { -webkit-appearance:none; background:url(':subdirectory:/image/file/1031') right center no-repeat; background-size:14px; width:93%; height:45px; border:0; font-size: 14px; font-weight:500; padding:0 25px 0 6px; color:#333;}
+/* 셀렉트 종료 */
+
+/* 슬라이더 시작 */
+.sb_mb_container { width:100%; background-color:#fff; }
+.mb_categorySlide { width:100%; height:45px; overflow: hidden; border-bottom:1px solid #efefef; position: relative; }
+.mb_categorySlide ul { width:900px; }
+.mb_categorySlide ul li {  display: inline-block; border-right:1px solid #efefef; line-height:45px; }
+.mb_categorySlide span { padding:0; font-size:14px; color:#555; font-weight:400; }
+.mb_categorySlide img { width:16px; vertical-align:middle; margin-right:3px; display:inline-block;}
+.mb_slideBtn_left { width:25px; height:45px; background:url('/image/file/1511') 50% 50% no-repeat; background-size:8px; z-index:100; line-height:40px; background-color:#fff; text-align:center;box-shadow:3px 0px 5px #e0e0e0; display:inline-block !important } 
+.mb_slideBtn_right { width:25px; height:45px; background:url('/image/file/1512') 50% 50% no-repeat; background-size:8px; z-index: 100; line-height: 40px; box-shadow:-3px 0px 5px #e0e0e0; background-color:#fff; text-align:center; display:inline-block !important }
+/* 슬라이더 시작 */
+
+/* 맵 시작 */
+.map_info { width:280px; height:150px;background-color: #fff; border-radius: 10px; overflow-y: scroll; box-shadow: 0px 5px 20px rgba(0,0,0,0.4); padding:12px; }
+.map_info table { position: relative; border-collapse: separate; width:100%; }
+.map_info tr th { width:84px; border-bottom: 2px solid #ededed; font-weight:bold; letter-spacing: -1px;  }
+.map_info tr td { border-bottom:1px dashed #e5e5e5; letter-spacing: 0px; }
+.map_info table tr td, table tr th { font-size:12px; line-height: 120%; color:#333; text-align: left; padding:5px 2px; font-family: "돋움;" }
+/* 맵 종료 */
+
+
+.map_info {margin-bottom:-3px !important;}
+.map_info::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 3px rgba(0,0,0,0.1); border-radius:0 10px 10px 0; background-color:transparent;}
+.map_info::-webkit-scrollbar{width:10px; background-color:transparent;}
+.map_info::-webkit-scrollbar-thumb{border-radius:10px; background-color:#C7CBE2; border:1px solid #B4B8D6;}
+.map_info::-webkit-scrollbar-thumb:hover{border-radius:10px; background-color:#B4B8D6; border:1px solid #B4B8D6;}
+
+
+/* map 리스트 시작 */		
+.map_list { padding:0 4%; }
+.map_list ul { padding-top:5px; }
+.map_list ul li { padding:15px; padding-bottom:18px; position:relative; border-bottom:1px solid #efefef; }
+.map_list ul li.none_data { padding:20px; text-align:center; border-bottom:1px solid #efefef; }
+
+.map_list ul li .list_box .list_category { background-color:#f1f1f1; color:#666; border-radius:5px; padding:0 4px; margin-right:3px; font-size:13px; }
+.map_list ul li .list_box .list_subject { color:#000; font-size:15px; font-weight:500; line-height:16px; }
+.map_list ul li .list_box > p { font-size:14px; font-weight:400; margin-top:10px; }
+.map_list ul li .list_box > p .list_name { padding-left:20px; background:url(/image/file/625) 0 0px no-repeat; background-size:18px; margin-right:20px; color:#333; }
+.map_list ul li .list_box > p .list_tel { padding-left:20px; background:url(/image/file/627) 0 0px no-repeat; background-size:15px; color:#333; }
+
+
+.map_list ul li .list_box .btn_mapList { position:absolute; top:10px; right:15px; color:#fff; font-size:14px; font-weight:500; }
+.map_list ul li .list_box .btn_mapList button { color:#fff; border:none; display:block; }
+.map_list ul li .list_box .btn_mapList .map_btn { background-color:#f46768; padding:5px 15px; border-radius:5px; margin-bottom:5px; }
+.map_list ul li .list_box .btn_mapList .list_btn { background-color:#ffb933; padding:5px 15px; border-radius:5px;  }
+
+/* map 리스트 종료 */

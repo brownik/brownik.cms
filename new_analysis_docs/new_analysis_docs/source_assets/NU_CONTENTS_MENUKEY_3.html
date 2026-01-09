@@ -1,0 +1,164 @@
+<!--
+DB PK: MENUKEY=3
+용도: NU_CONTENTS 테이블의 HTML 컨텐츠
+생성일: 2016-09-26 13:31:01
+수정일: 2019-10-17 09:11:27
+-->
+
+<div class="acWrap">
+	<ul>
+		<li><a href="javascript:scrollWin(1);">등록인구 남녀현황</a></li>
+		<li><a href="javascript:scrollWin(2);">연도별 인구 및 세대</a></li>
+		<li><a href="javascript:scrollWin(3);">읍면동별 세대 및 인구</a></li>
+		<li><a href="javascript:scrollWin(4);">연도별 연령계층별 인구</a></li>
+		<li><a href="javascript:scrollWin(4);">인구동태</a></li>
+		<li><a href="javascript:scrollWin(5);">연도별 인구이동</a></li>
+		<li><a href="javascript:scrollWin(5);">외국인 현황</a></li>
+		<li><a href="javascript:scrollWin(6);">읍면동별 외국인 현황</a></li>
+		<li><a href="javascript:scrollWin(7);">외국인 성별 현황</a></li>
+	</ul>
+	<p>※ 통계법 제27조의2(통계작성·공표과정에서의 영향력 행사, 누설 및 목적 외 사용의 금지 등)에 따라 공표전 통계는 공개하지 않습니다.</p>
+</div>
+<div class="graphWrap autoH">
+	<!-- 기존 그래프 시작 -->
+	<!-- 등록인구 남녀현황 -->
+	<div class="bay1 oneLine">
+		<graph:createTitle datasetGraphKey="5" />
+		<div class="bay_cont autoH">
+			<div style="width:300px; height:350px; display:inline-block; padding: 0px 0px 10px 20px; margin-left:0px;">
+				<graph:createGraph datasetKey="16" datasetGraphKey="5" />
+			</div>
+			<div style="width:1020px; height:350px; display:inline-block; padding-left:50px;">
+				<graph:createGraph datasetKey="18" datasetGraphKey="84" />
+			</div>
+			<p class="chartSource">
+				<graph:createOrigin datasetGraphKey="5" />
+			</p>
+		</div>
+	</div>
+	<!-- 연도별 인구 및 세대 -->
+	<div class="bay1 twoLine">
+		<graph:createTitle datasetGraphKey="14" /> 
+		<div class="bay_cont autoH">
+			<div style="width:1380px; height:350px; display:inline-block; margin-left:0px;">
+				<graph:createGraph datasetKey="20" datasetGraphKey="14" />
+			</div>
+		</div>
+		<p class="chartSource">
+			<graph:createOrigin datasetGraphKey="14" />
+		</p>
+	</div>
+	<!-- 읍면동별 인구 및 외국인 남여수 -->
+	<div class="bay1 threeLine">
+		<graph:createTitle datasetGraphKey="83" /> 
+		<div class="bay_cont autoH">
+			<div style="width:1380px; height:350px; display:inline-block; margin-left:0px;">
+				<graph:createGraph datasetKey="155" datasetGraphKey="83" />
+			</div>
+		</div>
+		<p class="chartSource">
+			<graph:createOrigin datasetGraphKey="83" />
+		</p>
+	</div>
+	<!-- 연도별 연령계층별 인구 -->
+	<div class="bay2 fourLine">
+		<graph:createTitle datasetGraphKey="58" />
+		<div class="bay_cont autoH">
+			<div style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+				<graph:createGraph datasetKey="94" datasetGraphKey="58" />
+			</div>
+		</div>
+		<p class="chartSource">
+			<graph:createOrigin datasetGraphKey="58" />
+		</p>
+	</div>
+	<div class="bay2 fourLine">
+		<graph:createTitle datasetGraphKey="78" /> 
+		<div class="bay_cont autoH">
+			<div style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+				<graph:createGraph datasetKey="144" datasetGraphKey="78" />
+			</div>
+		</div>
+		<p class="chartSource">
+			<graph:createOrigin datasetGraphKey="78" />
+		</p>
+	</div>
+	<!-- 연도별 인구이동 -->
+	<div class="bay2 fiveLine">
+		<graph:createTitle datasetGraphKey="22" /> 
+		<div class="bay_cont autoH">
+			<div style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+				<graph:createGraph datasetKey="21" datasetGraphKey="22" />
+			</div>
+		</div>
+		<p class="chartSource">
+			<graph:createOrigin datasetGraphKey="22" />
+		</p>
+	</div>
+	<!-- 외국인 현황 -->
+	<div class="bay2 fiveLine">
+		<graph:createTitle datasetGraphKey="25" /> 
+		<div class="bay_cont autoH">
+			<div style="width:640px; height:350px; display:inline-block; margin-left:0px;">
+				<graph:createGraph datasetKey="22" datasetGraphKey="25" />
+			</div>
+		</div>
+		<p class="chartSource">
+			<graph:createOrigin datasetGraphKey="22" />
+		</p>
+	</div>
+	<!-- 외국인 성별 현황 -->
+	<div class="bay2 sevenLine">
+		<graph:createTitle datasetGraphKey="2" />
+		<div class="bay_cont autoH">
+			<div id="chart2" style="width:640px; height:400px; display:inline-block; margin-left:0px;">
+				<graph:createGraph datasetKey="2" datasetGraphKey="2" />
+			</div>
+		</div>
+		<p class="chartSourceCircle">
+			<graph:createOrigin datasetGraphKey="2" />
+		</p>
+	</div>
+	<!-- 등록인구 남녀현황 D3 -->
+		<div class="bay1 oneLine">
+			<graph:createTitle datasetGraphKey="86" />
+			<div class="bay_cont autoH">
+				<div style="width:300px; height:350px; display:inline-block; padding: 0px 0px 10px 20px; margin-left:0px;">
+					<graph:createGraph datasetKey="282" datasetGraphKey="86" />
+				</div>
+			</div>
+		</div>
+</div>
+<script>
+var LineRevision = 20;
+function scrollWin(num) {
+	if (num == 1) {
+		var oneLine = $(".oneLine").offset();
+		$('html, body').animate({scrollTop: oneLine.top-LineRevision}, 300);
+	} else if (num == 2) {
+		var twoLine = $(".twoLine").offset();
+		$('html, body').animate({scrollTop: twoLine.top-LineRevision}, 300);
+	} else if (num == 3) {
+		var threeLine = $(".threeLine").offset();
+		$('html, body').animate({scrollTop: threeLine.top-LineRevision}, 300);
+	} else if (num == 4) {
+		var fourLine = $(".fourLine").offset();
+		$('html, body').animate({scrollTop: fourLine.top-LineRevision}, 300);
+	} else if (num == 5) {
+		var fiveLine = $(".fiveLine").offset();
+		$('html, body').animate({scrollTop: fiveLine.top-LineRevision}, 300);
+	} else if (num == 6) {
+		var sixLine = $(".sixLine").offset();
+		$('html, body').animate({scrollTop: sixLine.top-LineRevision}, 300);
+	} else if (num == 7) {
+		var sevenLine = $(".sevenLine").offset();
+		$('html, body').animate({scrollTop: sevenLine.top-LineRevision}, 300);
+	} else if (num == 8) {
+		var eightLine = $(".eightLine").offset();
+		$('html, body').animate({scrollTop: eightLine.top-LineRevision}, 300);
+	} else if (num == 9) {
+		var nineLine = $(".nineLine").offset();
+		$('html, body').animate({scrollTop: nineLine.top-LineRevision}, 300);
+	}
+}
+</script>

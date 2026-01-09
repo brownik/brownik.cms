@@ -1,0 +1,181 @@
+/*
+DB PK: MENUKEY=139
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2018-09-06 08:45:18
+수정일: 2018-09-06 10:15:52
+*/
+
+
+/*ebook-main*/
+.lifeWrap{padding:20px;}
+#bestContents{position:relative; width:1446px;}
+#bestContents .bestCon_tit img{margin:20px 0 20px 0;}
+
+.book_bg{background:url('/imap/image/file/thumb/688') 0 0 no-repeat;width:1000px;height:411px;content:"";display:block;position:absolute;}
+.bookWrap{position:relative; width:1446px; height:411px;}
+.bookWrap .bestbook_space{width:1446px; height:20px;}
+.bookWrap .bestbook_list{width:1446px; height:190px;}
+.bookWrap .bestbook_list ul li{position:relative; width:200px; height:144px; text-align:center; vertical-align:bottom; padding:0; display:table-cell;}
+.bookWrap .bestbook_list ul li ul li div.thumnail_img{padding-top:8px;}
+.bookWrap .bestbook_list ul li ul li div.thumnail_img img{max-width:132px; max-height:132px; vertical-align:bottom}
+.bookWrap .bestbook_list ul li ul li div.thumnail_img img.cover{border:1px solid silver;}
+.bookWrap .bestbook_list ul li ul li div.thumnail_img img.cover:hover{border-color:#8fa5ab;}
+
+.bookWrap .bestbook_list ul li p.bestbook_txt{width:194px; height:17px; display:table-cell; text-align:center; padding-top:25px;}
+.bookWrap .bestbook_list ul li p.bestbook_txt a{color:#fff; background-color:#8b8b8b; padding:2px 20px; max-width:150px; display:inline-block; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+
+.ico{display:inline-block; overflow:hidden; background:url(../images/ebook/main/icon1.png) no-repeat; line-height:999px; vertical-align:top;}
+.ico_new{position:absolute; z-index:20; width:34px; height:34px; left:10%; background-position:-34px 0;}
+.ico_hot{position:absolute; z-index:20; width:34px; height:34px; left:10%;}
+
+#ebookContents{position:relative; width:1000px; margin:0 auto; margin-top:80px; color:#646464;}
+
+/*카테고리,검색*/
+h3.con_tit{margin-top:10px; padding-left:10px; line-height:36px; font-size:16px; border-bottom:2px solid #646464;}
+h3.con_tit small{color:#ff5050; font-size:12px; margin-left:5px;}
+
+.ebookContents_L{float:left; width:255px;}
+.ebookContents_L .ebook_category{width:205px; border:1px solid #c5c5c5;}
+.ebookContents_L .ebook_category ul{margin:10px 10px 20px 20px;}
+.ebookContents_L .ebook_category ul li{background:url(../images/ebook/common/dot.png) 0 14px no-repeat; padding-left:10px; line-height:30px;}
+.ebookContents_L .ebook_category ul li:hover{font-weight:bold; text-decoration:underline; cursor:pointer;}
+.ebookContents_L .ebook_category ul li.select{font-weight:bold;}
+.categorySelect{font-weight:bold; color:#646464;}
+
+.ebookContents_L .ebook_search{width:181px; border:1px solid #c5c5c5; margin-top:10px; padding:12px;}
+.ebookContents_L .ebook_search ul li{width:100%; padding:5px 0;}
+.ebookContents_L .ebook_search ul li input{border:1px solid #c3c3c3;}
+.ebookContents_L .ebook_search ul li input.search_text{width:179px; height:24px;}
+.ebookContents_L .ebook_search ul li select.sel_year{width:78px; height:24px;}
+.ebookContents_L .ebook_search ul li em{line-height:24px; padding:0 5px;}
+
+/*리스트*/
+.ebookContents_R{float:left; width:745px; min-height: 885px;}
+.contents_list{width:730px;}
+.contents_list h3.con_tit span.sort{float:right; font-weight:normal; font-size:12px; height:25px;}
+.contents_list h3.con_tit span.sort a{display:block; overflow:hidden; float:left; width:61px; height:25px; background:url(../images/ebook/main/categorytab.png) no-repeat; line-height:999px;}
+.contents_list h3.con_tit span.sort a.nav1{background-position:0 -43px;}
+.contents_list h3.con_tit span.sort a.nav1.on{position:relative; background-position:0 0;}
+.contents_list h3.con_tit span.sort a.nav2{background-position:-61px -43px;}
+.contents_list h3.con_tit span.sort a.nav2.on{position:relative; background-position:-61px 0;}
+
+/* .contents_list .book_list{width:100%; height:737px; background:url(../images/ebook/main/book_bg2.png)no-repeat;} */
+.contents_list .book_list{width:100%; height:705px;}
+.contents_list .book_list ul{overflow: hidden;background: url(../images/ebook/main/book_bg2.png) repeat-x;}
+.contents_list .book_list ul li{position:relative; float:left; width:25%; height:225px; padding:12px 0; text-align:center; overflow: hidden; margin-bottom:-15px;}
+.contents_list .book_list ul li p.bk_thumnail{width:25%; height:142px; text-align:center; vertical-align:bottom; display:table-cell;}
+
+.contents_list .book_list ul li p.bk_thumnail img{max-width:132px; max-height:132px; vertical-align:bottom; border:1px solid #e9e9e9; cursor:pointer; margin-top:8px;}
+
+/* 리스트 다른 UI 구성 : 상단에 eBook 바로보기 */
+.contents_list .book_list ul li p.bk_thumnail img:hover{border-color:#8fa5ab;}
+.contents_list .book_list ul li div{margin-top:15px; width:100%; height:24px;}
+.contents_list .book_list ul li div .btn_view{height:24px; width:139px; margin-left:12%;}
+.contents_list .book_list ul li div .btn_view a.view_ebook{display:block; overflow:hidden; float:left; width:140px; height:26px; background:url(../images/ebook/main/btn_view.jpg)no-repeat; line-height:999px;}
+.contents_list .book_list ul li div .btn_view a.view_pdf{display:block; overflow:hidden; float:left; width:79px; height:26px; background:url(../images/ebook/main/btn_view.jpg)no-repeat; line-height:999px; background-position:-60px 0;} 
+
+.btnView_ebook{border:0; outline:0; display:block; overflow:hidden; float:left; width:140px; height:26px; background:url(../images/ebook/main/btn_view.jpg)no-repeat; line-height:999px;}
+.btnView_pdf{border:0; outline:0; display:block; overflow:hidden; float:left; width:79px; height:26px; background:url(../images/ebook/main/btn_view.jpg)no-repeat; line-height:999px; background-position:-60px 0;}
+
+.contents_list .book_list ul li p.book_tit{clear:both; line-height:24px; font-weight:bold; cursor:pointer; width:172px; display:inline-block; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.contents_list .book_list ul li p.book_date{color:#808080;}
+
+/*페이징*/
+
+.page_control{text-align:center;}
+.page_control p{height:26px;}
+.page_control p a{padding:5px 8px; margin:0 3px; font-size:11px; border:1px solid #b8b8b8;}
+.page_control p a:hover{font-weight:bold;}
+.page_control p a.select{border-color:#ed5c5c; color:#ed5c5c; font-weight:bold;}
+.page_control p a img{width:18px; height:18px;}
+.page_control p a.pad_3{padding:5px 3px;} 
+
+/*view*/
+#viewContainer{position:relative; width:1000px; margin:0 auto; padding-top:25px; color:#666; clear:both;}
+.eView_title{width:1000px; height:75px; background:url(../images/ebook/view/book_bg_img.png) 830px -10px no-repeat; background-color:#f6f6f6; border-top:3px solid #8c9ba1; border-bottom:1px solid #aeaeae;}
+.eView_title ul.book_tit{float:left; width:88%; padding:0 15px;}
+.eView_title ul.book_tit li{float:left; font-size:20px; font-weight:bold; line-height:75px;}
+.eView_title ul.book_tit li img{vertical-align:middle; padding-left:10px;}
+.eView_title span.book_date{float:left; line-height:75px;}
+
+.book_con{width:1000px; margin-top:30px;}
+.book_con .bookCon_left{float:left; width:350px; text-align:center;}
+/* .book_con .bookCon_left p img{width:267px; height:360px; border:1px solid #b4b4b4;} */
+.book_con .bookCon_left p img{width:100%; height:100%; max-width:267px; max-height:360px; border:1px solid #b4b4b4;}
+
+.book_con .bookCon_left p.btn_ebook img{width:267px; height:32px; border:0; margin-top:10px;}
+
+.book_con .bookCon_right{float:left; width:610px;}
+.book_con .bookCon_right table{width:100%;}
+.book_con .bookCon_right table tr{line-height:40px;}
+.book_con .bookCon_right table tr th{width:105px; padding-left:10px; border-bottom:1px solid #8c9ba1; text-align:left;}
+.book_con .bookCon_right table tr td{width:525px; padding-left:10px; border-bottom:1px solid #ececec;}
+.book_con .bookCon_right table tr td.pdf_down a img{vertical-align:middle;}
+
+.book_con .qrcode{margin-left:40px; padding-top:10px; clear:both;}
+.book_con .qrcode .qrcode_img{float:left; border:3px solid #d7d7d7;}
+.book_con .qrcode div{float:left; margin-left:5px;}
+.book_con .qrcode div h3.qrcode_guide{font-size:14px; padding:5px 0 10px 18px; background:url(../images/ebook/view/qrcode_guide.gif) 0 8px no-repeat;}
+
+.book_con .book_info{position:relative; width:920px; margin:0 auto; padding:40px 0; clear:both;}
+.book_con .book_info h2.book_info_tit{font-size:18px; line-height:40px; padding-left:5px; border-bottom:3px solid #8c9ba1;}
+.book_con .book_info .book_info_txt{margin:25px 0 0 10px;}
+.book_con .book_info .book_info_txt p{line-height:20px;}
+
+/*view_popup*/
+#view_popup{position:absolute; width:1000px; height:720px; top:50%; left:50%; margin:-360px 0 0 -527px; z-index:999; box-shadow: 7px 7px 7px 0px rgba(0,0,0,0.5);}
+#view_popup .popup_close{width:100%; height:35px; background-color:#fff;}
+#view_popup .popup_close img{float:right; cursor:pointer;}
+#view_popup .popupWrap{height:690px; overflow:scroll; overflow-x:hidden; background-color:#fff;}
+
+.popup_bg{position:absolute; top:0; right:0; left:0; bottom:0; background-color:#000; opacity:.75;}
+
+.btn_disabled { cursor: default;  opacity: .65; box-shadow: none;}
+
+
+/* 댓글: START */
+.comwrap{position:relative; width:1000px; margin:0 auto;}
+.comment{position:relative; width:910px; margin:0 auto; padding-top:20px;}
+.comment_txt{width:100%; height:auto; padding-bottom:20px; border:1px solid #e4e4e4;}
+.comment_txt div{width:100%; overflow:hidden;}
+.comment_txt ul{margin:6px 0 6px 24px;}
+.comment_txt ul li{float:left; margin-right:5px;}
+.comment_txt .com_textarea{width:745px; height:101px; margin:5px 0 0 24px; float:left; border:1px solid #c2c2c2;}
+.comment_txt input.btn_submit{width:107px; height:107px; margin-top:5px; border:0px; background-color:#333; color:#fff; font-size:14px;}
+
+.comment_list > ul{padding-top:20px;}
+/* .comment_list > ul > li{border-top:1px solid #e4e4e4;} */
+.comment_list > ul > li .comListwrap{padding:20px 30px; border-top:1px solid #e4e4e4;}
+.comment_list > ul > li:last-child{border-bottom:1px solid #e4e4e4;}
+.comment_list ul li div.profile{float:left; padding-right:25px;}
+.comment_list ul li div.profile img{border:1px solid #e4e4e4;}
+.comment_list .commentCon{padding-top:5px;}
+.comment_list .commentCon .comName{width:60%; float:left; font-size:13px; color:#373636; font-weight:bold;}
+.comment_list .commentCon .comDate{font-size:13px; color:#b1b1b1; text-align:right;}
+.comment_list .commentCon .comTxt_wrap{position:relative; padding-top:10px; overflow:hidden; font-size:12px; line-height:18px; word-break:break-all; word-wrap:break-word;}
+.comment_list .com_btn{padding-top:10px; text-align:right;}
+
+.comment_box{width:100%; background-color:#f5f5f5; /* border-top:1px solid #e4e4e4; */}
+.comment_box > ul > li{border-bottom:1px solid #e4e4e4; background:url(../images/ebook/view/com_img.png)50px 30px no-repeat;} 
+.comment_box > ul > li:last-child{border:0px;}
+
+.comment_box ul li .commentBox_wrap{padding:20px 20px 20px 55px;}
+.comment_box ul li .commentBox_wrap .txt_input{overflow:hidden;}
+
+.comment_box ul li .commentBox_wrap .txt_input .com_textarea{width:800px; height:101px; margin:5px 0 0 24px; border:1px solid #c2c2c2;}
+.comment_box ul li .commentBox_wrap .txt_input .comBox_btn{float:right; padding-right:5px;}
+.comment_box ul li .commentBox_wrap .txt_input .comBox_btn input.btn_submit2{width:78px; height:25px; margin-top:5px; border:0px; background-color:#777; color:#fff; font-size:12px;} 
+.comment_box ul li .commentBox_wrap .txt_input .comBox_btn input.btn_cancel{width:78px; height:25px; margin-top:5px; border:0px; background-color:#ff5a5a; color:#fff; font-size:12px;} 
+
+.comment_box ul li .comListwrap{padding:20px 30px 20px 45px;}
+
+.comment_list > ul > li.comBox_list{ background-color:#f5f5f5;}
+.comment_list > ul > li.comBox_list .comListwrap{background:url(../images/ebook/view/com_img.png)50px 30px no-repeat; padding:20px 30px 20px 80px;}
+
+.info_txt{font-size:11px; letter-spacing:-1px; display:block; padding:2px 15px; color:#828282;}
+
+.btn_logout{float:right;}
+.btn_logout a img{width:92px; height:35px; margin:10px 28px 0 15px;}
+.snsLoginInfo{font-size:12px; letter-spacing:-1px; display:block; padding: 5px 23px; color:#828282;} 
+#hiddenIframe{width:0px; height:0px; border:0;}
+/* 댓글: END */

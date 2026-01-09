@@ -1,0 +1,28 @@
+/*
+DB PK: MENUKEY=3
+용도: NU_CONTENTS 테이블의 CSS 스타일
+생성일: 2016-09-26 13:31:01
+수정일: 2019-10-17 09:11:27
+*/
+
+.acWrap{clear:both;position:relative;margin-bottom:30px}
+/* .acWrap ul{clear:both;width:100%;height:auto;min-height:80px} */
+.acWrap ul{clear:both;width:100%;height:auto;}
+.acWrap ul li{display:inline-block;width:18.8%; padding: 5px 0.5%}
+.acWrap ul li a{display:block;padding:0 0 0 3%; width:97%;  background:url(:subdirectory:/resources/images/common/br_link.png) 100% 100% no-repeat;font-size:15px; letter-spacing: -0.5px; line-height:33px;font-weight:300;color:#121212; border: 1px solid #c4c6cc; border-radius: 4px}
+.acWrap ul li a.open{background:url(:subdirectory:/resources/images/common/br_open.png) 100% 100% no-repeat;}
+.acWrap ul li a:hover{background:url(:subdirectory:/resources/images/common/br_link.png) 100% 0 no-repeat; background-color: #f9a459; color: #fff; border-color: #b5c9f0}
+.acWrap ul li a.open:hover{background:url(:subdirectory:/resources/images/common/br_open.png) 100% 0 no-repeat; background-color: #f9a459; color: #fff; border-color: #b5c9f0}
+.acWrap p {font-size:14px; font-weight:300; color:#424242; text-indent:10px;}
+
+.graphWrap{clear:both;position:relative;}
+
+.graphWrap .bay1{display:inline-block;width:1400px;padding:0 20px 30px;}
+.graphWrap .bay2{display:inline-block;width:680px;padding:0 20px 30px;}
+.graphWrap .bay2 h3, .graphWrap .bay1 h3{clear:both;position:relative;height:60px;margin-bottom:20px;padding-left:40px;border-bottom:1px solid #cfcdcd;text-align:left;color:#272635;font-size:20px;font-weight:600;line-height:60px;background:url(:subdirectory:/resources/images/sub/basic/br_h.gif) 0 50% no-repeat;}
+.graphWrap .bay2 h3 span, .graphWrap .bay1 h3 span{display:block;position:absolute;top:6px;right:10px;font-size:15px;font-weight:300;}
+.graphWrap .bay2 .bay_cont, .graphWrap .bay1 .bay_cont{clear:both;position:relative;}
+
+/* 통계차트 출처 */
+p.chartSource{float:right; margin-top:-35px; padding-right:15px; font-size:14px; color:#000; font-weight:lighter;}
+p.chartSourceCircle{float:right; margin-top:-70px; padding-right:15px; font-size:14px; color:#000; font-weight:lighter;}

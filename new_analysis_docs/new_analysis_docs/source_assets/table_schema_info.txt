@@ -1,0 +1,135 @@
+================================================================================
+테이블 스키마 정보
+생성일시: 2026-01-08 10:57:56
+================================================================================
+
+
+[테이블: NU_CONTENTS]
+--------------------------------------------------------------------------------
+  MENUKEY                        int(11)              NO    PRI   None
+  HTML                           longtext             YES         None
+  JS                             longtext             YES         None
+  CSS                            longtext             YES         None
+  INSERTDATE                     datetime             NO          None
+  INSERTIP                       varchar(15)          NO          None
+  INSERTMEMBERKEY                int(11)              NO          None
+  UPDATEDATE                     datetime             YES         None
+  UPDATEIP                       varchar(15)          YES         None
+  UPDATEMEMBERKEY                int(11)              YES         None
+
+[테이블: NU_CONTENTS_HISTORY]
+--------------------------------------------------------------------------------
+  HISTORYKEY                     int(11)              NO    PRI   None
+  INSERTHISTORYDATE              datetime             YES         None
+  MENUKEY                        int(11)              NO          None
+  HTML                           longtext             YES         None
+  JS                             longtext             YES         None
+  CSS                            longtext             YES         None
+  INSERTDATE                     datetime             NO          None
+  INSERTIP                       varchar(15)          NO          None
+  INSERTMEMBERKEY                int(11)              NO          None
+  UPDATEDATE                     datetime             YES         None
+  UPDATEIP                       varchar(15)          YES         None
+  UPDATEMEMBERKEY                int(11)              YES         None
+
+[테이블: NU_LAYOUT]
+--------------------------------------------------------------------------------
+  KEY                            int(11)              NO    PRI   None
+  SITEKEY                        int(11)              NO          None
+  TITLE                          varchar(50)          NO          None
+  HEADER                         text                 YES         None
+  FOOTER                         text                 YES         None
+  LEFT                           text                 YES         None
+  JS                             text                 YES         None
+  CSS                            mediumtext           YES         None
+  META                           text                 YES         None
+  STATUS                         char(1)              NO          None
+  INSERTDATE                     datetime             NO          None
+  INSERTIP                       varchar(15)          NO          None
+  INSERTMEMBERKEY                int(11)              NO          None
+  UPDATEDATE                     datetime             YES         None
+  UPDATEIP                       varchar(15)          YES         None
+  UPDATEMEMBERKEY                int(11)              YES         None
+
+[테이블: NU_MENU]
+--------------------------------------------------------------------------------
+  KEY                            int(11)              NO    PRI   None
+  SITEKEY                        int(11)              NO          None
+  TITLE                          varchar(50)          NO          None
+  DESCRIPTION                    varchar(500)         YES         None
+  CONTENTTYPE                    varchar(50)          NO          None
+  URL                            varchar(500)         YES         None
+  LINKTYPE                       varchar(10)          NO          None
+  LAYOUTKEY                      int(11)              YES         None
+  ACCESSROLE                     varchar(50)          NO          None
+  BOARDKEY                       int(11)              YES         None
+  STEP                           int(11)              NO          None
+  STATUS                         char(1)              NO          None
+  FRONTMENUSHOW                  char(1)              NO          None
+  MENUCODE                       varchar(100)         YES         None
+  LINKMENUKEY                    int(11)              YES         None
+  MANAGER                        int(11)              YES         None
+  PARENTKEY                      int(11)              NO          0
+  KOGL                           char(1)              NO          None
+  DEPTH                          int(11)              YES         None
+  RESERVATION                    datetime             YES         None
+  INSERTDATE                     datetime             NO          None
+  INSERTIP                       varchar(15)          NO          None
+  INSERTMEMBERKEY                int(11)              NO          None
+  PARENTALLKEY                   varchar(500)         YES         None
+  PARENTTOPKEY                   int(11)              YES         None
+  STEPALL                        varchar(500)         YES         None
+  UPDATEDATE                     datetime             YES         None
+  UPDATEIP                       varchar(15)          YES         None
+  UPDATEMEMBERKEY                int(11)              YES         None
+  MAINCHECK                      char(1)              YES         N
+
+[테이블: NU_BOARD]
+--------------------------------------------------------------------------------
+  KEY                            int(11)              NO    PRI   None
+  SITEKEY                        int(11)              NO    MUL   None
+  TITLE                          varchar(50)          NO          None
+  BOARDTYPE                      varchar(50)          NO          None
+  SKINKEY                        int(11)              NO    MUL   None
+  LISTACCESSROLE                 varchar(50)          NO          None
+  READACCESSROLE                 varchar(50)          NO          None
+  CUDACCESSROLE                  varchar(50)          NO          None
+  COMMENTACCESSROLE              varchar(50)          NO          None
+  REPLYACCESSROLE                varchar(50)          NO          None
+  COMMENTUSEYN                   char(1)              NO          None
+  REPLYUSEYN                     char(1)              NO          None
+  SECRETUSEYN                    char(1)              NO          None
+  OKEYUSEYN                      char(1)              NO          None
+  RESERVATIONYN                  char(1)              NO          None
+  UPLOADUSEYN                    char(1)              NO          None
+  UPLOADCOUNT                    int(11)              NO          1
+  UPLOADSIZE                     int(11)              NO          10000000
+  UPLOADFILEEXTENSION            varchar(100)         YES         None
+  HEADER                         text                 YES         None
+  FOOTER                         text                 YES         None
+  WRITE                          text                 YES         None
+  MODIFY                         text                 YES         None
+  STATUS                         char(1)              NO          None
+  INSERTDATE                     datetime             NO          None
+  INSERTIP                       varchar(15)          NO          None
+  INSERTMEMBERKEY                int(11)              NO    MUL   None
+  UPDATEDATE                     datetime             YES         None
+  UPDATEIP                       varchar(15)          YES         None
+  UPDATEMEMBERKEY                int(11)              YES   MUL   None
+
+[테이블: NU_BOARD_SKIN]
+--------------------------------------------------------------------------------
+  KEY                            int(11)              NO    PRI   None
+  SITEKEY                        int(11)              NO    MUL   None
+  TITLE                          varchar(50)          NO          None
+  LIST                           text                 YES         None
+  READ                           text                 YES         None
+  WRITE                          text                 YES         None
+  MODIFY                         text                 YES         None
+  STATUS                         char(1)              NO          None
+  INSERTDATE                     datetime             NO          None
+  INSERTIP                       varchar(15)          NO          None
+  INSERTMEMBERKEY                int(11)              NO    MUL   None
+  UPDATEDATE                     datetime             YES         None
+  UPDATEIP                       varchar(15)          YES         None
+  UPDATEMEMBERKEY                int(11)              YES   MUL   None
