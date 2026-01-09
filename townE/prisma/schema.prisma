@@ -6,9 +6,9 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
-  // MariaDB는 MySQL과 호환되므로 mysql provider 사용
+  // Supabase PostgreSQL로 마이그레이션
 }
 
 model Member {
@@ -100,7 +100,7 @@ model BoardItem {
   boardKey       Int       @map("BOARDKEY")
   categoryKey    Int?      @map("CATEGORYKEY")
   title          String    @db.VarChar(50) @map("TITLE")
-  content        String    @db.MediumText @map("CONTENT")
+  content        String    @db.Text @map("CONTENT")
   writer         String    @db.VarChar(50) @map("WRITER")
   notice         String    @default("N") @db.VarChar(1) @map("NOTICE")
   openDate       DateTime? @map("OPENDATE")

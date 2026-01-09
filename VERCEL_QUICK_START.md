@@ -29,11 +29,11 @@
 Settings → Environment Variables에서 추가:
 
 ```
-DATABASE_URL = mysql://townE:townE@192.168.0.153:3306/townE?schema=public
+DATABASE_URL = postgresql://[your-supabase-connection-string]
 JWT_SECRET = your-secret-key-change-in-production-min-256-bits
 JWT_EXPIRATION = 86400000
 JWT_REFRESH_EXPIRATION = 604800000
-NEXT_PUBLIC_API_BASE_URL = https://your-project.vercel.app/api
+NEXT_PUBLIC_API_BASE_URL = https://brownik-cms.vercel.app/api
 ```
 
 **주의**: `NEXT_PUBLIC_API_BASE_URL`은 배포 후 실제 도메인으로 업데이트 필요
