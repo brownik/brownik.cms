@@ -109,10 +109,11 @@ export async function POST(request: NextRequest) {
 // PUT: 댓글 수정
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { commentKey: string } }
+  { params }: { params: Promise<{ commentKey: string }> }
 ) {
   try {
-    const commentKey = parseInt(params.commentKey);
+    const { commentKey: commentKeyParam } = await params;
+    const commentKey = parseInt(commentKeyParam);
     const body = await request.json();
     const { comment } = body;
 
@@ -165,10 +166,11 @@ export async function PUT(
 // DELETE: 댓글 삭제 (논리 삭제)
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { commentKey: string } }
+  { params }: { params: Promise<{ commentKey: string }> }
 ) {
   try {
-    const commentKey = parseInt(params.commentKey);
+    const { commentKey: commentKeyParam } = await params;
+    const commentKey = parseInt(commentKeyParam);
 
     const comment = await prisma.comment.findUnique({
       where: { key: commentKey },

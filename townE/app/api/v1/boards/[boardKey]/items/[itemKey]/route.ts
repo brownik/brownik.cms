@@ -14,11 +14,12 @@ import { verifyToken, extractTokenFromHeader } from '@/lib/auth/jwt';
 // GET: 게시글 상세 조회
 export async function GET(
   request: NextRequest,
-  { params }: { params: { boardKey: string; itemKey: string } }
+  { params }: { params: Promise<{ boardKey: string; itemKey: string }> }
 ) {
   try {
-    const boardKey = parseInt(params.boardKey);
-    const itemKey = parseInt(params.itemKey);
+    const { boardKey: boardKeyParam, itemKey: itemKeyParam } = await params;
+    const boardKey = parseInt(boardKeyParam);
+    const itemKey = parseInt(itemKeyParam);
 
     const item = await prisma.boardItem.findFirst({
       where: {
@@ -57,10 +58,11 @@ export async function GET(
 // POST: 게시글 작성
 export async function POST(
   request: NextRequest,
-  { params }: { params: { boardKey: string } }
+  { params }: { params: Promise<{ boardKey: string }> }
 ) {
   try {
-    const boardKey = parseInt(params.boardKey);
+    const { boardKey: boardKeyParam } = await params;
+    const boardKey = parseInt(boardKeyParam);
     const body = await request.json();
     const {
       title,
@@ -137,11 +139,12 @@ export async function POST(
 // PUT: 게시글 수정
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { boardKey: string; itemKey: string } }
+  { params }: { params: Promise<{ boardKey: string; itemKey: string }> }
 ) {
   try {
-    const boardKey = parseInt(params.boardKey);
-    const itemKey = parseInt(params.itemKey);
+    const { boardKey: boardKeyParam, itemKey: itemKeyParam } = await params;
+    const boardKey = parseInt(boardKeyParam);
+    const itemKey = parseInt(itemKeyParam);
     const body = await request.json();
 
     const item = await prisma.boardItem.findFirst({
@@ -193,11 +196,12 @@ export async function PUT(
 // DELETE: 게시글 삭제 (논리 삭제)
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { boardKey: string; itemKey: string } }
+  { params }: { params: Promise<{ boardKey: string; itemKey: string }> }
 ) {
   try {
-    const boardKey = parseInt(params.boardKey);
-    const itemKey = parseInt(params.itemKey);
+    const { boardKey: boardKeyParam, itemKey: itemKeyParam } = await params;
+    const boardKey = parseInt(boardKeyParam);
+    const itemKey = parseInt(itemKeyParam);
 
     const item = await prisma.boardItem.findFirst({
       where: {

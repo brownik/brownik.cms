@@ -9,10 +9,11 @@ import { successResponse, errorResponse } from '@/lib/utils/response';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { boardKey: string } }
+  { params }: { params: Promise<{ boardKey: string }> }
 ) {
   try {
-    const boardKey = parseInt(params.boardKey);
+    const { boardKey: boardKeyParam } = await params;
+    const boardKey = parseInt(boardKeyParam);
     const { searchParams } = new URL(request.url);
     const page = parseInt(searchParams.get('page') || '0');
     const size = parseInt(searchParams.get('size') || '10');

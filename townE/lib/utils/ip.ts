@@ -18,5 +18,5 @@ export function getClientIpAddress(request: NextRequest): string {
   }
   
   // 기본 IP (로컬 개발 환경)
-  return request.ip || '127.0.0.1';
+  return '127.0.0.1';
 }
