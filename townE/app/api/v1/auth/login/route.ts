@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
       return errorResponse('아이디 또는 비밀번호가 잘못되었습니다', 401);
     }
 
-    // 비밀번호 검증
+    // 비밀번호 검증 (하이브리드 방식: bcrypt + SHA-256)
     const isValidPassword = await verifyPassword(userPw, member.userPw);
     if (!isValidPassword) {
       // 로그인 실패 횟수 증가
@@ -42,6 +42,16 @@ export async function POST(request: NextRequest) {
         },
       });
       return errorResponse('아이디 또는 비밀번호가 잘못되었습니다', 401);
+    }
+
+    // SHA-256 해시인 경우 bcrypt로 재해싱
+    if (!member.userPw.startsWith('$2')) {
+      const newHashedPassword = await hashPassword(userPw);
+      await prisma.member.update({
+        where: { key: member.key },
+        data: { userPw: newHashedPassword },
+      });
+      console.log(`회원 ${member.userId}의 비밀번호를 bcrypt로 재해싱했습니다.`);
     }
 
     // 로그인 정보 업데이트
