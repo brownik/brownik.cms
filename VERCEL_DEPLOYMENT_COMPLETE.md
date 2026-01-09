@@ -53,12 +53,14 @@ NEXT_PUBLIC_API_BASE_URL=https://your-project.vercel.app/api
   "outputDirectory": "townE/.next",
   "devCommand": "cd townE && npm run dev",
   "installCommand": "cd townE && npm install",
-  "framework": "nextjs",
-  "rootDirectory": "townE"
+  "framework": "nextjs"
 }
 ```
 
-**중요**: Vercel 대시보드에서도 Root Directory를 `townE`로 설정해야 합니다.
+**중요**: 
+- `vercel.json`에는 `rootDirectory` 속성을 넣지 마세요 (Vercel에서 지원하지 않음)
+- Root Directory는 **Vercel 대시보드**에서만 설정합니다:
+  - Settings → General → Root Directory → `townE` 입력
 
 ### 4. 배포
 

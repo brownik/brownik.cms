@@ -3,6 +3,5 @@
   "outputDirectory": "townE/.next",
   "devCommand": "cd townE && npm run dev",
   "installCommand": "cd townE && npm install",
-  "framework": "nextjs",
-  "rootDirectory": "townE"
+  "framework": "nextjs"
 }
