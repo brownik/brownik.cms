@@ -32,7 +32,7 @@ mvn spring-boot:run
 ### 2. 프론트엔드 서버 실행
 
 ```bash
-cd townE-frontend
+cd townE
 npm run dev
 ```
 
@@ -121,9 +121,9 @@ curl -X DELETE 'http://localhost:8080/api/v1/boards/1/items/1'
 - `townE-backend/src/test/java/kr/co/nubiz/service/BoardItemServiceTest.java`
 
 ### 프론트엔드
-- `townE-frontend/lib/api/board.ts` - 게시판 API 클라이언트
-- `townE-frontend/app/boards/[boardKey]/page.tsx` - 게시판 목록 페이지
-- `townE-frontend/app/boards/[boardKey]/items/[itemKey]/page.tsx` - 게시글 상세 페이지
+- `townE/lib/api/board.ts` - 게시판 API 클라이언트
+- `townE/app/boards/[boardKey]/page.tsx` - 게시판 목록 페이지
+- `townE/app/boards/[boardKey]/items/[itemKey]/page.tsx` - 게시글 상세 페이지
 
 ## 주의사항
 

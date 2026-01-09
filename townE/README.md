@@ -37,7 +37,7 @@ npm run dev
 ## 프로젝트 구조
 
 ```
-townE-frontend/
+townE/
 ├── app/                    # Next.js App Router 페이지
 ├── components/             # React 컴포넌트
 ├── lib/                   # 유틸리티 및 라이브러리

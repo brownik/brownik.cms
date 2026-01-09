@@ -1,8 +1,8 @@
 {
-  "buildCommand": "cd townE-frontend && npm install && npm run build",
-  "outputDirectory": "townE-frontend/.next",
-  "devCommand": "cd townE-frontend && npm run dev",
-  "installCommand": "cd townE-frontend && npm install",
+  "buildCommand": "cd townE && npm install && npm run build",
+  "outputDirectory": "townE/.next",
+  "devCommand": "cd townE && npm run dev",
+  "installCommand": "cd townE && npm install",
   "framework": "nextjs",
-  "rootDirectory": "townE-frontend"
+  "rootDirectory": "townE"
 }

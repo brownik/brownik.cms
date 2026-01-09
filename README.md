@@ -6,7 +6,7 @@ JSP/Spring MVC 기반 시스템을 Next.js(App Router)로 전환하는 프로젝
 
 ```
 maeul-e/
-├── townE-frontend/     # Next.js 프론트엔드 + API Routes (백엔드 통합)
+├── townE/              # Next.js (프론트엔드 + API Routes 통합)
 └── new_analysis_docs/   # 분석 문서 및 가이드
 ```
 
@@ -27,7 +27,7 @@ maeul-e/
 
 ### 개발 서버 실행
 ```bash
-cd townE-frontend
+cd townE
 npm install
 npm run dev
 ```

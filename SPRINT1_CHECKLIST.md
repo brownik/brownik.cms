@@ -52,7 +52,7 @@
 
 - [ ] Next.js 프로젝트가 정상 실행되는지 확인
   ```bash
-  cd townE-frontend
+  cd townE
   npm run dev
   ```
   - URL: `http://localhost:3000`
@@ -100,7 +100,7 @@ townE-backend/
 
 ### Frontend
 ```
-townE-frontend/
+townE/
 ├── package.json
 ├── .env.local
 ├── app/

@@ -49,7 +49,7 @@
 ### 2.1 React 프로젝트 구조
 
 ```
-townE-frontend/
+townE/
 ├── public/
 │   ├── index.html
 │   └── favicon.ico
@@ -232,9 +232,9 @@ interface PagedResponse<T> {
 
 ```bash
 # Vite로 React + TypeScript 프로젝트 생성
-npm create vite@latest townE-frontend -- --template react-ts
+npm create vite@latest townE -- --template react-ts
 
-cd townE-frontend
+cd townE
 npm install
 
 # 추가 패키지 설치
@@ -247,7 +247,7 @@ npm install -D @types/node
 
 ```json
 {
-  "name": "townE-frontend",
+  "name": "townE",
   "version": "1.0.0",
   "type": "module",
   "scripts": {

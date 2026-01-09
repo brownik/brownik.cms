@@ -27,7 +27,7 @@ mvn spring-boot:run
 
 ### 프론트엔드 실행
 ```bash
-cd townE-frontend
+cd townE
 npm install  # 처음 실행 시
 npm run dev
 ```

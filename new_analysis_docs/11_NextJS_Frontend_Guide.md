@@ -50,7 +50,7 @@
 ### 2.1 Next.js 프로젝트 구조 (App Router)
 
 ```
-townE-frontend/
+townE/
 ├── app/                          # App Router (Next.js 13+)
 │   ├── (auth)/                  # Route Group
 │   │   ├── login/
@@ -167,14 +167,14 @@ townE-backend/
 
 ```bash
 # Next.js 프로젝트 생성 (TypeScript, App Router, Tailwind CSS)
-npx create-next-app@latest townE-frontend \
+npx create-next-app@latest townE \
   --typescript \
   --tailwind \
   --app \
   --no-src-dir \
   --import-alias "@/*"
 
-cd townE-frontend
+cd townE
 ```
 
 ### 3.2 필수 패키지 설치
@@ -200,7 +200,7 @@ npm install date-fns clsx
 
 ```json
 {
-  "name": "townE-frontend",
+  "name": "townE",
   "version": "0.1.0",
   "private": true,
   "scripts": {

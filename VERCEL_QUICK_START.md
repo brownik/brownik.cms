@@ -10,7 +10,7 @@
 
 2. **Root Directory 설정**
    - **Settings** → **General** → **Root Directory**
-   - `townE-frontend` 선택
+   - `townE` 선택
    - **Save** 클릭
 
 ### 2단계: 환경 변수 설정 (3분)
@@ -65,7 +65,7 @@
 
 ```bash
 # 로컬에서 빌드 테스트
-cd townE-frontend
+cd townE
 npm install
 npm run build
 ```
@@ -86,7 +86,7 @@ git push origin main
 ## 📋 체크리스트
 
 배포 전:
-- [ ] Root Directory: `townE-frontend` 설정
+- [ ] Root Directory: `townE` 설정
 - [ ] 환경 변수: `NEXT_PUBLIC_API_BASE_URL` 설정
 - [ ] 로컬 빌드 테스트 성공
 

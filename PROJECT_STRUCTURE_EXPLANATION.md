@@ -13,7 +13,7 @@
 - **실행 환경**: JVM
 - **의존성**: Spring Data JPA, Spring Security, Querydsl 등
 
-### Frontend (`townE-frontend`)
+### Frontend (`townE`)
 - **언어**: TypeScript
 - **프레임워크**: Next.js 14+ (App Router)
 - **빌드 도구**: npm/yarn (`package.json`)
@@ -41,7 +41,7 @@ townE-backend/
 ├── target/              # Maven 빌드 산출물 (.jar)
 └── BOOT-INF/           # Spring Boot 실행 파일
 
-townE-frontend/
+townE/
 ├── .next/              # Next.js 빌드 산출물
 └── out/                # 정적 빌드 산출물 (선택적)
 ```
@@ -130,7 +130,7 @@ maeul-e/
 ├── townE-backend/     # 독립적인 Spring Boot 프로젝트
 │   ├── pom.xml
 │   └── src/
-└── townE-frontend/    # 독립적인 Next.js 프로젝트
+└── townE/    # 독립적인 Next.js 프로젝트
     ├── package.json
     └── app/
 ```

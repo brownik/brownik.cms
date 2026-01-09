@@ -51,7 +51,7 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:3000/api
 ### 2. Prisma Client 생성
 
 ```bash
-cd townE-frontend
+cd townE
 npx prisma generate
 ```
 
@@ -73,7 +73,7 @@ npx prisma db pull  # 기존 스키마와 동기화 (선택적)
 
 ## 프론트엔드 API 클라이언트 업데이트
 
-`townE-frontend/lib/api/client.ts`의 `baseURL`을 업데이트하세요:
+`townE/lib/api/client.ts`의 `baseURL`을 업데이트하세요:
 
 ```typescript
 const apiClient = axios.create({

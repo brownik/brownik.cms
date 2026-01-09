@@ -565,14 +565,14 @@ public class MemberController {
 
 ```bash
 # Next.js 프로젝트 생성 (TypeScript, App Router, Tailwind CSS)
-npx create-next-app@latest townE-frontend \
+npx create-next-app@latest townE \
   --typescript \
   --tailwind \
   --app \
   --no-src-dir \
   --import-alias "@/*"
 
-cd townE-frontend
+cd townE
 
 # 필수 패키지 설치
 npm install axios @tanstack/react-query zustand
@@ -584,7 +584,7 @@ npm install date-fns clsx
 
 ```json
 {
-  "name": "townE-frontend",
+  "name": "townE",
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
@@ -920,7 +920,7 @@ java -jar target/townE-backend-4.0.0.jar
 ### 12.2 프론트엔드 실행
 
 ```bash
-cd townE-frontend
+cd townE
 npm run dev
 # http://localhost:3000 또는 http://localhost:5173 접속
 ```
